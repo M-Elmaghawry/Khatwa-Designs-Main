@@ -1,0 +1,170 @@
+(function () {
+    'use strict';
+
+    var headerTemplate = '' +
+        '<header>' +
+        '    <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">' +
+        '        <div class="container-fluid">' +
+        '            <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">' +
+        '                <a class="navbar-brand" href="index.html">' +
+        '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="default-logo">' +
+        '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="alt-logo">' +
+        '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="mobile-logo">' +
+        '                </a>' +
+        '            </div>' +
+        '            <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">' +
+        '                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">' +
+        '                    <span class="navbar-toggler-line"></span>' +
+        '                    <span class="navbar-toggler-line"></span>' +
+        '                    <span class="navbar-toggler-line"></span>' +
+        '                    <span class="navbar-toggler-line"></span>' +
+        '                </button>' +
+        '                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">' +
+        '                    <ul class="navbar-nav">' +
+        '                        <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>' +
+        '                        <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>' +
+        '                        <li class="nav-item dropdown dropdown-with-icon-style02">' +
+        '                            <a href="services.html" class="nav-link" data-i18n="nav_services">Services</a>' +
+        '                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>' +
+        '                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">' +
+        '                                <li><a href="services-details.html"><i class="line-icon-Medal-2"></i><span data-i18n="service_1">Business planning</span></a></li>' +
+        '                                <li><a href="services-details.html"><i class="line-icon-Archery-2"></i><span data-i18n="service_2">Market research</span></a></li>' +
+        '                                <li><a href="services-details.html"><i class="line-icon-Financial"></i><span data-i18n="service_3">Business consulting</span></a></li>' +
+        '                                <li><a href="services-details.html"><i class="line-icon-Money-Bag"></i><span data-i18n="service_4">Audience analysis</span></a></li>' +
+        '                            </ul>' +
+        '                        </li>' +
+        '                        <li class="nav-item"><a href="customer-stories.html" class="nav-link" data-i18n="nav_testimonials">Testimonials</a></li>' +
+        '                        <li class="nav-item"><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>' +
+        '                        <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>' +
+        '                    </ul>' +
+        '                </div>' +
+        '            </div>' +
+        '            <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">' +
+        '                <div class="header-icon">' +
+        '                    <div class="header-search-icon icon">' +
+        '                        <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>' +
+        '                        <div class="search-form-wrapper">' +
+        '                            <button title="Close" type="button" class="search-close">×</button>' +
+        '                            <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">' +
+        '                                <div class="search-form-box">' +
+        '                                    <h2 class="text-dark-gray text-center fw-600 mb-4 ls-minus-1px" data-i18n="search_title">What are you looking for?</h2>' +
+        '                                    <input class="search-input" id="search-form-input5e219ef164995" data-i18n-placeholder="search_placeholder" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">' +
+        '                                    <button type="submit" class="search-button">' +
+        '                                        <i class="feather icon-feather-search" aria-hidden="true"></i>' +
+        '                                    </button>' +
+        '                                </div>' +
+        '                            </form>' +
+        '                        </div>' +
+        '                    </div>' +
+        '                    <div class="header-button ms-20px d-none d-xl-inline-block">' +
+        '                        <a href="contact.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">' +
+        '                            <span>' +
+        '                                <span class="btn-double-text fw-600" data-i18n="cta_consultation" data-text="Free consultation">Free consultation</span>' +
+        '                                <span><i class="fa-regular fa-envelope"></i></span>' +
+        '                            </span>' +
+        '                        </a>' +
+        '                    </div>' +
+        '                </div>' +
+        '            </div>' +
+        '        </div>' +
+        '    </nav>' +
+        '</header>';
+
+    var footerTemplate = '' +
+        '<footer class="p-0 fs-16 border-top border-color-extra-medium-gray">' +
+        '    <div class="container">' +
+        '        <div class="row justify-content-center pt-6 sm-pt-40px">' +
+        '            <div class="col-6 col-xl-3 col-lg-12 col-sm-6 last-paragraph-no-margin text-xl-start text-lg-center order-sm-1 lg-mb-50px sm-mb-30px">' +
+        '                <a href="index.html" class="footer-logo mb-15px d-inline-block"><img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt=""></a>' +
+        '                <p class="lh-30 w-90 xl-w-100 mx-lg-auto mx-xl-0" data-i18n="footer_intro">Gearing your company through an innovative strategy.</p>' +
+        '                <div class="elements-social social-icon-style-02 mt-20px xs-mt-15px">' +
+        '                    <ul class="medium-icon dark">' +
+        '                        <li class="my-0"><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>' +
+        '                        <li class="my-0"><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li>' +
+        '                        <li class="my-0"><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>' +
+        '                        <li class="my-0"><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>' +
+        '                    </ul>' +
+        '                </div>' +
+        '            </div>' +
+        '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">' +
+        '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_company_title">Company</span>' +
+        '                <ul>' +
+        '                    <li><a href="about.html" data-i18n="footer_about">Who we are</a></li>' +
+        '                    <li><a href="services.html" data-i18n="footer_services_link">Our services</a><div class="bg-dark-gray fw-600 text-white lh-22 text-uppercase border-radius-30px ps-10px pe-10px fs-10 ms-10px d-inline-block align-middle" data-i18n="footer_hot">Hot</div></li>' +
+        '                    <li><a href="customer-stories.html" data-i18n="footer_clients">Our clients</a></li>' +
+        '                    <li><a href="contact.html" data-i18n="footer_contact">Contact us</a></li>' +
+        '                </ul>' +
+        '            </div>' +
+        '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-4 order-lg-3">' +
+        '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_services_title">Services</span>' +
+        '                <ul>' +
+        '                    <li><a href="services-details.html" data-i18n="service_1">Planning</a></li>' +
+        '                    <li><a href="services-details.html" data-i18n="service_2">Research</a></li>' +
+        '                    <li><a href="services-details.html" data-i18n="service_3">Consulting</a></li>' +
+        '                    <li><a href="services-details.html" data-i18n="service_4">Analysis</a></li>' +
+        '                </ul>' +
+        '            </div>' +
+        '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-5 order-lg-4">' +
+        '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_customer_title">Customer</span>' +
+        '                <ul>' +
+        '                    <li><a href="customer-stories.html" data-i18n="footer_support">Client support</a></li>' +
+        '                    <li><a href="customer-stories.html" data-i18n="footer_help_center">Help center</a></li>' +
+        '                    <li><a href="customer-stories.html" data-i18n="footer_status">System status</a></li>' +
+        '                    <li><a href="customer-stories.html" data-i18n="footer_feedback">Feedback</a></li>' +
+        '                </ul>' +
+        '            </div>' +
+        '            <div class="col-xl-3 col-lg-3 col-sm-6 md-mb-50px sm-mb-30px xs-mb-0 order-sm-2 order-lg-5">' +
+        '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_newsletter_title">Subscribe newsletter</span>' +
+        '                <p class="lh-30 w-95 sm-w-100 mb-15px" data-i18n="footer_newsletter_text">Subscribe our newsletter to get the latest news and updates!</p>' +
+        '                <div class="d-inline-block w-100 newsletter-style-02 position-relative">' +
+        '                    <form action="#local-success" method="post" class="position-relative">' +
+        '                        <input class="border-color-extra-medium-gray bg-transparent border-radius-4px w-100 form-control input-small pe-50px required" type="email" name="email" data-i18n-placeholder="footer_email_placeholder" placeholder="Enter your email" />' +
+        '                        <input type="hidden" name="redirect" value="">' +
+        '                        <button class="btn pe-20px submit lh-16" aria-label="submit"><i class="feather icon-feather-mail icon-small text-dark-gray"></i></button>' +
+        '                        <div class="form-results border-radius-4px pt-5px pb-5px ps-15px pe-15px fs-14 lh-22 mt-10px w-100 text-center position-absolute d-none"></div>' +
+        '                    </form>' +
+        '                </div>' +
+        '            </div>' +
+        '        </div>' +
+        '        <div class="row justify-content-center align-items-center pt-2">' +
+        '            <div class="col-12">' +
+        '                <div class="divider-style-03 divider-style-03-01 border-color-transparent-white-light"></div>' +
+        '            </div>' +
+        '            <div class="col-lg-5 pt-35px pb-35px md-pt-0 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin footer-copyright">' +
+        '                <p data-i18n="footer_copy">© 2026 Khatwa Designs - خطوة للتصميمات</p>' +
+        '            </div>' +
+        '            <div class="col-lg-7 pt-35px pb-35px md-pt-25px md-pb-5px order-1 order-lg-2 text-center text-lg-end">' +
+        '                <ul class="footer-navbar sm-lh-normal">' +
+        '                    <li><a href="privacy-policy.html" class="nav-link" data-i18n="footer_privacy">Privacy policy</a></li>' +
+        '                    <li><a href="terms-and-conditions.html" class="nav-link" data-i18n="footer_terms">Terms and conditions</a></li>' +
+        '                    <li><a href="copyright.html" class="nav-link" data-i18n="footer_copyright_link">Copyright</a></li>' +
+        '                </ul>' +
+        '            </div>' +
+        '        </div>' +
+        '    </div>' +
+        '</footer>';
+
+    function injectSharedHeader() {
+        var header = document.querySelector('body > header, .box-layout > header, header');
+        if (!header) {
+            return;
+        }
+
+        document.body.setAttribute('data-mobile-nav-trigger-alignment', 'right');
+        document.body.setAttribute('data-mobile-nav-style', 'modern');
+        document.body.setAttribute('data-mobile-nav-bg-color', '#1C3664');
+        header.outerHTML = headerTemplate;
+    }
+
+    function injectSharedFooter() {
+        var footer = document.querySelector('body > footer, .box-layout > footer, footer');
+        if (!footer) {
+            return;
+        }
+
+        footer.outerHTML = footerTemplate;
+    }
+
+    injectSharedHeader();
+    injectSharedFooter();
+})();
