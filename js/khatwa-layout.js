@@ -41,22 +41,7 @@
         '            </div>' +
         '            <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">' +
         '                <div class="header-icon">' +
-        '                    <div class="header-search-icon icon">' +
-        '                        <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>' +
-        '                        <div class="search-form-wrapper">' +
-        '                            <button title="Close" type="button" class="search-close">×</button>' +
-        '                            <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">' +
-        '                                <div class="search-form-box">' +
-        '                                    <h2 class="text-dark-gray text-center fw-600 mb-4 ls-minus-1px" data-i18n="search_title">What are you looking for?</h2>' +
-        '                                    <input class="search-input" id="search-form-input5e219ef164995" data-i18n-placeholder="search_placeholder" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">' +
-        '                                    <button type="submit" class="search-button">' +
-        '                                        <i class="feather icon-feather-search" aria-hidden="true"></i>' +
-        '                                    </button>' +
-        '                                </div>' +
-        '                            </form>' +
-        '                        </div>' +
-        '                    </div>' +
-        '                    <div class="header-button ms-20px d-none d-xl-inline-block">' +
+        '                    <div class="header-button d-none d-xl-inline-block">' +
         '                        <a href="contact.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">' +
         '                            <span>' +
         '                                <span class="btn-double-text fw-600" data-i18n="cta_consultation" data-text="Free consultation">Free consultation</span>' +
@@ -75,14 +60,15 @@
         '    <div class="container">' +
         '        <div class="row justify-content-center pt-6 sm-pt-40px">' +
         '            <div class="col-6 col-xl-3 col-lg-12 col-sm-6 last-paragraph-no-margin text-xl-start text-lg-center order-sm-1 lg-mb-50px sm-mb-30px">' +
-        '                <a href="index.html" class="footer-logo mb-15px d-inline-block"><img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt=""></a>' +
+        '                <a href="index.html" class="footer-logo mb-15px d-inline-block"><img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" style="transform: scale(2); transform-origin: left center; margin-bottom: 20px; margin-top: 10px;"></a>' +
         '                <p class="lh-30 w-90 xl-w-100 mx-lg-auto mx-xl-0" data-i18n="footer_intro">Gearing your company through an innovative strategy.</p>' +
         '                <div class="elements-social social-icon-style-02 mt-20px xs-mt-15px">' +
         '                    <ul class="medium-icon dark">' +
-        '                        <li class="my-0"><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>' +
-        '                        <li class="my-0"><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li>' +
-        '                        <li class="my-0"><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>' +
-        '                        <li class="my-0"><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>' +
+        '                        <li class="my-0"><a class="facebook" href="https://www.facebook.com/khatwadesigns" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>' +
+        '                        <li class="my-0"><a class="instagram" href="https://www.instagram.com/khatwadesigns/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>' +
+        '                        <li class="my-0"><a class="x-twitter" href="https://x.com/khatwadesigns" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>' +
+        '                        <li class="my-0"><a class="linkedin" href="https://www.linkedin.com/company/khatwadesigns/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>' +
+        '                        <li class="my-0"><a class="behance" href="https://www.behance.net/khatwadesigns2" target="_blank"><i class="fa-brands fa-behance"></i></a></li>' +
         '                    </ul>' +
         '                </div>' +
         '            </div>' +
