@@ -12,10 +12,10 @@
             nav_testimonials: 'Testimonials',
             nav_blog: 'Blog',
             nav_contact: 'Contact',
-            service_1: 'Brand strategy',
-            service_2: 'Visual identity',
+            service_1: 'Logo design',
+            service_2: 'Brand identity',
             service_3: 'Social media design',
-            service_4: 'Campaign creative',
+            service_4: 'Web design',
             search_title: 'What are you looking for?',
             search_placeholder: 'Enter your keywords...',
             cta_consultation: 'Free consultation',
@@ -53,7 +53,17 @@
             home_badge: 'Arabic and English design support',
             home_hero_title: 'Design systems that move brands forward',
             home_hero_text: 'Khatwa Designs helps ambitious teams build clear identities, campaign creatives, and consistent digital experiences.',
-            home_hero_btn: 'Start your project'
+            home_hero_btn: 'Start your project',
+            country_egypt: 'Egypt (+20)',
+            country_saudi: 'Saudi Arabia (+966)',
+            country_kuwait: 'Kuwait (+965)',
+            country_uae: 'UAE (+971)',
+            country_qatar: 'Qatar (+974)',
+            country_bahrain: 'Bahrain (+973)',
+            country_iraq: 'Iraq (+964)',
+            country_turkey: 'Turkey (+90)',
+            country_spain: 'Spain (+34)',
+            country_other: 'Other'
         },
         ar: {
             nav_home: 'الرئيسية',
@@ -62,10 +72,10 @@
             nav_testimonials: 'آراء العملاء',
             nav_blog: 'المدونة',
             nav_contact: 'تواصل معنا',
-            service_1: 'استراتيجية العلامة',
+            service_1: 'تصميم الشعار',
             service_2: 'الهوية البصرية',
             service_3: 'تصميم السوشيال ميديا',
-            service_4: 'التصميم الإعلاني',
+            service_4: 'تصميم المواقع',
             search_title: 'ماذا تبحث عنه؟',
             search_placeholder: 'اكتب كلمات البحث...',
             cta_consultation: 'استشارة مجانية',
@@ -103,7 +113,17 @@
             home_badge: 'دعم تصميم بالعربية والإنجليزية',
             home_hero_title: 'أنظمة تصميم تدفع العلامات إلى الأمام',
             home_hero_text: 'تساعد Khatwa Designs الفرق الطموحة على بناء هوية أوضح، وحملات أقوى، وتجربة رقمية متسقة.',
-            home_hero_btn: 'ابدأ مشروعك'
+            home_hero_btn: 'ابدأ مشروعك',
+            country_egypt: 'مصر (+20)',
+            country_saudi: 'السعودية (+966)',
+            country_kuwait: 'الكويت (+965)',
+            country_uae: 'الإمارات (+971)',
+            country_qatar: 'قطر (+974)',
+            country_bahrain: 'البحرين (+973)',
+            country_iraq: 'العراق (+964)',
+            country_turkey: 'تركيا (+90)',
+            country_spain: 'أسبانيا (+34)',
+            country_other: 'أخرى'
         }
     };
 
@@ -163,13 +183,6 @@
         setText('a.nav-link[href="customer-stories.html"]', t.nav_testimonials);
         setText('a.nav-link[href="blog.html"]', t.nav_blog);
         setText('a.nav-link[href="contact.html"]', t.nav_contact);
-
-        setText('a[href="services-details.html"]:nth-of-type(1)', t.service_1);
-        var serviceLinks = document.querySelectorAll('ul.dropdown-menu a[href="services-details.html"]');
-        if (serviceLinks[0]) serviceLinks[0].lastChild.textContent = t.service_1;
-        if (serviceLinks[1]) serviceLinks[1].lastChild.textContent = t.service_2;
-        if (serviceLinks[2]) serviceLinks[2].lastChild.textContent = t.service_3;
-        if (serviceLinks[3]) serviceLinks[3].lastChild.textContent = t.service_4;
 
         setText('.search-form-box h2', t.search_title);
         setInputPlaceholder('.search-form-box .search-input', t.search_placeholder);

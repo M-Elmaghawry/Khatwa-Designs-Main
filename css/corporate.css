@@ -32,6 +32,16 @@ a {
     color: #878898;
 } 
 
+.footer-copyright-link {
+    color: inherit;
+    transition: color 0.25s ease;
+}
+
+.footer-copyright-link:hover,
+.footer-copyright-link:focus {
+    color: var(--accent-color) !important;
+}
+
 .language-switcher {
     display: inline-flex;
     align-items: center;
@@ -256,6 +266,58 @@ h2 {
 .bg-gradient-blue-whale-transparent { 
     background: -webkit-linear-gradient(right, rgba(28, 54, 100, 0.96), rgba(28, 54, 100, 0.0));
     background: linear-gradient(to right, rgba(28, 54, 100, 0.96), rgba(28, 54, 100, 0.0));
+}
+.featured-client-logos .client-box {
+    min-height: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-client-logos .client-box img {
+    height: 108px !important;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.about-trusted-marquee .swiper-slide {
+    min-height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-trusted-marquee .swiper-slide a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-trusted-marquee .swiper-slide img {
+    height: 96px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    .featured-client-logos .client-box {
+        min-height: 114px;
+    }
+
+    .featured-client-logos .client-box img {
+        height: 84px !important;
+    }
+
+    .about-trusted-marquee .swiper-slide {
+        min-height: 104px;
+    }
+
+    .about-trusted-marquee .swiper-slide img {
+        height: 72px;
+    }
 }
 .bg-gradient-quartz-light-transparent {
     background: -webkit-linear-gradient(right, rgba(255, 205, 5, 0.24), rgba(28, 54, 100, 0.10), rgba(255, 255, 255, 0.0));

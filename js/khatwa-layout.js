@@ -27,10 +27,10 @@
         '                            <a href="services.html" class="nav-link" data-i18n="nav_services">Services</a>' +
         '                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>' +
         '                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">' +
-        '                                <li><a href="services-details.html"><i class="line-icon-Medal-2"></i><span data-i18n="service_1">Business planning</span></a></li>' +
-        '                                <li><a href="services-details.html"><i class="line-icon-Archery-2"></i><span data-i18n="service_2">Market research</span></a></li>' +
-        '                                <li><a href="services-details.html"><i class="line-icon-Financial"></i><span data-i18n="service_3">Business consulting</span></a></li>' +
-        '                                <li><a href="services-details.html"><i class="line-icon-Money-Bag"></i><span data-i18n="service_4">Audience analysis</span></a></li>' +
+        '                                <li><a href="logo-design.html"><i class="line-icon-Medal-2"></i><span data-i18n="service_1">Logo design</span></a></li>' +
+        '                                <li><a href="brand-identity.html"><i class="line-icon-Archery-2"></i><span data-i18n="service_2">Brand identity</span></a></li>' +
+        '                                <li><a href="social-media-design.html"><i class="line-icon-Financial"></i><span data-i18n="service_3">Social media design</span></a></li>' +
+        '                                <li><a href="web-design.html"><i class="line-icon-Money-Bag"></i><span data-i18n="service_4">Web design</span></a></li>' +
         '                            </ul>' +
         '                        </li>' +
         '                        <li class="nav-item"><a href="customer-stories.html" class="nav-link" data-i18n="nav_testimonials">Testimonials</a></li>' +
@@ -84,10 +84,10 @@
         '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-4 order-lg-3">' +
         '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_services_title">Services</span>' +
         '                <ul>' +
-        '                    <li><a href="services-details.html" data-i18n="service_1">Planning</a></li>' +
-        '                    <li><a href="services-details.html" data-i18n="service_2">Research</a></li>' +
-        '                    <li><a href="services-details.html" data-i18n="service_3">Consulting</a></li>' +
-        '                    <li><a href="services-details.html" data-i18n="service_4">Analysis</a></li>' +
+        '                    <li><a href="logo-design.html" data-i18n="service_1">Logo design</a></li>' +
+        '                    <li><a href="brand-identity.html" data-i18n="service_2">Brand identity</a></li>' +
+        '                    <li><a href="social-media-design.html" data-i18n="service_3">Social media design</a></li>' +
+        '                    <li><a href="web-design.html" data-i18n="service_4">Web design</a></li>' +
         '                </ul>' +
         '            </div>' +
         '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-5 order-lg-4">' +
@@ -117,7 +117,7 @@
         '                <div class="divider-style-03 divider-style-03-01 border-color-transparent-white-light"></div>' +
         '            </div>' +
         '            <div class="col-lg-5 pt-35px pb-35px md-pt-0 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin footer-copyright">' +
-        '                <p data-i18n="footer_copy">© 2026 Khatwa Designs - خطوة للتصميمات</p>' +
+        '                <p><a href="https://www.behance.net/khatwadesigns2" target="_blank" rel="noopener noreferrer" class="footer-copyright-link" data-i18n="footer_copy">© 2026 Khatwa Designs - خطوة للتصميمات</a></p>' +
         '            </div>' +
         '            <div class="col-lg-7 pt-35px pb-35px md-pt-25px md-pb-5px order-1 order-lg-2 text-center text-lg-end">' +
         '                <ul class="footer-navbar sm-lh-normal">' +
@@ -151,6 +151,40 @@
         footer.outerHTML = footerTemplate;
     }
 
+    function bindServicesDropdownLinks() {
+        document.addEventListener('click', function (event) {
+            var link = event.target.closest('li.nav-item.dropdown.dropdown-with-icon-style02 .dropdown-menu a');
+            if (!link) {
+                return;
+            }
+
+            // Keep dropdown navigation deterministic when other theme handlers run.
+            event.preventDefault();
+            event.stopPropagation();
+            window.location.href = link.href;
+        });
+    }
+
+    function highlightActiveSidebarService() {
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPage = (window.location.pathname.split('/').pop() || 'index.html').split('?')[0];
+            var sidebarLinks = document.querySelectorAll('.list-style-02 a[href]');
+            sidebarLinks.forEach(function (link) {
+                var linkPage = (link.getAttribute('href') || '').split('?')[0].split('/').pop();
+                var li = link.closest('li');
+                if (linkPage === currentPage) {
+                    link.classList.add('text-dark-gray', 'text-dark-gray-hover');
+                    if (li) { li.classList.add('text-dark-gray'); }
+                } else {
+                    link.classList.remove('text-dark-gray', 'text-dark-gray-hover');
+                    if (li) { li.classList.remove('text-dark-gray'); }
+                }
+            });
+        });
+    }
+
     injectSharedHeader();
     injectSharedFooter();
+    bindServicesDropdownLinks();
+    highlightActiveSidebarService();
 })();
