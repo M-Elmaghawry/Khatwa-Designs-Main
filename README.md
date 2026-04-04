@@ -108,6 +108,24 @@ https://github.com/M-Elmaghawry/Khatwa-Designs-Main
 2. git commit -m "your message"
 3. git push origin main
 
+## المعاينة عبر GitHub Pages و Actions
+
+تم تجهيز Workflow باسم `deploy-pages.yml` داخل `.github/workflows/` بحيث يتم نشر الموقع تلقائيًا عند أي Push على فرع `main`.
+
+### خطوات التفعيل مرة واحدة على GitHub
+
+1. افتح المستودع على GitHub.
+2. ادخل إلى **Settings > Pages**.
+3. من **Source** اختر **GitHub Actions**.
+4. اعمل `git add -A` ثم `git commit` ثم `git push origin main`.
+5. انتظر انتهاء الـ workflow من تبويب **Actions**.
+
+بعدها ستكون المعاينة غالبًا على الرابط:
+
+`https://USERNAME.github.io/Khatwa-Designs-Main/`
+
+> ملاحظة: لأن الموقع Static HTML، المعاينة ستعمل جيدًا، لكن أي جزء يعتمد على PHP أو Backend لن يعمل على GitHub Pages.
+
 ## الترخيص
 
 هذا المشروع مبني على قالب Crafto (ThemeZaa) مع تخصيصات خاصة بعلامة Khatwa Designs.

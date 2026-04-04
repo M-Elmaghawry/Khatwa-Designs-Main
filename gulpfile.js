@@ -92,7 +92,16 @@ function watchTask() {
   watch('js/vendors/*.js', concatVendorsTask);
 }
 
-// Default task
+// Build task for CI / GitHub Pages
+exports.build = parallel(
+  sassTask,
+  iconTask,
+  vendorsTask,
+  concatVendorsTask,
+  responsiveTask
+);
+
+// Default task for local development
 exports.default = parallel(
   browserSyncTask,
   sassTask,
