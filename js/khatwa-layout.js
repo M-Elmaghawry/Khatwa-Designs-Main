@@ -7,7 +7,7 @@
         '        <div class="container-fluid">' +
         '            <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">' +
         '                <a class="navbar-brand" href="index.html">' +
-        '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="default-logo">' +
+        '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="Khatwa Designs" class="default-logo">' +
         '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="alt-logo">' +
         '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="mobile-logo">' +
         '                </a>' +
@@ -27,14 +27,15 @@
         '                            <a href="services.html" class="nav-link" data-i18n="nav_services">Services</a>' +
         '                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>' +
         '                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">' +
-        '                                <li><a href="logo-design.html"><i class="line-icon-Medal-2"></i><span data-i18n="service_1">Logo design</span></a></li>' +
-        '                                <li><a href="brand-identity.html"><i class="line-icon-Archery-2"></i><span data-i18n="service_2">Brand identity</span></a></li>' +
-        '                                <li><a href="social-media-design.html"><i class="line-icon-Financial"></i><span data-i18n="service_3">Social media design</span></a></li>' +
-        '                                <li><a href="web-design.html"><i class="line-icon-Money-Bag"></i><span data-i18n="service_4">Web design</span></a></li>' +
+        '                                <li><a href="company-portfolio.html"><i class="line-icon-Medal-2"></i><span data-i18n="service_profiles">Company Profiles &amp; Engineering Portfolios</span></a></li>' +
+        '                                <li><a href="powerpoint-presentations.html"><i class="line-icon-Financial"></i><span data-i18n="service_presentations">Presentations, Tender Documents &amp; Technical Proposals</span></a></li>' +
+        '                                <li><a href="web-design.html"><i class="line-icon-Money-Bag"></i><span data-i18n="service_web">Website Design &amp; Development</span></a></li>' +
+        '                                <li><a href="brand-identity.html"><i class="line-icon-Archery-2"></i><span data-i18n="service_brand">Logo Design &amp; Visual Identity</span></a></li>' +
+        '                                <li><a href="social-media-design.html"><i class="line-icon-Financial"></i><span data-i18n="service_social">Social Media Design</span></a></li>' +
         '                            </ul>' +
         '                        </li>' +
-        '                        <li class="nav-item"><a href="customer-stories.html" class="nav-link" data-i18n="nav_testimonials">Testimonials</a></li>' +
-        '                        <li class="nav-item"><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>' +
+        '                        <li class="nav-item"><a href="portfolio.html" class="nav-link" data-i18n="nav_work">Our Work</a></li>' +
+        '                        <li class="nav-item"><a href="customer-stories.html" class="nav-link"         data-i18n="nav_testimonials">Client Reviews</a></li>' +
         '                        <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>' +
         '                    </ul>' +
         '                </div>' +
@@ -44,7 +45,7 @@
         '                    <div class="header-button d-none d-xl-inline-block">' +
         '                        <a href="contact.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">' +
         '                            <span>' +
-        '                                <span class="btn-double-text fw-600" data-i18n="cta_consultation" data-text="Free consultation">Free consultation</span>' +
+        '                                <span class="btn-double-text fw-600" data-i18n="cta_quote" data-text="Request a Quote">Request a Quote</span>' +
         '                                <span><i class="fa-regular fa-envelope"></i></span>' +
         '                            </span>' +
         '                        </a>' +
@@ -59,9 +60,9 @@
         '<footer class="p-0 fs-16 border-top border-color-extra-medium-gray">' +
         '    <div class="container">' +
         '        <div class="row justify-content-center pt-6 sm-pt-40px">' +
-        '            <div class="col-6 col-xl-3 col-lg-12 col-sm-6 last-paragraph-no-margin text-xl-start text-lg-center order-sm-1 lg-mb-50px sm-mb-30px">' +
-        '                <a href="index.html" class="footer-logo mb-15px d-inline-block"><img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" style="transform: scale(2); transform-origin: left center; margin-bottom: 20px; margin-top: 10px;"></a>' +
-        '                <p class="lh-30 w-90 xl-w-100 mx-lg-auto mx-xl-0" data-i18n="footer_intro">Gearing your company through an innovative strategy.</p>' +
+        '            <div class="col-12 col-xl-4 col-lg-12 last-paragraph-no-margin text-xl-start text-lg-center order-sm-1 lg-mb-50px sm-mb-30px">' +
+        '                <a href="index.html" class="footer-logo mb-15px d-inline-block"><img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="Khatwa Designs" style="transform: scale(2); transform-origin: left center; margin-bottom: 20px; margin-top: 10px;"></a>' +
+        '                <p class="lh-30 w-90 xl-w-100 mx-lg-auto mx-xl-0" data-i18n="footer_intro">Khatwa Designs is a creative and digital partner for construction companies and engineering firms, helping them organize content and present their work through company profiles, technical presentations, visual identity, and websites.</p>' +
         '                <div class="elements-social social-icon-style-02 mt-20px xs-mt-15px">' +
         '                    <ul class="medium-icon dark">' +
         '                        <li class="my-0"><a class="facebook" href="https://www.facebook.com/khatwadesigns" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>' +
@@ -72,44 +73,26 @@
         '                    </ul>' +
         '                </div>' +
         '            </div>' +
-        '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">' +
+        '            <div class="col-6 col-xl-3 col-lg-4 col-sm-6 xs-mb-30px order-sm-2">' +
         '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_company_title">Company</span>' +
         '                <ul>' +
-        '                    <li><a href="about.html" data-i18n="footer_about">Who we are</a></li>' +
-        '                    <li><a href="services.html" data-i18n="footer_services_link">Our services</a><div class="bg-dark-gray fw-600 text-white lh-22 text-uppercase border-radius-30px ps-10px pe-10px fs-10 ms-10px d-inline-block align-middle" data-i18n="footer_hot">Hot</div></li>' +
-        '                    <li><a href="customer-stories.html" data-i18n="footer_clients">Our clients</a></li>' +
-        '                    <li><a href="contact.html" data-i18n="footer_contact">Contact us</a></li>' +
+        '                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>' +
+        '                    <li><a href="about.html" data-i18n="footer_about">About Us</a></li>' +
+        '                    <li><a href="services.html" data-i18n="footer_services_link">Services</a></li>' +
+        '                    <li><a href="portfolio.html" data-i18n="nav_work">Our Work</a></li>' +
+        '                    <li><a href="customer-stories.html" data-i18n="footer_clients">Client Reviews</a></li>' +
+        '                    <li><a href="contact.html" data-i18n="cta_quote">Request a Quote</a></li>' +
         '                </ul>' +
         '            </div>' +
-        '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-4 order-lg-3">' +
+        '            <div class="col-6 col-xl-5 col-lg-8 col-sm-6 xs-mb-30px order-sm-3">' +
         '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_services_title">Services</span>' +
         '                <ul>' +
-        '                    <li><a href="logo-design.html" data-i18n="service_1">Logo design</a></li>' +
-        '                    <li><a href="brand-identity.html" data-i18n="service_2">Brand identity</a></li>' +
-        '                    <li><a href="social-media-design.html" data-i18n="service_3">Social media design</a></li>' +
-        '                    <li><a href="web-design.html" data-i18n="service_4">Web design</a></li>' +
+        '                    <li><a href="company-portfolio.html" data-i18n="service_profiles">Company Profiles &amp; Engineering Portfolios</a></li>' +
+        '                    <li><a href="powerpoint-presentations.html" data-i18n="service_presentations">Presentations, Tender Documents &amp; Technical Proposals</a></li>' +
+        '                    <li><a href="web-design.html" data-i18n="service_web">Website Design &amp; Development</a></li>' +
+        '                    <li><a href="brand-identity.html" data-i18n="service_brand">Logo Design &amp; Visual Identity</a></li>' +
+        '                    <li><a href="social-media-design.html" data-i18n="service_social">Social Media Design</a></li>' +
         '                </ul>' +
-        '            </div>' +
-        '            <div class="col-6 col-xl-2 col-lg-3 col-sm-4 xs-mb-30px order-sm-5 order-lg-4">' +
-        '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_customer_title">Customer</span>' +
-        '                <ul>' +
-        '                    <li><a href="customer-stories.html" data-i18n="footer_support">Client support</a></li>' +
-        '                    <li><a href="customer-stories.html" data-i18n="footer_help_center">Help center</a></li>' +
-        '                    <li><a href="customer-stories.html" data-i18n="footer_status">System status</a></li>' +
-        '                    <li><a href="customer-stories.html" data-i18n="footer_feedback">Feedback</a></li>' +
-        '                </ul>' +
-        '            </div>' +
-        '            <div class="col-xl-3 col-lg-3 col-sm-6 md-mb-50px sm-mb-30px xs-mb-0 order-sm-2 order-lg-5">' +
-        '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_newsletter_title">Subscribe newsletter</span>' +
-        '                <p class="lh-30 w-95 sm-w-100 mb-15px" data-i18n="footer_newsletter_text">Subscribe our newsletter to get the latest news and updates!</p>' +
-        '                <div class="d-inline-block w-100 newsletter-style-02 position-relative">' +
-        '                    <form action="#local-success" method="post" class="position-relative">' +
-        '                        <input class="border-color-extra-medium-gray bg-transparent border-radius-4px w-100 form-control input-small pe-50px required" type="email" name="email" data-i18n-placeholder="footer_email_placeholder" placeholder="Enter your email" />' +
-        '                        <input type="hidden" name="redirect" value="">' +
-        '                        <button class="btn pe-20px submit lh-16" aria-label="submit"><i class="feather icon-feather-mail icon-small text-dark-gray"></i></button>' +
-        '                        <div class="form-results border-radius-4px pt-5px pb-5px ps-15px pe-15px fs-14 lh-22 mt-10px w-100 text-center position-absolute d-none"></div>' +
-        '                    </form>' +
-        '                </div>' +
         '            </div>' +
         '        </div>' +
         '        <div class="row justify-content-center align-items-center pt-2">' +
