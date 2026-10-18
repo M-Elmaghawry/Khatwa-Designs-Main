@@ -88,7 +88,6 @@ npm run build
 - images/ : الصور والشعارات
   - images/customers/ : شعارات العملاء
 - fonts/ : الخطوط
-- revolution/ : ملفات Slider/Revolution
 
 ## ملاحظات تطوير
 

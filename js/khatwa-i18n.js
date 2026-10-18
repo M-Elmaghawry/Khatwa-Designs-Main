@@ -92,7 +92,7 @@
             home_step4_text: 'We provide the final deliverables according to the agreed scope.',
             home_reviews_title: 'Built on Real Client Experiences.',
             home_reviews_intro: 'A selection of recommendations published on Khatwa Designs’ Facebook page.',
-            home_reviews_note: 'English texts are translations of the original Arabic recommendations, except Amira Hassan’s, which was written in English.',
+            home_reviews_note: 'These recommendations are from 2021. English texts are translations of the original Arabic recommendations, except Amira Hassan’s, which was written in English.',
             home_reviews_btn: 'Read More Reviews',
             home_rev1: '“A professional company that respects deadlines and delivers high-quality work.”',
             home_rev2: '“Excellent work delivered quickly. Thank you—this won\'t be our last collaboration.”',
@@ -290,8 +290,7 @@
             cs_meta_title: 'Khatwa Designs Client Reviews',
             cs_meta_desc: 'Read selected client recommendations published on Khatwa Designs’ Facebook page.',
             cs_title: 'What Clients Say About Working with Khatwa.',
-            cs_intro: 'We appreciate the recommendations shared by clients on Khatwa Designs’ Facebook page. This page presents selected feedback as originally published, with the source and date indicated.',
-            cs_source: 'Recommendation published on Facebook',
+            cs_intro: 'We appreciate the recommendations shared by clients on Khatwa Designs’ Facebook page. This page presents a selection of their feedback.',
             cs_note: 'Most reviews were originally written in Arabic; the English text shown here is a translation. Recommendations date from 2021.',
             cs_rev1: '“A professional company that respects deadlines and delivers high-quality work.”',
             cs_rev2: '“One of the best companies in their field—creative and professional.”',
@@ -415,7 +414,7 @@
             home_step4_text: 'نسلّم المخرجات النهائية وفق نطاق المشروع والاتفاق.',
             home_reviews_title: 'ثقة نبنيها من خلال تجربة التعامل.',
             home_reviews_intro: 'هذه مختارات من توصيات منشورة على صفحة خطوة للتصميمات على فيسبوك.',
-            home_reviews_note: 'النصوص كما نُشرت أصلًا على الصفحة؛ توصية Amira Hassan كُتبت بالإنجليزية.',
+            home_reviews_note: 'تعود هذه التوصيات إلى عام 2021. النصوص كما نُشرت أصلًا على الصفحة؛ توصية Amira Hassan كُتبت بالإنجليزية.',
             home_reviews_btn: 'قراءة المزيد من التوصيات',
             home_rev1: '«شركة محترمة جدا بيحترموا مواعيدهم وشغلهم عالي»',
             home_rev2: '«شغل ممتاز وفي وقت منجز جدا شكرا ليكم ومش آخر تعامل إن شاء الله 😍»',
@@ -613,8 +612,7 @@
             cs_meta_title: 'آراء عملاء خطوة للتصميمات',
             cs_meta_desc: 'اقرأ مختارات من توصيات العملاء المنشورة على صفحة خطوة للتصميمات على فيسبوك.',
             cs_title: 'آراء عملائنا عن تجربة التعامل مع خطوة.',
-            cs_intro: 'نعتز بالتوصيات التي شاركها عملاؤنا على صفحة خطوة للتصميمات على فيسبوك. نعرض هنا مجموعة من آرائهم كما نُشرت، مع الإشارة إلى المصدر والتاريخ.',
-            cs_source: 'توصية منشورة على Facebook',
+            cs_intro: 'نعتز بالتوصيات التي شاركها عملاؤنا على صفحة خطوة للتصميمات على فيسبوك. نعرض هنا مجموعة مختارة من آرائهم.',
             cs_note: 'تعود هذه التوصيات إلى عام 2021، وتظهر بنصها الأصلي كما نُشرت.',
             cs_rev1: '«شركة محترمة جدا بيحترموا مواعيدهم وشغلهم عالي»',
             cs_rev2: '«من افضل الشركات في مجالهم مبدعين و محترفين»',
@@ -698,9 +696,60 @@
         });
     }
 
+    function prepareButtonTextMotion() {
+        document.querySelectorAll('a.btn:not(.btn-switch-text):not(.lang-btn):not([data-lang]), button.btn:not(.btn-switch-text):not(.lang-btn):not([data-lang])').forEach(function (button) {
+            if (button.closest('.language-switcher') || button.querySelector('.khatwa-button-text')) {
+                return;
+            }
+
+            var walker = document.createTreeWalker(button, NodeFilter.SHOW_TEXT);
+            var textNodes = [];
+            var node;
+            while ((node = walker.nextNode())) {
+                if (node.nodeValue.trim() && !node.parentElement.closest('i, svg, script, style')) {
+                    textNodes.push(node);
+                }
+            }
+            if (!textNodes.length) {
+                return;
+            }
+
+            var translationKey = button.getAttribute('data-i18n');
+            if (translationKey) {
+                var clip = document.createElement('span');
+                var label = document.createElement('span');
+                clip.className = 'khatwa-button-clip';
+                label.className = 'khatwa-button-text';
+                label.setAttribute('data-i18n', translationKey);
+                label.setAttribute('data-text', textNodes.map(function (textNode) {
+                    return textNode.nodeValue;
+                }).join('').trim());
+                clip.appendChild(label);
+                button.removeAttribute('data-i18n');
+                button.insertBefore(clip, textNodes[0]);
+                textNodes.forEach(function (textNode) {
+                    textNode.remove();
+                });
+                return;
+            }
+
+            textNodes.forEach(function (textNode) {
+                var clip = document.createElement('span');
+                var label = document.createElement('span');
+                clip.className = 'khatwa-button-clip';
+                label.className = 'khatwa-button-text';
+                label.setAttribute('data-text', textNode.nodeValue.trim());
+                clip.appendChild(label);
+                textNode.parentNode.insertBefore(clip, textNode);
+                label.appendChild(textNode);
+            });
+        });
+    }
+
     function applyGlobalText(lang) {
         var t = translations[lang];
 
+        prepareButtonTextMotion();
         applyDataTranslations(t);
 
         setText('a.nav-link[href="index.html"]', t.nav_home);
@@ -799,6 +848,23 @@
         });
     }
 
+    function applyArabicFont() {
+        document.querySelectorAll('.khatwa-arabic-font').forEach(function (el) {
+            el.classList.remove('khatwa-arabic-font');
+        });
+
+        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        var textNode;
+        while ((textNode = walker.nextNode())) {
+            if (/[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/.test(textNode.nodeValue)) {
+                var parent = textNode.parentElement;
+                if (parent) {
+                    parent.classList.add('khatwa-arabic-font');
+                }
+            }
+        }
+    }
+
     function applyLanguage(lang) {
         var safeLang = SUPPORTED_LANGS.indexOf(lang) !== -1 ? lang : 'en';
         localStorage.setItem(STORAGE_KEY, safeLang);
@@ -811,8 +877,13 @@
         applyGlobalText(safeLang);
         applyHomeText(safeLang);
         applyStatusPageText(safeLang);
+        prepareButtonTextMotion();
+        document.querySelectorAll('.khatwa-button-text').forEach(function (label) {
+            label.setAttribute('data-text', label.textContent.trim());
+        });
         setLinksLanguage(safeLang);
         markActiveButton(safeLang);
+        applyArabicFont();
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -823,5 +894,3 @@
         applyLanguage(lang);
     });
 })();
-
-

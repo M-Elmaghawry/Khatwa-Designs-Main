@@ -18,6 +18,7 @@
      ====================================== */
     const {animate} = anime;
     var menuBreakPoint = 991;
+    var mobileNavBreakPoint = 1199;
     var sliderBreakPoint = 991; // It will effect when you have used attribute "data-thumb-slider-md-direction" OR "data-slider-md-direction"
     var animeBreakPoint = 1199;
     var headerTransition = 300;  // Header transition effect time
@@ -65,6 +66,16 @@
     $('.vertical-counter, .counter, .progress-bar, .pie-chart-style-01, .attractive-hover, .splitting-animation, .section-dark, footer, [data-anime], [data-fancy-text]').each(function () {
         $(this).appear().trigger('resize');
     });
+
+    const khatwaRevealElements = $('[data-khatwa-reveal]');
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (khatwaRevealElements.length && !prefersReducedMotion && typeof $.fn.appear === 'function') {
+        khatwaRevealElements.on('appear', function () {
+            this.classList.add('khatwa-revealed');
+        });
+        document.documentElement.classList.add('khatwa-reveal-enabled');
+        khatwaRevealElements.appear({force_process: true});
+    }
 
     initScrollNavigate();
     slideboxstyle();
@@ -122,7 +133,7 @@
                 $('.navbar-full-screen-menu-inner').css('background', bgColor);
             }
             // Set submenu height after opened toggle menu
-            if (getWindowWidth() <= menuBreakPoint) {
+            if (getWindowWidth() <= mobileNavBreakPoint) {
                 var windowHeight = getWindowHeight(),
                         headerHeight = getHeaderHeight();
                 $('header .navbar-collapse').css('max-height', windowHeight - headerHeight);
@@ -289,7 +300,7 @@
     $('.nav-item.submenu').on('mouseenter touchstart', function (e) {
         var _this = $(this),
                 colorAttr = $('header nav').attr('data-header-hover');
-        if (getWindowWidth() > menuBreakPoint) {
+        if (getWindowWidth() > mobileNavBreakPoint) {
             if ($(e.target).siblings('.dropdown-menu').length) {
                 e.preventDefault();
             }
@@ -309,7 +320,7 @@
         var _this = $(this);
         _this.siblings('.dropdown').removeClass('open');
         _this.parents('.navbar-nav').siblings('.navbar-nav').find('.dropdown').removeClass('open');
-        if (getWindowWidth() >= menuBreakPoint) {
+        if (getWindowWidth() >= mobileNavBreakPoint) {
             if (_this.hasClass('open') && _this[0] == $(e.target).parent()[0]) {
                 let href = $(_this).find('.nav-link').attr('href');
                 if (href != 'undefined' && href.indexOf('javascript') === -1 && typeof undefined !== typeof href && href != '#') {
@@ -319,7 +330,7 @@
         }
         _this.addClass('open');
         menuPosition(_this);
-        if (getWindowWidth() > menuBreakPoint) {
+        if (getWindowWidth() > mobileNavBreakPoint) {
             if ($(e.target).siblings('.dropdown-menu').length) {
                 e.preventDefault();
             }
@@ -381,7 +392,7 @@
                 }
 
                 if ($('.left-modern-menu').hasClass('left-menu-onepage')) {
-                    if (getWindowWidth() <= menuBreakPoint) {
+                    if (getWindowWidth() <= mobileNavBreakPoint) {
                         offset = -59;
                     }
                 }
@@ -2483,7 +2494,7 @@
         }
 
         // Hide side menu on scroll
-        if (scrollPos >= 200 && getWindowWidth() > menuBreakPoint) {
+        if (scrollPos >= 200 && getWindowWidth() > mobileNavBreakPoint) {
 
             // Close all dropdown menu
             $('.dropdown').trigger('mouseleave');

@@ -3,16 +3,16 @@
 
     var headerTemplate = '' +
         '<header>' +
-        '    <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">' +
+        '    <nav class="navbar navbar-expand-xl header-light bg-white disable-fixed">' +
         '        <div class="container-fluid">' +
-        '            <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">' +
+        '            <div class="col-auto col-xl-3 me-lg-0 me-auto">' +
         '                <a class="navbar-brand" href="index.html">' +
         '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="Khatwa Designs" class="default-logo">' +
         '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="alt-logo">' +
         '                    <img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="" class="mobile-logo">' +
         '                </a>' +
         '            </div>' +
-        '            <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">' +
+        '            <div class="col-auto col-xl-6 menu-order position-static">' +
         '                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">' +
         '                    <span class="navbar-toggler-line"></span>' +
         '                    <span class="navbar-toggler-line"></span>' +
@@ -40,9 +40,9 @@
         '                    </ul>' +
         '                </div>' +
         '            </div>' +
-        '            <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">' +
+        '            <div class="col-auto col-xl-3 text-end md-pe-0">' +
         '                <div class="header-icon">' +
-        '                    <div class="header-button d-none d-xl-inline-block">' +
+        '                    <div class="header-button d-none d-lg-inline-block">' +
         '                        <a href="contact.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">' +
         '                            <span>' +
         '                                <span class="btn-double-text fw-600" data-i18n="cta_quote" data-text="Request a Quote">Request a Quote</span>' +
@@ -60,9 +60,9 @@
         '<footer class="p-0 fs-16 border-top border-color-extra-medium-gray">' +
         '    <div class="container">' +
         '        <div class="row justify-content-center pt-6 sm-pt-40px">' +
-        '            <div class="col-12 col-xl-4 col-lg-12 last-paragraph-no-margin text-xl-start text-lg-center order-sm-1 lg-mb-50px sm-mb-30px">' +
-        '                <a href="index.html" class="footer-logo mb-15px d-inline-block"><img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="Khatwa Designs" style="transform: scale(2); transform-origin: left center; margin-bottom: 20px; margin-top: 10px;"></a>' +
-        '                <p class="lh-30 w-90 xl-w-100 mx-lg-auto mx-xl-0" data-i18n="footer_intro">Khatwa Designs is a creative and digital partner for construction companies and engineering firms, helping them organize content and present their work through company profiles, technical presentations, visual identity, and websites.</p>' +
+        '            <div class="footer-brand-column col-12 col-xl-4 col-lg-12 last-paragraph-no-margin text-center order-sm-1 lg-mb-50px sm-mb-30px">' +
+        '                <a href="index.html" class="footer-logo mb-15px d-inline-block"><img src="images/khatwa-logo.png" data-at2x="images/khatwa-logo@2x.png" alt="Khatwa Designs"></a>' +
+        '                <p class="footer-intro lh-30 w-90 xl-w-100 mx-auto" data-i18n="footer_intro">Khatwa Designs is a creative and digital partner for construction companies and engineering firms, helping them organize content and present their work through company profiles, technical presentations, visual identity, and websites.</p>' +
         '                <div class="elements-social social-icon-style-02 mt-20px xs-mt-15px">' +
         '                    <ul class="medium-icon dark">' +
         '                        <li class="my-0"><a class="facebook" href="https://www.facebook.com/khatwadesigns" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>' +
@@ -73,7 +73,7 @@
         '                    </ul>' +
         '                </div>' +
         '            </div>' +
-        '            <div class="col-6 col-xl-3 col-lg-4 col-sm-6 xs-mb-30px order-sm-2">' +
+        '            <div class="footer-company-column col-12 col-xl-4 col-lg-4 col-sm-6 xs-mb-30px order-sm-2 text-center">' +
         '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_company_title">Company</span>' +
         '                <ul>' +
         '                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>' +
@@ -84,7 +84,7 @@
         '                    <li><a href="contact.html" data-i18n="cta_quote">Request a Quote</a></li>' +
         '                </ul>' +
         '            </div>' +
-        '            <div class="col-6 col-xl-5 col-lg-8 col-sm-6 xs-mb-30px order-sm-3">' +
+        '            <div class="footer-services-column col-12 col-xl-4 col-lg-8 col-sm-6 xs-mb-30px order-sm-3">' +
         '                <span class="fs-17 fw-600 d-block text-dark-gray mb-5px" data-i18n="footer_services_title">Services</span>' +
         '                <ul>' +
         '                    <li><a href="company-portfolio.html" data-i18n="service_profiles">Company Profiles &amp; Engineering Portfolios</a></li>' +
