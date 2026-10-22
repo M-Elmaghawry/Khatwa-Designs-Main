@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://m-elmaghawry.github.io/Khatwa-Designs-Main/sitemap.xml

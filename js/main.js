@@ -1187,7 +1187,7 @@
                     figcaption = _this.find('figcaption');
 
             setTimeout(function () {
-                figure.css({'padding-bottom': figcaption.outerHeight()});
+                figure.css({'padding-bottom': figure.find('img').length ? figcaption.outerHeight() : 0});
             }, 500);
         });
     }

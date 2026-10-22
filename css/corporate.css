@@ -80,14 +80,46 @@ body.lang-ar .language-switcher {
     margin-inline-end: 12px;
 }
 
+body.lang-ar .mobile-nav-action .mobile-language-switcher {
+    margin-inline: 0;
+}
+
+body.lang-ar .mobile-nav-action {
+    text-align: right;
+}
+
 body.lang-ar .search-form-box,
 body.lang-ar .search-form {
     text-align: right !important;
 }
 
-@media (max-width: 991.98px) {
-    .language-switcher {
+@media (max-width: 1199.98px) {
+    .header-icon > .language-switcher {
         display: none;
+    }
+}
+
+.mobile-nav-action {
+    display: none;
+}
+
+@media (max-width: 1199.98px) {
+    .mobile-nav-action {
+        display: block;
+    }
+
+    .mobile-nav-action .mobile-language-switcher {
+        display: inline-flex;
+        margin: 12px 0;
+    }
+
+    .navbar .mobile-nav-action > .nav-link {
+        display: inline-block;
+        margin: 12px 0;
+        padding: 10px 18px;
+        border-radius: 30px;
+        background: var(--base-color);
+        color: #ffffff;
     }
 }
 

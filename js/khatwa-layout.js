@@ -37,12 +37,17 @@
         '                        <li class="nav-item"><a href="portfolio.html" class="nav-link" data-i18n="nav_work">Our Work</a></li>' +
         '                        <li class="nav-item"><a href="customer-stories.html" class="nav-link"         data-i18n="nav_testimonials">Client Reviews</a></li>' +
         '                        <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>' +
+        '                        <li class="nav-item mobile-nav-action" data-mobile-quote><a href="contact.html" class="nav-link" data-i18n="cta_quote">Request a Quote</a></li>' +
+        '                        <li class="nav-item mobile-nav-action"><div class="language-switcher mobile-language-switcher">' +
+        '                            <button type="button" class="lang-btn" data-lang="en">English</button>' +
+        '                            <button type="button" class="lang-btn" data-lang="ar">العربية</button>' +
+        '                        </div></li>' +
         '                    </ul>' +
         '                </div>' +
         '            </div>' +
         '            <div class="col-auto col-xl-3 text-end md-pe-0">' +
         '                <div class="header-icon">' +
-        '                    <div class="header-button d-none d-lg-inline-block">' +
+        '                    <div class="header-button d-none d-xl-inline-block">' +
         '                        <a href="contact.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">' +
         '                            <span>' +
         '                                <span class="btn-double-text fw-600" data-i18n="cta_quote" data-text="Request a Quote">Request a Quote</span>' +

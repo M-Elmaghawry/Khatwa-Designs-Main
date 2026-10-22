@@ -69,6 +69,12 @@ function concatVendorsTask() {
     .pipe(browserSync.stream());
 }
 
+function minifySiteScriptsTask() {
+  return src(['js/main.js', 'js/khatwa-i18n.js'], { base: 'js' })
+    .pipe(terser())
+    .pipe(dest('js/min'));
+}
+
 // BrowserSync
 function browserSyncTask() {
   browserSync.init({
@@ -98,8 +104,11 @@ exports.build = parallel(
   iconTask,
   vendorsTask,
   concatVendorsTask,
-  responsiveTask
+  responsiveTask,
+  minifySiteScriptsTask
 );
+
+exports.minifySiteScripts = minifySiteScriptsTask;
 
 // Default task for local development
 exports.default = parallel(

@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     var STORAGE_KEY = 'khatwa_lang';
@@ -316,6 +316,56 @@
             cs_date10: '15 May 2021',
             cs_date11: '15 May 2021',
             cs_date12: '15 May 2021',
+            contact_meta_title: 'Contact Khatwa Designs | Request a Quote',
+            contact_meta_desc: 'Contact Khatwa Designs to discuss company profiles, presentations, website design, and visual identity projects.',
+            contact_title: 'Contact us',
+            contact_kicker: "Let's talk",
+            contact_intro_title: 'Tell us about your project and what you need to communicate.',
+            contact_intro_text: 'Share the project context and available information so we can discuss a suitable scope and next steps.',
+            contact_working_model: 'How we work',
+            contact_working_text: 'We collaborate with clients in Egypt and Saudi Arabia on company profiles, presentations, websites, visual identity, and social media design.',
+            contact_response_time: 'Next steps',
+            contact_response_text: 'We review each inquiry and respond with a recommendation based on the information provided.',
+            contact_consultation_flow: 'Project discussion',
+            contact_consultation_text: 'We discuss your needs, agree on the scope, and outline deliverables, timing, and review stages.',
+            contact_clients: 'Who we work with',
+            contact_clients_text: 'Construction companies, contracting companies, and engineering consultancies.',
+            contact_cta_text: "Let's discuss your project.",
+            contact_cta_link: 'Start the conversation.',
+            contact_remote_kicker: 'Project discussion',
+            contact_remote_title: 'Tell us about your project and we will discuss the next steps.',
+            contact_remote_text: 'Share your goals, timing, and available information. We will review the request and discuss an appropriate scope.',
+            contact_form_kicker: 'Project inquiry',
+            contact_form_title: "Share the context and we'll help you shape the next move.",
+            contact_name_label: 'Your name*',
+            contact_name_placeholder: 'Tell us your name',
+            contact_email_label: 'Email address*',
+            contact_email_placeholder: 'Enter your email address',
+            contact_phone_label: 'Phone number',
+            contact_phone_placeholder: 'Add your phone number',
+            contact_service_label: 'What do you need?',
+            contact_service_placeholder: 'Select a service',
+            contact_brand_identity: 'Brand identity',
+            contact_social_management: 'Social media management',
+            contact_video_presentations: 'Video presentations',
+            contact_company_profile: 'Company profile',
+            contact_automation: 'n8n + AI automations',
+            contact_details_label: 'Project details',
+            contact_details_placeholder: 'Share your goals, timing, and available project information',
+            contact_privacy_note: 'We use the information you provide to review your request and respond.',
+            contact_submit: 'Send inquiry',
+            page404_meta_title: 'Page Not Found | Khatwa Designs',
+            page404_meta_desc: 'The page may have moved or no longer exists. Return to Khatwa Designs homepage.',
+            page404_kicker: 'Sorry',
+            page404_title: 'Page not found!',
+            page404_text: "The page you're looking for may have moved or no longer exists.",
+            page404_home: 'Back to homepage',
+            thankyou_meta_title: 'Thank You | Khatwa Designs',
+            thankyou_meta_desc: 'Thank you for contacting Khatwa Designs.',
+            thankyou_thanks: 'Thank you',
+            thankyou_title: 'Thank you for contacting us',
+            thankyou_text: 'Your message has been received. We will review the information you provided and respond to your inquiry.',
+            thankyou_home: 'Back to homepage',
             country_egypt: 'Egypt (+20)',
             country_saudi: 'Saudi Arabia (+966)',
             country_kuwait: 'Kuwait (+965)',
@@ -638,6 +688,56 @@
             cs_date10: '15 مايو 2021',
             cs_date11: '15 مايو 2021',
             cs_date12: '15 مايو 2021',
+            contact_meta_title: 'تواصل مع خطوة للتصميمات | اطلب عرض سعر',
+            contact_meta_desc: 'تواصل مع خطوة للتصميمات لمناقشة مشروعات بروفايلات الشركات والعروض التقديمية وتصميم المواقع والهويات البصرية.',
+            contact_title: 'تواصل معنا',
+            contact_kicker: 'لنتحدث',
+            contact_intro_title: 'شاركنا تفاصيل مشروعك وما تحتاج إلى توضيحه.',
+            contact_intro_text: 'أرسل نبذة عن المشروع والمعلومات المتاحة لنناقش نطاق العمل المناسب والخطوات التالية.',
+            contact_working_model: 'كيف نعمل',
+            contact_working_text: 'نتعاون مع العملاء في مصر والسعودية في بروفايلات الشركات والعروض التقديمية والمواقع والهويات البصرية وتصميمات السوشيال ميديا.',
+            contact_response_time: 'الخطوات التالية',
+            contact_response_text: 'نراجع كل استفسار ونرد بتوصية مناسبة بناءً على المعلومات المقدمة.',
+            contact_consultation_flow: 'مناقشة المشروع',
+            contact_consultation_text: 'نناقش احتياجك ونتفق على نطاق العمل والمخرجات والتوقيت ومراحل المراجعة.',
+            contact_clients: 'من نخدم',
+            contact_clients_text: 'شركات المقاولات والإنشاءات والاستشارات الهندسية.',
+            contact_cta_text: 'لنتحدث عن مشروعك.',
+            contact_cta_link: 'ابدأ المحادثة.',
+            contact_remote_kicker: 'مناقشة المشروع',
+            contact_remote_title: 'أخبرنا عن مشروعك لنناقش الخطوات التالية.',
+            contact_remote_text: 'شاركنا أهدافك والتوقيت والمعلومات المتاحة، وسنراجع الطلب ونناقش نطاق العمل المناسب.',
+            contact_form_kicker: 'طلب مشروع',
+            contact_form_title: 'شاركنا تفاصيل المشروع لنساعدك في تحديد الخطوة التالية.',
+            contact_name_label: 'الاسم*',
+            contact_name_placeholder: 'اكتب اسمك',
+            contact_email_label: 'البريد الإلكتروني*',
+            contact_email_placeholder: 'اكتب بريدك الإلكتروني',
+            contact_phone_label: 'رقم الهاتف',
+            contact_phone_placeholder: 'أضف رقم هاتفك',
+            contact_service_label: 'ما الخدمة التي تحتاج إليها؟',
+            contact_service_placeholder: 'اختر الخدمة',
+            contact_brand_identity: 'هوية بصرية',
+            contact_social_management: 'إدارة حسابات التواصل الاجتماعي',
+            contact_video_presentations: 'عروض فيديو',
+            contact_company_profile: 'بروفايل شركة',
+            contact_automation: 'أتمتة n8n والذكاء الاصطناعي',
+            contact_details_label: 'تفاصيل المشروع',
+            contact_details_placeholder: 'شاركنا أهدافك والتوقيت والمعلومات المتاحة عن المشروع',
+            contact_privacy_note: 'نستخدم المعلومات التي تقدمها لمراجعة طلبك والرد عليك.',
+            contact_submit: 'إرسال الطلب',
+            page404_meta_title: 'الصفحة غير موجودة | خطوة للتصميمات',
+            page404_meta_desc: 'قد تكون الصفحة التي تبحث عنها قد نُقلت أو لم تعد موجودة. ارجع إلى الصفحة الرئيسية لخطوة للتصميمات.',
+            page404_kicker: 'عذرًا',
+            page404_title: 'الصفحة غير موجودة',
+            page404_text: 'قد تكون الصفحة التي تبحث عنها قد نُقلت أو لم تعد موجودة.',
+            page404_home: 'العودة إلى الصفحة الرئيسية',
+            thankyou_meta_title: 'شكرًا لك | خطوة للتصميمات',
+            thankyou_meta_desc: 'شكرًا لتواصلك مع خطوة للتصميمات.',
+            thankyou_thanks: 'شكرًا لك',
+            thankyou_title: 'شكرًا لتواصلك معنا',
+            thankyou_text: 'وصلتنا رسالتك. سنراجع المعلومات التي أرسلتها ونرد على استفسارك.',
+            thankyou_home: 'العودة إلى الصفحة الرئيسية',
             country_egypt: 'مصر (+20)',
             country_saudi: 'السعودية (+966)',
             country_kuwait: 'الكويت (+965)',
@@ -756,7 +856,7 @@
         setText('a.nav-link[href="about.html"]', t.nav_about);
         setText('a.nav-link[href="services.html"]', t.nav_services);
         setText('a.nav-link[href="customer-stories.html"]', t.nav_testimonials);
-        setText('a.nav-link[href="contact.html"]', t.nav_contact);
+        setText('.navbar-nav > .nav-item:not(.mobile-nav-action) > a.nav-link[href="contact.html"]', t.nav_contact);
 
         setText('.search-form-box h2', t.search_title);
         setInputPlaceholder('.search-form-box .search-input', t.search_placeholder);
@@ -777,13 +877,52 @@
         var descKey = body.getAttribute('data-meta-desc');
         if (!titleKey) {
             var path = window.location.pathname.toLowerCase();
-            if (!(path.endsWith('/index.html') || path.endsWith('/'))) return;
-            titleKey = 'home_meta_title';
-            descKey = 'home_meta_desc';
+            if (path.endsWith('/index.html') || path.endsWith('/')) {
+                titleKey = 'home_meta_title';
+                descKey = 'home_meta_desc';
+            }
         }
-        if (t[titleKey]) document.title = t[titleKey];
+        if (titleKey && t[titleKey]) document.title = t[titleKey];
         var meta = document.querySelector('meta[name="description"]');
-        if (meta && t[descKey]) meta.setAttribute('content', t[descKey]);
+        if (meta && descKey && t[descKey]) meta.setAttribute('content', t[descKey]);
+        if (titleKey && descKey) {
+            updateSocialMetadata(
+                lang,
+                t[titleKey] || document.title,
+                t[descKey] || (meta && meta.getAttribute('content'))
+            );
+        }
+    }
+
+    function updateSocialMetadata(lang, title, description) {
+        if (!title || !description) return;
+
+        var pageUrl = new URL(window.location.href);
+        pageUrl.hash = '';
+        pageUrl.search = '';
+        pageUrl.searchParams.set('lang', lang);
+
+        [
+            ['property', 'og:title', title],
+            ['property', 'og:description', description],
+            ['property', 'og:url', pageUrl.toString()],
+            ['property', 'og:locale', lang === 'ar' ? 'ar_EG' : 'en_US'],
+            ['name', 'twitter:title', title],
+            ['name', 'twitter:description', description]
+        ].forEach(function (entry) {
+            var tag = document.querySelector('meta[' + entry[0] + '="' + entry[1] + '"]');
+            if (tag) tag.setAttribute('content', entry[2]);
+        });
+
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', pageUrl.toString());
+
+        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+            var alternateUrl = new URL(pageUrl.toString());
+            alternateUrl.hash = '';
+            alternateUrl.searchParams.set('lang', link.getAttribute('hreflang') === 'ar' ? 'ar' : 'en');
+            link.setAttribute('href', alternateUrl.toString());
+        });
     }
 
     function applyStatusPageText(lang) {
@@ -802,44 +941,84 @@
     }
 
     function ensureLanguageSwitcher() {
-        if (document.querySelector('.language-switcher')) return;
+        var desktopSwitcher = document.querySelector('.header-icon > .language-switcher');
+        var mobileNav = document.querySelector('.navbar .navbar-nav');
 
-        var wrapper = document.createElement('div');
-        wrapper.className = 'language-switcher';
-        wrapper.innerHTML = '' +
-            '<button type="button" class="lang-btn" data-lang="en">English</button>' +
-            '<button type="button" class="lang-btn" data-lang="ar">العربية</button>';
+        if (!desktopSwitcher) {
+            desktopSwitcher = document.createElement('div');
+            desktopSwitcher.className = 'language-switcher';
+            desktopSwitcher.innerHTML = '' +
+                '<button type="button" class="lang-btn" data-lang="en">English</button>' +
+                '<button type="button" class="lang-btn" data-lang="ar">العربية</button>';
 
-        var target = document.querySelector('.header-icon');
-        if (target) {
-            target.appendChild(wrapper);
-        } else {
-            document.body.appendChild(wrapper);
+            var target = document.querySelector('.header-icon');
+            if (target) {
+                target.appendChild(desktopSwitcher);
+            } else {
+                document.body.appendChild(desktopSwitcher);
+            }
         }
 
-        wrapper.addEventListener('click', function (e) {
+        if (mobileNav && !mobileNav.querySelector('.mobile-language-switcher')) {
+            var mobileItem = document.createElement('li');
+            mobileItem.className = 'nav-item mobile-nav-action';
+            mobileItem.innerHTML = '' +
+                '<div class="language-switcher mobile-language-switcher">' +
+                '<button type="button" class="lang-btn" data-lang="en">English</button>' +
+                '<button type="button" class="lang-btn" data-lang="ar">العربية</button>' +
+                '</div>';
+            mobileNav.appendChild(mobileItem);
+        }
+
+        if (mobileNav && !mobileNav.querySelector('.mobile-nav-action[data-mobile-quote]')) {
+            var quoteItem = document.createElement('li');
+            quoteItem.className = 'nav-item mobile-nav-action';
+            quoteItem.setAttribute('data-mobile-quote', '');
+            quoteItem.innerHTML = '<a href="contact.html" class="nav-link" data-i18n="cta_quote">Request a Quote</a>';
+            mobileNav.appendChild(quoteItem);
+        }
+
+        document.addEventListener('click', function (e) {
             var btn = e.target.closest('[data-lang]');
-            if (!btn) return;
+            if (!btn || !btn.closest('.language-switcher')) return;
             var lang = btn.getAttribute('data-lang');
             applyLanguage(lang);
         });
     }
 
     function setLinksLanguage(lang) {
-        document.querySelectorAll('a[href$=".html"]').forEach(function (link) {
+        document.querySelectorAll('a[href]').forEach(function (link) {
             var href = link.getAttribute('href');
             if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
                 return;
             }
-            if (href.indexOf('.html') === -1) return;
-            var url = new URL(href, window.location.origin + window.location.pathname);
+            var url = new URL(href, window.location.href);
+            if (url.origin !== window.location.origin || !/\.html$/i.test(url.pathname)) return;
             url.searchParams.set('lang', lang);
             var next = url.pathname.split('/').pop();
             if (url.search) {
                 next += url.search;
             }
+            if (url.hash) next += url.hash;
             link.setAttribute('href', next);
         });
+    }
+
+    function getSavedLanguage() {
+        try {
+            return localStorage.getItem(STORAGE_KEY);
+        } catch (error) {
+            console.warn('Could not read the saved language preference.', error);
+            return null;
+        }
+    }
+
+    function saveLanguage(lang) {
+        try {
+            localStorage.setItem(STORAGE_KEY, lang);
+        } catch (error) {
+            console.warn('Could not save the language preference.', error);
+        }
     }
 
     function markActiveButton(lang) {
@@ -867,7 +1046,7 @@
 
     function applyLanguage(lang) {
         var safeLang = SUPPORTED_LANGS.indexOf(lang) !== -1 ? lang : 'en';
-        localStorage.setItem(STORAGE_KEY, safeLang);
+        saveLanguage(safeLang);
         setPathLang(safeLang);
 
         document.documentElement.lang = safeLang;
@@ -888,9 +1067,9 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         ensureLanguageSwitcher();
-        var savedLang = localStorage.getItem(STORAGE_KEY);
+        var savedLang = getSavedLanguage();
         var pathLang = getPathLang();
-        var lang = pathLang || savedLang || 'en';
+        var lang = pathLang || savedLang || 'ar';
         applyLanguage(lang);
     });
 })();
