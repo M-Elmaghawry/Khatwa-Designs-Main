@@ -23,16 +23,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Build production assets
+        run: npm run build
+
+      - name: Run regression checks
+        run: npm test
+
       - name: Prepare Pages artifact
-        run: |
-          mkdir -p _site
-          cp ./*.html _site/
-          cp robots.txt sitemap.xml _site/
-          cp -r css js images fonts _site/
-          find _site -name '*.map' -delete
-          rm -f _site/blog.html _site/blog-single-clean.html \
-            _site/coming-soon.html _site/maintenance.html _site/search-result.html
-          touch _site/.nojekyll
+        run: npm run prepare:site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

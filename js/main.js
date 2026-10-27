@@ -2149,18 +2149,29 @@
      Contact form validation
      ====================================== */
 
+    // Shared by submit and blur; allow long domains, subdomains and plus addressing.
+    var emailFormat = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)+$/;
+
     // Contact form validation on submit
     $(document).on('click', '.submit', function () {
         var error = false,
                 _this = $(this),
                 formObj = _this.parents('form'),
-                emailFormat = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/,
                 urlformat = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/,
                 telFormat = /[0-9 -()+]+$/,
                 actionURL = formObj.attr('action'),
                 resultsObj = formObj.find('.form-results'),
                 grecaptchav3 = _this.attr('data-sitekey') || '',
                 redirectVal = formObj.find('[name="redirect"]').val();
+        if (_this.hasClass('loading')) return false;
+
+        function showSendError() {
+            var message = document.documentElement.lang === 'ar'
+                ? 'تعذر إرسال الطلب. تحقق من اتصالك وحاول مرة أخرى.'
+                : 'We couldn’t send your request. Please check your connection and try again.';
+            resultsObj.stop(true, true).removeClass('alert-success d-none').addClass('alert-danger')
+                .attr('role', 'alert').text(message).show();
+        }
         formObj.find('.required').removeClass('is-invalid');
         formObj.find('.required').each(function () {
             var __this = $(this),
@@ -2225,14 +2236,21 @@
                 type: 'POST',
                 url: actionURL,
                 data: formObj.serialize(),
+                timeout: 20000,
                 success: function (result) {
-                    _this.removeClass('loading');
+                    try {
+                        if (typeof result === 'string') result = JSON.parse(result);
+                        if (!result || result.alert !== 'alert-success' || typeof result.message !== 'string') {
+                            showSendError();
+                            return;
+                        }
+                    } catch (error) {
+                        showSendError();
+                        return;
+                    }
                     if (redirectVal != '' && redirectVal != undefined) {
                         window.location.href = redirectVal;
                     } else {
-                        if (typeof (result) !== 'undefined' && result !== null) {
-                            result = $.parseJSON(result);
-                        }
                         formObj.find('input[type=text],input[type=url],input[type=email],input[type=tel],input[type=password],textarea').each(function () {
                             $(this).val('');
                             $(this).removeClass('is-invalid');
@@ -2243,9 +2261,13 @@
                             grecaptcha.reset();
                         }
                         resultsObj.removeClass('alert-success').removeClass('alert-danger').hide();
-                        resultsObj.addClass(result.alert).html(result.message);
+                        resultsObj.addClass('alert-success').attr('role', 'status').text(result.message);
                         resultsObj.removeClass('d-none').fadeIn('slow').delay(4000).fadeOut('slow');
                     }
+                },
+                error: showSendError,
+                complete: function () {
+                    _this.removeClass('loading');
                 }
             });
         }
@@ -2254,8 +2276,7 @@
 
     // Contact form validation on blur
     $(document).on('blur', '.required', function () {
-        var emailFormat = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/,
-                telFormat = /[0-9 -()+]+$/,
+        var telFormat = /[0-9 -()+]+$/,
                 urlformat = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/,
                 fieldVal = $(this).val();
         if (fieldVal == '' || fieldVal == undefined) {

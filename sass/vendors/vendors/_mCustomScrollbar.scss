@@ -356,7 +356,7 @@ yx-axis
 	.mCSB_scrollTools .mCSB_buttonDown,
 	.mCSB_scrollTools .mCSB_buttonLeft,
 	.mCSB_scrollTools .mCSB_buttonRight{
-		background-image: url(mCSB_buttons.png); /* css sprites */
+		background-image: none; /* Optional legacy sprite is not included in this theme. */
 		background-repeat: no-repeat;
 		opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
 	}
