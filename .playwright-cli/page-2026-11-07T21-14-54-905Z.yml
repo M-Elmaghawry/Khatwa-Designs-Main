@@ -1,0 +1,122 @@
+- generic [active] [ref=e1]:
+  - link "تجاوز إلى المحتوى" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - banner:
+      - navigation [ref=e4]:
+        - generic [ref=e5]:
+          - link [ref=e7] [cursor=pointer]:
+            - /url: index.html?lang=ar
+            - img "Khatwa Designs" [ref=e8]
+          - list [ref=e11]:
+            - listitem [ref=e12]:
+              - link "الرئيسية" [ref=e13] [cursor=pointer]:
+                - /url: index.html?lang=ar
+            - listitem [ref=e14]:
+              - link "من نحن" [ref=e15] [cursor=pointer]:
+                - /url: about.html?lang=ar
+            - listitem [ref=e16]:
+              - link "خدماتنا" [ref=e17] [cursor=pointer]:
+                - /url: services.html?lang=ar
+              - button "عرض الخدمات" [ref=e18] [cursor=pointer]
+              - text:     
+            - listitem [ref=e20]:
+              - link "أعمالنا" [ref=e21] [cursor=pointer]:
+                - /url: portfolio.html?lang=ar
+            - listitem [ref=e22]:
+              - link "آراء العملاء" [ref=e23] [cursor=pointer]:
+                - /url: customer-stories.html?lang=ar
+            - listitem [ref=e24]:
+              - link "تواصل معنا" [ref=e25] [cursor=pointer]:
+                - /url: contact.html?lang=ar
+          - generic [ref=e27]:
+            - link "اطلب عرض سعر اطلب عرض سعر" [ref=e29] [cursor=pointer]:
+              - /url: contact.html?lang=ar
+            - generic [ref=e34]:
+              - button "English" [ref=e35] [cursor=pointer]
+              - button "العربية" [pressed] [ref=e36] [cursor=pointer]
+    - main [ref=e37]:
+      - generic [ref=e40]:
+        - generic [ref=e42]: 
+        - heading "تم إرسال رسالتك بنجاح" [level=1] [ref=e43]
+        - paragraph [ref=e44]: سيتم التواصل معك في أقرب وقت ممكن.
+        - link "العودة إلى الصفحة الرئيسية العودة إلى الصفحة الرئيسية" [ref=e46] [cursor=pointer]:
+          - /url: index.html?lang=ar
+    - text:     
+    - contentinfo [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - link [ref=e53] [cursor=pointer]:
+              - /url: index.html?lang=ar
+              - img "Khatwa Designs" [ref=e54]
+            - paragraph [ref=e55]: خطوة للتصميمات شريك إبداعي ورقمي لشركات المقاولات والمكاتب الهندسية، يساعدها على تنظيم المحتوى وتقديم أعمالها من خلال بروفايلات الشركات والعروض الفنية والهوية البصرية والمواقع الإلكترونية.
+            - list [ref=e57]:
+              - listitem [ref=e58]:
+                - link "Facebook" [ref=e59] [cursor=pointer]:
+                  - /url: https://www.facebook.com/khatwadesigns
+              - listitem [ref=e61]:
+                - link "Instagram" [ref=e62] [cursor=pointer]:
+                  - /url: https://www.instagram.com/khatwadesigns/
+              - listitem [ref=e64]:
+                - link "X" [ref=e65] [cursor=pointer]:
+                  - /url: https://x.com/khatwadesigns
+              - listitem [ref=e67]:
+                - link "LinkedIn" [ref=e68] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/khatwadesigns/
+              - listitem [ref=e70]:
+                - link "Behance" [ref=e71] [cursor=pointer]:
+                  - /url: https://www.behance.net/khatwadesigns2
+          - generic [ref=e73]:
+            - generic [ref=e74]: الشركة
+            - list [ref=e75]:
+              - listitem [ref=e76]:
+                - link "الرئيسية" [ref=e77] [cursor=pointer]:
+                  - /url: index.html?lang=ar
+              - listitem [ref=e78]:
+                - link "من نحن" [ref=e79] [cursor=pointer]:
+                  - /url: about.html?lang=ar
+              - listitem [ref=e80]:
+                - link "خدماتنا" [ref=e81] [cursor=pointer]:
+                  - /url: services.html?lang=ar
+              - listitem [ref=e82]:
+                - link "أعمالنا" [ref=e83] [cursor=pointer]:
+                  - /url: portfolio.html?lang=ar
+              - listitem [ref=e84]:
+                - link "آراء العملاء" [ref=e85] [cursor=pointer]:
+                  - /url: customer-stories.html?lang=ar
+              - listitem [ref=e86]:
+                - link "اطلب عرض سعر" [ref=e87] [cursor=pointer]:
+                  - /url: contact.html?lang=ar
+          - generic [ref=e88]:
+            - generic [ref=e89]: الخدمات
+            - list [ref=e90]:
+              - listitem [ref=e91]:
+                - link "بروفايلات الشركات والمكاتب الهندسية" [ref=e92] [cursor=pointer]:
+                  - /url: company-portfolio.html?lang=ar
+              - listitem [ref=e93]:
+                - link "العروض التقديمية وملفات المناقصات والعروض الفنية" [ref=e94] [cursor=pointer]:
+                  - /url: powerpoint-presentations.html?lang=ar
+              - listitem [ref=e95]:
+                - link "تصميم وتطوير المواقع الإلكترونية" [ref=e96] [cursor=pointer]:
+                  - /url: web-design.html?lang=ar
+              - listitem [ref=e97]:
+                - link "الشعارات والهوية البصرية" [ref=e98] [cursor=pointer]:
+                  - /url: brand-identity.html?lang=ar
+              - listitem [ref=e99]:
+                - link "تصميم منشورات السوشيال ميديا" [ref=e100] [cursor=pointer]:
+                  - /url: social-media-design.html?lang=ar
+        - generic [ref=e101]:
+          - paragraph [ref=e105]:
+            - link "© 2026 Khatwa Designs - خطوة للتصميمات" [ref=e106] [cursor=pointer]:
+              - /url: https://www.behance.net/khatwadesigns2
+          - list [ref=e108]:
+            - listitem [ref=e109]:
+              - link "سياسة الخصوصية" [ref=e110] [cursor=pointer]:
+                - /url: privacy-policy.html?lang=ar
+            - listitem [ref=e111]:
+              - link "الشروط والأحكام" [ref=e112] [cursor=pointer]:
+                - /url: terms-and-conditions.html?lang=ar
+            - listitem [ref=e113]:
+              - link "حقوق النشر" [ref=e114] [cursor=pointer]:
+                - /url: copyright.html?lang=ar

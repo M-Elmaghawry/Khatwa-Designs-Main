@@ -1,0 +1,31 @@
+async page => {
+ const result={};
+ await page.goto('http://127.0.0.1:4173/contact.html?lang=ar',{waitUntil:'domcontentloaded'});
+ await page.setViewportSize({width:390,height:844});
+ const attempts=[];
+ await page.route('**/*',r=>{if(r.request().method()!=='GET'){attempts.push({method:r.request().method(),url:r.request().url()});return r.abort();}return r.continue();});
+ await page.locator('[name="name"]').fill('Local audit test');
+ await page.locator('[name="email"]').fill('audit@example.com');
+ await page.locator('#projectDetails').fill('Local audit only');
+ await page.locator('#contact-form .submit').click();
+ await page.waitForTimeout(700);
+ result.form={attempts,state:await page.locator('#contact-form').evaluate(e=>({text:e.querySelector('.form-results').textContent,classes:e.querySelector('.form-results').className,name:e.querySelector('[name="name"]').value,invalid:[...e.querySelectorAll('.is-invalid')].map(e=>e.name)}))};
+ await page.screenshot({path:'docs/audit-2026-11-07/form-result-ar-390.png'});
+ result.formTop=await page.locator('#contact-form').evaluate(e=>e.getBoundingClientRect().top+scrollY);
+ await page.goto('http://127.0.0.1:4173/index.html?lang=ar',{waitUntil:'domcontentloaded'});
+ await page.setViewportSize({width:768,height:1024});
+ result.tabletOverflow=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,elements:[...document.querySelectorAll('section *,nav *')].filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&getComputedStyle(e).visibility!=='hidden'&&(b.right>innerWidth+1||b.left< -1)}).slice(0,20).map(e=>({tag:e.tagName,cls:e.className,text:e.innerText?.slice(0,70),x:e.getBoundingClientRect().x,right:e.getBoundingClientRect().right}))}));
+ result.styles=await page.evaluate(()=>{const p=document.querySelector('#services .row p');const h=document.querySelector('#services h3');return {bodyColor:getComputedStyle(document.body).color,paragraph:{color:getComputedStyle(p).color,font:getComputedStyle(p).fontFamily,size:getComputedStyle(p).fontSize},heading:{lineHeight:getComputedStyle(h).lineHeight,fontSize:getComputedStyle(h).fontSize},dropdown:document.querySelector('header .dropdown-toggle').outerHTML}});
+ for(const width of [1440,390]) {
+  await page.setViewportSize({width,height:width===1440?900:844});
+  await page.evaluate(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=550){scrollTo(0,y);await new Promise(r=>setTimeout(r,420));}scrollTo(0,0);});
+  await page.waitForTimeout(1200);
+  await page.screenshot({path:`docs/audit-2026-11-07/index-ar-${width}.png`,fullPage:true});
+  if(width===1440) await page.screenshot({path:'docs/audit-2026-11-07/home-header-1440.png'});
+ }
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.reload({waitUntil:'domcontentloaded'});
+ result.reducedMotion=await page.locator('[data-khatwa-reveal]').evaluateAll(els=>els.map(e=>({opacity:getComputedStyle(e).opacity,transition:getComputedStyle(e).transitionDuration})));
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ return result;
+}

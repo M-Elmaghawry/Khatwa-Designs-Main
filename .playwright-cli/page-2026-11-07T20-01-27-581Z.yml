@@ -1,0 +1,260 @@
+- generic [ref=e2]:
+  - banner:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: index.html?lang=ar
+          - img "Khatwa Designs" [ref=e7]
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "الرئيسية" [ref=e12] [cursor=pointer]:
+              - /url: index.html?lang=ar
+          - listitem [ref=e13]:
+            - link "من نحن" [ref=e14] [cursor=pointer]:
+              - /url: about.html?lang=ar
+          - listitem [ref=e15]:
+            - link "خدماتنا" [ref=e16] [cursor=pointer]:
+              - /url: services.html?lang=ar
+            - text:     
+          - listitem [ref=e17]:
+            - link "أعمالنا" [ref=e18] [cursor=pointer]:
+              - /url: portfolio.html?lang=ar
+          - listitem [ref=e19]:
+            - link "آراء العملاء" [ref=e20] [cursor=pointer]:
+              - /url: customer-stories.html?lang=ar
+          - listitem [ref=e21]:
+            - link "تواصل معنا" [ref=e22] [cursor=pointer]:
+              - /url: contact.html?lang=ar
+          - listitem [ref=e23]:
+            - link "اطلب عرض سعر" [ref=e24] [cursor=pointer]:
+              - /url: contact.html?lang=ar
+          - listitem [ref=e25]:
+            - generic [ref=e26]:
+              - button "English" [ref=e27] [cursor=pointer]
+              - button "العربية" [ref=e28] [cursor=pointer]
+        - generic [ref=e30]:
+          - link "اطلب عرض سعر اطلب عرض سعر" [ref=e32] [cursor=pointer]:
+            - /url: contact.html?lang=ar
+          - generic [ref=e37]:
+            - button "English" [ref=e38] [cursor=pointer]
+            - button "العربية" [ref=e39] [cursor=pointer]
+  - generic [ref=e40]:
+    - generic [ref=e44]:
+      - generic [ref=e45]: من تنظيم المعلومات وكتابة المحتوى إلى التصميم والتسليم.
+      - heading "شريك إبداعي يفهم عالمك الهندسي." [level=1] [ref=e46]
+      - paragraph [ref=e47]: نساعد شركات المقاولات والمكاتب الهندسية على تقديم خبراتها ومشروعاتها باحترافية، من خلال بروفايلات الشركات، والعروض الفنية، والهوية البصرية، والمواقع الإلكترونية.
+      - link "اطلب عرض سعر اطلب عرض سعر" [ref=e48] [cursor=pointer]:
+        - /url: contact.html?lang=ar
+      - link "استكشف أعمالنا استكشف أعمالنا" [ref=e51] [cursor=pointer]:
+        - /url: "#work"
+    - generic [ref=e55]:
+      - generic [ref=e57]:
+        - heading "خدمات تصميم متكاملة لعرض أعمالك باحترافية." [level=2] [ref=e58]
+        - paragraph [ref=e59]: نجمع بين فهم احتياجات شركتك، وتنظيم المعلومات، وإعداد المحتوى، والتصميم؛ لتصل رسالتك إلى عملائك بصورة واضحة ومتناسقة.
+      - generic [ref=e60]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: 
+          - heading "بروفايلات الشركات والمكاتب الهندسية" [level=3] [ref=e64]
+          - paragraph [ref=e65]: نرتب معلومات شركتك ونصوغ محتواها، ثم نصمم بروفايلًا يبرز خدماتك وخبراتك ومشروعاتك.
+          - link "اكتشف الخدمة" [ref=e66] [cursor=pointer]:
+            - /url: company-portfolio.html?lang=ar
+        - generic [ref=e68]:
+          - generic [ref=e69]: 
+          - heading "العروض التقديمية وملفات المناقصات" [level=3] [ref=e70]
+          - paragraph [ref=e71]: ننظم المستندات والمعلومات التي تقدمها، ونحرر المحتوى، ثم نصمم العرض أو الملف بما يلائم هدفه والجمهور المستهدف.
+          - link "اكتشف الخدمة" [ref=e72] [cursor=pointer]:
+            - /url: powerpoint-presentations.html?lang=ar
+        - generic [ref=e74]:
+          - generic [ref=e75]: 
+          - heading "تصميم وتطوير المواقع الإلكترونية" [level=3] [ref=e76]
+          - paragraph [ref=e77]: نساعدك على تخطيط صفحات الموقع وإعداد محتواه وتصميمه وتطويره وتجهيزه للنشر.
+          - link "اكتشف الخدمة" [ref=e78] [cursor=pointer]:
+            - /url: web-design.html?lang=ar
+        - generic [ref=e80]:
+          - heading "الشعارات والهوية البصرية" [level=3] [ref=e81]
+          - paragraph [ref=e82]: نصمم شعارًا وهوية بصرية متناسقة، مع دليل للهوية والتطبيقات المطلوبة حسب المشروع.
+          - link "اكتشف الخدمة" [ref=e83] [cursor=pointer]:
+            - /url: brand-identity.html?lang=ar
+        - generic [ref=e85]:
+          - heading "تصميم منشورات السوشيال ميديا" [level=3] [ref=e86]
+          - paragraph [ref=e87]: نصمم منشورات تتوافق مع هوية شركتك والنصوص والصور التي تقدمها.
+          - link "اكتشف الخدمة" [ref=e88] [cursor=pointer]:
+            - /url: social-media-design.html?lang=ar
+    - generic [ref=e90]:
+      - heading "نفهم طبيعة أعمالك قبل أن نبدأ التصميم." [level=2] [ref=e93]
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]: 
+          - heading "فهم القطاع الهندسي" [level=3] [ref=e97]
+          - paragraph [ref=e98]: خبرة مؤسس الشركة كمهندس تساعدنا على فهم طريقة عرض خدمات الشركات الهندسية ومشروعاتها واحتياجاتها.
+        - generic [ref=e99]:
+          - generic [ref=e100]: 
+          - heading "المحتوى والتصميم معًا" [level=3] [ref=e101]
+          - paragraph [ref=e102]: نساعد في تنظيم المعلومات وصياغة المحتوى ثم تصميمه، بدل ترك العميل ينسق بين جهات متعددة.
+        - generic [ref=e103]:
+          - generic [ref=e104]: 
+          - heading "من الفكرة إلى التسليم" [level=3] [ref=e105]
+          - paragraph [ref=e106]: نعمل وفق خطوات واضحة تبدأ بفهم المطلوب وتنتهي بتسليم الملفات المتفق عليها.
+    - generic [ref=e108]:
+      - generic [ref=e110]:
+        - heading "أعمال مختارة من مشروعات خطوة." [level=2] [ref=e111]
+        - paragraph [ref=e112]: تعرّف على نماذج من بروفايلات الشركات، والمواقع الإلكترونية، والعروض التقديمية التي نفذناها لعملائنا.
+      - generic [ref=e113]:
+        - generic [ref=e115]:
+          - generic [ref=e116]: بروفايل شركة مقاولات
+          - heading "بروفايل شركة غاية للمقاولات" [level=3] [ref=e117]
+          - link "عرض المشروع على Behance" [ref=e118] [cursor=pointer]:
+            - /url: https://www.behance.net/gallery/192450545/_
+        - generic [ref=e120]:
+          - generic [ref=e121]: بروفايل شركة مقاولات
+          - heading "بروفايل شركة وادي الأبرقين للمقاولات" [level=3] [ref=e122]
+          - link "عرض المشروع على Behance" [ref=e123] [cursor=pointer]:
+            - /url: https://www.behance.net/gallery/193903091/_
+        - generic [ref=e125]:
+          - generic [ref=e126]: بروفايل شركة
+          - heading "بروفايل شركة الإعمار الفريد" [level=3] [ref=e127]
+          - link "عرض المشروع على Behance" [ref=e128] [cursor=pointer]:
+            - /url: https://www.behance.net/gallery/202594407/_
+        - generic [ref=e130]:
+          - generic [ref=e131]: بروفايل مكتب هندسي
+          - heading "بروفايل مكتب BIM Connection الهندسي" [level=3] [ref=e132]
+          - link "عرض المشروع على Behance" [ref=e133] [cursor=pointer]:
+            - /url: https://www.behance.net/gallery/192151991/_
+        - generic [ref=e135]:
+          - generic [ref=e136]: موقع إلكتروني لشركة في مجال الخدمات الهندسية
+          - heading "موقع شركة الماهر للإلكتروميكانيك" [level=3] [ref=e137]
+          - link "عرض المشروع على Behance" [ref=e138] [cursor=pointer]:
+            - /url: https://www.behance.net/gallery/203874479/_
+        - generic [ref=e140]:
+          - generic [ref=e141]: نموذج من أعمال العروض التقديمية
+          - heading "TPACK PowerPoint Presentation" [level=3] [ref=e142]
+          - link "عرض المشروع على Behance" [ref=e143] [cursor=pointer]:
+            - /url: https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation
+      - link "مشاهدة كل الأعمال مشاهدة كل الأعمال" [ref=e146] [cursor=pointer]:
+        - /url: portfolio.html?lang=ar
+    - generic [ref=e150]:
+      - heading "خطوات واضحة من أول نقاش حتى التسليم." [level=2] [ref=e153]
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: 
+          - heading "نفهم احتياجك" [level=3] [ref=e157]
+          - paragraph [ref=e158]: نحدد الهدف والجمهور والمخرجات المطلوبة.
+        - generic [ref=e159]:
+          - generic [ref=e160]: 
+          - heading "ننظم المعلومات" [level=3] [ref=e161]
+          - paragraph [ref=e162]: نراجع مستنداتك ونرتب المحتوى ونحدد ما يلزم استكماله.
+        - generic [ref=e163]:
+          - generic [ref=e164]: 
+          - heading "نصمم ونراجع" [level=3] [ref=e165]
+          - paragraph [ref=e166]: ننفذ العمل ونتلقى ملاحظاتك وفق مراحل المراجعة المتفق عليها.
+        - generic [ref=e167]:
+          - generic [ref=e168]: 
+          - heading "نسلّم الملفات" [level=3] [ref=e169]
+          - paragraph [ref=e170]: نسلّم المخرجات النهائية وفق نطاق المشروع والاتفاق.
+    - generic [ref=e172]:
+      - generic [ref=e174]:
+        - heading "ثقة نبنيها من خلال تجربة التعامل." [level=2] [ref=e175]
+        - paragraph [ref=e176]: هذه مختارات من توصيات منشورة على صفحة خطوة للتصميمات على فيسبوك.
+      - generic [ref=e177]:
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: «شركة محترمة جدا بيحترموا مواعيدهم وشغلهم عالي»
+          - generic [ref=e181]: Rana Ahmed
+        - generic [ref=e183]:
+          - paragraph [ref=e184]: «شغل ممتاز وفي وقت منجز جدا شكرا ليكم ومش آخر تعامل إن شاء الله 😍»
+          - generic [ref=e185]: Aya Fathy
+        - generic [ref=e187]:
+          - paragraph [ref=e188]: «بصراحة ناس فاهمين شغلهم كويس جدا وملتزمين في مواعيدهم»
+          - generic [ref=e189]: Mahmoud Elsayed
+        - generic [ref=e191]:
+          - paragraph [ref=e192]: توصية بشأن الإبداع والاحترافية في تصميم اللوجو والفيديو.
+          - generic [ref=e193]: Farida Gerges
+        - generic [ref=e195]:
+          - paragraph [ref=e196]: “very professional people and highly recommended”
+          - generic [ref=e197]: Amira Hassan
+      - generic [ref=e199]:
+        - paragraph [ref=e200]: تعود هذه التوصيات إلى عام 2021. النصوص كما نُشرت أصلًا على الصفحة؛ توصية Amira Hassan كُتبت بالإنجليزية.
+        - link "قراءة المزيد من التوصيات قراءة المزيد من التوصيات" [ref=e201] [cursor=pointer]:
+          - /url: customer-stories.html?lang=ar
+    - generic [ref=e207]:
+      - heading "عندك مشروع وتحتاج شريكًا يفهم احتياجك؟" [level=2] [ref=e208]
+      - paragraph [ref=e209]: شاركنا فكرة المشروع والمعلومات المتاحة، وسنراجع احتياجك ونحدد نطاق العمل والمخرجات المناسبة.
+      - link "اطلب عرض سعر اطلب عرض سعر" [ref=e210] [cursor=pointer]:
+        - /url: contact.html?lang=ar
+  - text:     
+  - contentinfo [ref=e213]:
+    - generic [ref=e214]:
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - link [ref=e217] [cursor=pointer]:
+            - /url: index.html?lang=ar
+            - img "Khatwa Designs" [ref=e218]
+          - paragraph [ref=e219]: خطوة للتصميمات شريك إبداعي ورقمي لشركات المقاولات والمكاتب الهندسية، يساعدها على تنظيم المحتوى وتقديم أعمالها من خلال بروفايلات الشركات والعروض الفنية والهوية البصرية والمواقع الإلكترونية.
+          - list [ref=e221]:
+            - listitem [ref=e222]:
+              - link [ref=e223] [cursor=pointer]:
+                - /url: https://www.facebook.com/khatwadesigns
+            - listitem [ref=e225]:
+              - link [ref=e226] [cursor=pointer]:
+                - /url: https://www.instagram.com/khatwadesigns/
+            - listitem [ref=e228]:
+              - link [ref=e229] [cursor=pointer]:
+                - /url: https://x.com/khatwadesigns
+            - listitem [ref=e231]:
+              - link [ref=e232] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/khatwadesigns/
+            - listitem [ref=e234]:
+              - link [ref=e235] [cursor=pointer]:
+                - /url: https://www.behance.net/khatwadesigns2
+        - generic [ref=e237]:
+          - generic [ref=e238]: الشركة
+          - list [ref=e239]:
+            - listitem [ref=e240]:
+              - link "الرئيسية" [ref=e241] [cursor=pointer]:
+                - /url: index.html?lang=ar
+            - listitem [ref=e242]:
+              - link "من نحن" [ref=e243] [cursor=pointer]:
+                - /url: about.html?lang=ar
+            - listitem [ref=e244]:
+              - link "خدماتنا" [ref=e245] [cursor=pointer]:
+                - /url: services.html?lang=ar
+            - listitem [ref=e246]:
+              - link "أعمالنا" [ref=e247] [cursor=pointer]:
+                - /url: portfolio.html?lang=ar
+            - listitem [ref=e248]:
+              - link "آراء العملاء" [ref=e249] [cursor=pointer]:
+                - /url: customer-stories.html?lang=ar
+            - listitem [ref=e250]:
+              - link "اطلب عرض سعر" [ref=e251] [cursor=pointer]:
+                - /url: contact.html?lang=ar
+        - generic [ref=e252]:
+          - generic [ref=e253]: الخدمات
+          - list [ref=e254]:
+            - listitem [ref=e255]:
+              - link "بروفايلات الشركات والمكاتب الهندسية" [ref=e256] [cursor=pointer]:
+                - /url: company-portfolio.html?lang=ar
+            - listitem [ref=e257]:
+              - link "العروض التقديمية وملفات المناقصات والعروض الفنية" [ref=e258] [cursor=pointer]:
+                - /url: powerpoint-presentations.html?lang=ar
+            - listitem [ref=e259]:
+              - link "تصميم وتطوير المواقع الإلكترونية" [ref=e260] [cursor=pointer]:
+                - /url: web-design.html?lang=ar
+            - listitem [ref=e261]:
+              - link "الشعارات والهوية البصرية" [ref=e262] [cursor=pointer]:
+                - /url: brand-identity.html?lang=ar
+            - listitem [ref=e263]:
+              - link "تصميم منشورات السوشيال ميديا" [ref=e264] [cursor=pointer]:
+                - /url: social-media-design.html?lang=ar
+      - generic [ref=e265]:
+        - paragraph [ref=e269]:
+          - link "© 2026 Khatwa Designs - خطوة للتصميمات" [ref=e270] [cursor=pointer]:
+            - /url: https://www.behance.net/khatwadesigns2
+        - list [ref=e272]:
+          - listitem [ref=e273]:
+            - link "سياسة الخصوصية" [ref=e274] [cursor=pointer]:
+              - /url: privacy-policy.html?lang=ar
+          - listitem [ref=e275]:
+            - link "الشروط والأحكام" [ref=e276] [cursor=pointer]:
+              - /url: terms-and-conditions.html?lang=ar
+          - listitem [ref=e277]:
+            - link "حقوق النشر" [ref=e278] [cursor=pointer]:
+              - /url: copyright.html?lang=ar

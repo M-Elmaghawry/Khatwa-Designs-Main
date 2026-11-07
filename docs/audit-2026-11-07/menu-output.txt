@@ -1,0 +1,20 @@
+﻿### Result
+{"scrollX":0,"scrollY":0,"body":"lang-ar navbar-collapse-show","elements":[{"tag":"DIV","cls":"navbar-modern-inner","rect":{"x":0,"y":0,"width":390,"height":844,"top":0,"right":390,"bottom":844,"left":0},"style":{"transform":"matrix(1, 0, 0, 1, 0, 0)","visibility":"visible","display":"flex","opacity":"1","color":"rgb(135, 136, 152)","background":"rgba(0, 0, 0, 0)"}},{"tag":"UL","cls":"navbar-nav","rect":{"x":20,"y":165.5,"width":350,"height":513,"top":165.5,"right":370,"bottom":678.5,"left":20},"style":{"transform":"none","visibility":"visible","display":"flex","opacity":"1","color":"rgb(135, 136, 152)","background":"rgba(0, 0, 0, 0)"}},{"tag":"A","cls":"nav-link khatwa-arabic-font","rect":{"x":168.796875,"y":187.5,"width":52.390625,"height":44,"top":187.5,"right":221.1875,"bottom":231.5,"left":168.796875},"style":{"transform":"none","visibility":"visible","display":"inline-block","opacity":"1","color":"rgb(255, 255, 255)","background":"rgba(0, 0, 0, 0)"}},{"tag":"BUTTON","cls":"navbar-toggler float-start navbar-toggler-clone","rect":{"x":338,"y":35,"width":22,"height":14,"top":35,"right":360,"bottom":49,"left":338},"style":{"transform":"none","visibility":"visible","display":"block","opacity":"1","color":"rgb(135, 136, 152)","background":"rgba(0, 0, 0, 0)"}}],"tab":{"tag":"A","text":"اطلب عرض سعر","rect":{"x":91.5625,"y":402.984375,"width":191.859375,"height":64,"top":402.984375,"right":283.421875,"bottom":466.984375,"left":91.5625}},"escape":"false"}
+### Ran Playwright code
+```js
+await (async page=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('http://127.0.0.1:4173/index.html?lang=ar',{waitUntil:'domcontentloaded'});
+ await page.waitForTimeout(1000);
+ await page.locator('header .navbar-toggler').click();
+ await page.waitForTimeout(1300);
+ const result=await page.evaluate(()=>({scrollX,scrollY,body:document.body.className,elements:[document.querySelector('.navbar-modern-inner'),document.querySelector('.navbar-modern-inner .navbar-nav'),document.querySelector('.navbar-modern-inner .nav-link'),document.querySelector('.navbar-modern-inner .navbar-toggler')].map(e=>({tag:e?.tagName,cls:e?.className,rect:e?.getBoundingClientRect().toJSON(),style:e?{transform:getComputedStyle(e).transform,visibility:getComputedStyle(e).visibility,display:getComputedStyle(e).display,opacity:getComputedStyle(e).opacity,color:getComputedStyle(e).color,background:getComputedStyle(e).backgroundColor}:null}))}));
+ await page.screenshot({path:'docs/audit-2026-11-07/menu-ar-390.png'});
+ await page.keyboard.press('Tab');
+ result.tab=await page.evaluate(()=>({tag:document.activeElement.tagName,text:document.activeElement.textContent.trim(),rect:document.activeElement.getBoundingClientRect().toJSON()}));
+ await page.keyboard.press('Escape');
+ result.escape=await page.locator('header .navbar-toggler').getAttribute('aria-expanded');
+ return result;
+}
+)(page);
+```

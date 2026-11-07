@@ -6,6 +6,28 @@
 
     var translations = {
         en: {
+            services_meta_title: 'Design Services for Engineering Companies | Khatwa Designs',
+            services_meta_desc: 'Company profiles, presentations and tender documents, websites, visual identity, and social media design for construction companies and engineering firms.',
+            skip_content: 'Skip to content',
+            pf_filters_label: 'Project categories',
+            nav_toggle: 'Open navigation',
+            nav_close: 'Close navigation',
+            nav_services_toggle: 'Show services',
+            contact_country_label: 'Country calling code',
+            contact_required_note: 'Fields marked * are required.',
+            contact_error_required: 'Please complete this field.',
+            contact_error_email: 'Enter a valid email address, such as name@company.com.',
+            contact_unavailable: 'Your inquiry could not be sent right now. Your details have been kept. Please try again later.',
+            contact_sending: 'Sending…',
+            contact_result_error_title: 'Message not sent',
+            contact_result_error_text: 'We could not send your message. Please try again.',
+            contact_result_error_meta: 'Message not sent | Khatwa Designs',
+            contact_result_neutral_title: 'Contact Khatwa Designs',
+            contact_result_neutral_text: 'Share your project details through our contact form.',
+            contact_result_neutral_meta: 'Contact Khatwa Designs',
+            contact_result_retry: 'Try again',
+            contact_result_new: 'Go to contact form',
+            document_language_notice: 'This document is currently available in English.',
             nav_home: 'Home',
             nav_about: 'About Us',
             nav_services: 'Services',
@@ -363,8 +385,8 @@
             thankyou_meta_title: 'Thank You | Khatwa Designs',
             thankyou_meta_desc: 'Thank you for contacting Khatwa Designs.',
             thankyou_thanks: 'Thank you',
-            thankyou_title: 'Thank you for contacting us',
-            thankyou_text: 'Your message has been received. We will review the information you provided and respond to your inquiry.',
+            thankyou_title: 'Your message was sent successfully',
+            thankyou_text: 'We will contact you as soon as possible.',
             thankyou_home: 'Back to homepage',
             country_egypt: 'Egypt (+20)',
             country_saudi: 'Saudi Arabia (+966)',
@@ -378,6 +400,28 @@
             country_other: 'Other'
         },
         ar: {
+            services_meta_title: 'خدمات التصميم للشركات الهندسية | خطوة للتصميمات',
+            services_meta_desc: 'بروفايلات الشركات والعروض وملفات المناقصات والمواقع والهوية البصرية وتصميمات السوشيال ميديا لشركات المقاولات والمكاتب الهندسية.',
+            skip_content: 'تجاوز إلى المحتوى',
+            pf_filters_label: 'تصنيفات المشاريع',
+            nav_toggle: 'فتح القائمة',
+            nav_close: 'إغلاق القائمة',
+            nav_services_toggle: 'عرض الخدمات',
+            contact_country_label: 'مفتاح الاتصال بالدولة',
+            contact_required_note: 'الحقول المميزة بعلامة * مطلوبة.',
+            contact_error_required: 'يرجى إكمال هذا الحقل.',
+            contact_error_email: 'اكتب بريدًا إلكترونيًا صحيحًا، مثل name@company.com.',
+            contact_unavailable: 'تعذر إرسال طلبك الآن. احتفظنا بالتفاصيل التي أدخلتها؛ يرجى المحاولة لاحقًا.',
+            contact_sending: 'جارٍ الإرسال…',
+            contact_result_error_title: 'فشل الإرسال',
+            contact_result_error_text: 'تعذر إرسال رسالتك. يرجى المحاولة مرة أخرى.',
+            contact_result_error_meta: 'فشل إرسال الرسالة | خطوة للتصميمات',
+            contact_result_neutral_title: 'تواصل مع خطوة للتصميمات',
+            contact_result_neutral_text: 'شاركنا تفاصيل مشروعك من خلال نموذج التواصل.',
+            contact_result_neutral_meta: 'تواصل مع خطوة للتصميمات',
+            contact_result_retry: 'حاول مرة أخرى',
+            contact_result_new: 'الذهاب إلى نموذج التواصل',
+            document_language_notice: 'هذه الصفحة متاحة حاليًا باللغة الإنجليزية.',
             nav_home: 'الرئيسية',
             nav_about: 'من نحن',
             nav_services: 'خدماتنا',
@@ -735,8 +779,8 @@
             thankyou_meta_title: 'شكرًا لك | خطوة للتصميمات',
             thankyou_meta_desc: 'شكرًا لتواصلك مع خطوة للتصميمات.',
             thankyou_thanks: 'شكرًا لك',
-            thankyou_title: 'شكرًا لتواصلك معنا',
-            thankyou_text: 'وصلتنا رسالتك. سنراجع المعلومات التي أرسلتها ونرد على استفسارك.',
+            thankyou_title: 'تم إرسال رسالتك بنجاح',
+            thankyou_text: 'سيتم التواصل معك في أقرب وقت ممكن.',
             thankyou_home: 'العودة إلى الصفحة الرئيسية',
             country_egypt: 'مصر (+20)',
             country_saudi: 'السعودية (+966)',
@@ -781,6 +825,10 @@
     }
 
     function applyDataTranslations(dict) {
+        document.querySelectorAll('[data-i18n-aria-label]').forEach(function (el) {
+            var label = dict[el.getAttribute('data-i18n-aria-label')];
+            if (label) el.setAttribute('aria-label', label);
+        });
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
             var key = el.getAttribute('data-i18n');
             if (dict[key]) {
@@ -928,6 +976,26 @@
     function applyStatusPageText(lang) {
         var t = translations[lang];
 
+        if (document.body.hasAttribute('data-contact-result-page')) {
+            var state = new URLSearchParams(window.location.search).get('status');
+            if (state !== 'success' && state !== 'error') state = 'neutral';
+            document.body.setAttribute('data-contact-result', state);
+            var success = state === 'success';
+            var titleKey = success ? 'thankyou_title' : 'contact_result_' + state + '_title';
+            var textKey = success ? 'thankyou_text' : 'contact_result_' + state + '_text';
+            setText('[data-contact-result-title]', t[titleKey]);
+            setText('[data-contact-result-text]', t[textKey]);
+            document.title = t[success ? 'thankyou_meta_title' : 'contact_result_' + state + '_meta'];
+            var description = document.querySelector('meta[name="description"]');
+            if (description) description.setAttribute('content', t[textKey]);
+            var primary = document.querySelector('[data-contact-result-action]');
+            primary.href = (success ? 'index.html' : 'contact.html') + '?lang=' + lang + (state === 'error' ? '&retry=1#contact-form' : '');
+            setText('[data-contact-result-action] .khatwa-button-text', t[success ? 'thankyou_home' : state === 'error' ? 'contact_result_retry' : 'contact_result_new']);
+            var icon = document.querySelector('[data-contact-result-icon]');
+            icon.className = 'feather icon-feather-' + (success ? 'check-circle' : state === 'error' ? 'alert-circle' : 'mail');
+            document.querySelector('[data-contact-result-home]').hidden = success;
+        }
+
         setText('[data-coming-soon-title]', t.coming_soon_title);
         setText('[data-coming-soon-subtitle]', t.coming_soon_subtitle);
         setInputPlaceholder('[data-coming-soon-placeholder]', t.coming_soon_placeholder);
@@ -1024,6 +1092,7 @@
     function markActiveButton(lang) {
         document.querySelectorAll('.language-switcher .lang-btn').forEach(function (btn) {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
         });
     }
 
@@ -1045,7 +1114,7 @@
     }
 
     function applyLanguage(lang) {
-        var safeLang = SUPPORTED_LANGS.indexOf(lang) !== -1 ? lang : 'en';
+        var safeLang = SUPPORTED_LANGS.indexOf(lang) !== -1 ? lang : 'ar';
         saveLanguage(safeLang);
         setPathLang(safeLang);
 
@@ -1063,13 +1132,20 @@
         setLinksLanguage(safeLang);
         markActiveButton(safeLang);
         applyArabicFont();
+        document.dispatchEvent(new CustomEvent('khatwa:language', {detail: {lang: safeLang}}));
     }
+
+    window.KhatwaI18n = {
+        text: function (key) {
+            var lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+            return translations[lang][key] || translations.en[key] || key;
+        }
+    };
 
     document.addEventListener('DOMContentLoaded', function () {
         ensureLanguageSwitcher();
-        var savedLang = getSavedLanguage();
         var pathLang = getPathLang();
-        var lang = pathLang || savedLang || 'ar';
+        var lang = pathLang || 'ar';
         applyLanguage(lang);
     });
 })();

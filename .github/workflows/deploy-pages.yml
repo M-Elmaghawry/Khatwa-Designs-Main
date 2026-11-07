@@ -28,7 +28,7 @@ jobs:
           mkdir -p _site
           cp ./*.html _site/
           cp robots.txt sitemap.xml _site/
-          cp -r css js images fonts _site/
+          cp -r css js images fonts projects _site/
           find _site -name '*.map' -delete
           rm -f _site/blog.html _site/blog-single-clean.html \
             _site/coming-soon.html _site/maintenance.html _site/search-result.html

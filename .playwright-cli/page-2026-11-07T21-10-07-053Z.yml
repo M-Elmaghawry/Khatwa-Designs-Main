@@ -1,0 +1,181 @@
+- generic [active] [ref=e1]:
+  - link "تجاوز إلى المحتوى" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - banner:
+      - navigation [ref=e4]:
+        - generic [ref=e5]:
+          - link [ref=e7] [cursor=pointer]:
+            - /url: index.html?lang=ar
+            - img "Khatwa Designs" [ref=e8]
+          - list [ref=e11]:
+            - listitem [ref=e12]:
+              - link "الرئيسية" [ref=e13] [cursor=pointer]:
+                - /url: index.html?lang=ar
+            - listitem [ref=e14]:
+              - link "من نحن" [ref=e15] [cursor=pointer]:
+                - /url: about.html?lang=ar
+            - listitem [ref=e16]:
+              - link "خدماتنا" [ref=e17] [cursor=pointer]:
+                - /url: services.html?lang=ar
+              - button "عرض الخدمات" [ref=e18] [cursor=pointer]
+              - text:     
+            - listitem [ref=e20]:
+              - link "أعمالنا" [ref=e21] [cursor=pointer]:
+                - /url: portfolio.html?lang=ar
+            - listitem [ref=e22]:
+              - link "آراء العملاء" [ref=e23] [cursor=pointer]:
+                - /url: customer-stories.html?lang=ar
+            - listitem [ref=e24]:
+              - link "تواصل معنا" [ref=e25] [cursor=pointer]:
+                - /url: contact.html?lang=ar
+          - generic [ref=e27]:
+            - link "اطلب عرض سعر اطلب عرض سعر" [ref=e29] [cursor=pointer]:
+              - /url: contact.html?lang=ar
+            - generic [ref=e34]:
+              - button "English" [ref=e35] [cursor=pointer]
+              - button "العربية" [pressed] [ref=e36] [cursor=pointer]
+    - main [ref=e37]:
+      - generic [ref=e41]:
+        - heading "تواصل معنا" [level=1] [ref=e42]
+        - paragraph [ref=e43]: أرسل نبذة عن المشروع والمعلومات المتاحة لنناقش نطاق العمل المناسب والخطوات التالية.
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - heading "شاركنا تفاصيل المشروع لنساعدك في تحديد الخطوة التالية." [level=2] [ref=e48]
+          - paragraph [ref=e49]: الحقول المميزة بعلامة * مطلوبة.
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - generic [ref=e53]: الاسم*
+              - generic [ref=e54]:
+                - generic [ref=e55]: 
+                - textbox "الاسم*" [ref=e57]:
+                  - /placeholder: اكتب اسمك
+            - generic [ref=e58]:
+              - generic [ref=e59]: البريد الإلكتروني*
+              - generic [ref=e60]:
+                - generic [ref=e61]: 
+                - textbox "البريد الإلكتروني*" [ref=e63]:
+                  - /placeholder: اكتب بريدك الإلكتروني
+            - generic [ref=e64]:
+              - generic [ref=e65]: رقم الهاتف
+              - generic [ref=e66]:
+                - combobox "مفتاح الاتصال بالدولة" [ref=e69]:
+                  - option "مصر (+20)" [selected]
+                  - option "السعودية (+966)"
+                  - option "الكويت (+965)"
+                  - option "الإمارات (+971)"
+                  - option "قطر (+974)"
+                  - option "البحرين (+973)"
+                  - option "العراق (+964)"
+                  - option "تركيا (+90)"
+                  - option "أسبانيا (+34)"
+                  - option "أخرى"
+                - generic [ref=e71]:
+                  - generic [ref=e72]: 
+                  - textbox "رقم الهاتف" [ref=e74]:
+                    - /placeholder: أضف رقم هاتفك
+            - generic [ref=e75]:
+              - generic [ref=e76]: ما الخدمة التي تحتاج إليها؟
+              - generic [ref=e77]:
+                - generic [ref=e78]: 
+                - combobox "ما الخدمة التي تحتاج إليها؟" [ref=e80]:
+                  - option "اختر الخدمة" [selected]
+                  - option "بروفايلات الشركات والمكاتب الهندسية"
+                  - option "العروض التقديمية وملفات المناقصات والعروض الفنية"
+                  - option "تصميم وتطوير المواقع الإلكترونية"
+                  - option "الشعارات والهوية البصرية"
+                  - option "تصميم منشورات السوشيال ميديا"
+            - generic [ref=e81]:
+              - generic [ref=e82]: تفاصيل المشروع
+              - generic [ref=e83]:
+                - textbox "تفاصيل المشروع" [ref=e84]:
+                  - /placeholder: شاركنا أهدافك والتوقيت والمعلومات المتاحة عن المشروع
+                - generic [ref=e85]: 
+            - paragraph [ref=e88]: نستخدم المعلومات التي تقدمها لمراجعة طلبك والرد عليك.
+            - button "إرسال الطلب إرسال الطلب" [ref=e90] [cursor=pointer]
+        - complementary [ref=e93]:
+          - heading "الخطوات التالية" [level=2] [ref=e94]
+          - paragraph [ref=e95]: نراجع كل استفسار ونرد بتوصية مناسبة بناءً على المعلومات المقدمة.
+          - paragraph [ref=e96]: نناقش احتياجك ونتفق على نطاق العمل والمخرجات والتوقيت ومراحل المراجعة.
+          - heading "من نخدم" [level=2] [ref=e97]
+          - paragraph [ref=e98]: شركات المقاولات والإنشاءات والاستشارات الهندسية.
+          - link "استكشف أعمالنا" [ref=e99] [cursor=pointer]:
+            - /url: portfolio.html?lang=ar
+    - text:     
+    - contentinfo [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - link [ref=e104] [cursor=pointer]:
+              - /url: index.html?lang=ar
+              - img "Khatwa Designs" [ref=e105]
+            - paragraph [ref=e106]: خطوة للتصميمات شريك إبداعي ورقمي لشركات المقاولات والمكاتب الهندسية، يساعدها على تنظيم المحتوى وتقديم أعمالها من خلال بروفايلات الشركات والعروض الفنية والهوية البصرية والمواقع الإلكترونية.
+            - list [ref=e108]:
+              - listitem [ref=e109]:
+                - link "Facebook" [ref=e110] [cursor=pointer]:
+                  - /url: https://www.facebook.com/khatwadesigns
+              - listitem [ref=e112]:
+                - link "Instagram" [ref=e113] [cursor=pointer]:
+                  - /url: https://www.instagram.com/khatwadesigns/
+              - listitem [ref=e115]:
+                - link "X" [ref=e116] [cursor=pointer]:
+                  - /url: https://x.com/khatwadesigns
+              - listitem [ref=e118]:
+                - link "LinkedIn" [ref=e119] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/khatwadesigns/
+              - listitem [ref=e121]:
+                - link "Behance" [ref=e122] [cursor=pointer]:
+                  - /url: https://www.behance.net/khatwadesigns2
+          - generic [ref=e124]:
+            - generic [ref=e125]: الشركة
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - link "الرئيسية" [ref=e128] [cursor=pointer]:
+                  - /url: index.html?lang=ar
+              - listitem [ref=e129]:
+                - link "من نحن" [ref=e130] [cursor=pointer]:
+                  - /url: about.html?lang=ar
+              - listitem [ref=e131]:
+                - link "خدماتنا" [ref=e132] [cursor=pointer]:
+                  - /url: services.html?lang=ar
+              - listitem [ref=e133]:
+                - link "أعمالنا" [ref=e134] [cursor=pointer]:
+                  - /url: portfolio.html?lang=ar
+              - listitem [ref=e135]:
+                - link "آراء العملاء" [ref=e136] [cursor=pointer]:
+                  - /url: customer-stories.html?lang=ar
+              - listitem [ref=e137]:
+                - link "اطلب عرض سعر" [ref=e138] [cursor=pointer]:
+                  - /url: contact.html?lang=ar
+          - generic [ref=e139]:
+            - generic [ref=e140]: الخدمات
+            - list [ref=e141]:
+              - listitem [ref=e142]:
+                - link "بروفايلات الشركات والمكاتب الهندسية" [ref=e143] [cursor=pointer]:
+                  - /url: company-portfolio.html?lang=ar
+              - listitem [ref=e144]:
+                - link "العروض التقديمية وملفات المناقصات والعروض الفنية" [ref=e145] [cursor=pointer]:
+                  - /url: powerpoint-presentations.html?lang=ar
+              - listitem [ref=e146]:
+                - link "تصميم وتطوير المواقع الإلكترونية" [ref=e147] [cursor=pointer]:
+                  - /url: web-design.html?lang=ar
+              - listitem [ref=e148]:
+                - link "الشعارات والهوية البصرية" [ref=e149] [cursor=pointer]:
+                  - /url: brand-identity.html?lang=ar
+              - listitem [ref=e150]:
+                - link "تصميم منشورات السوشيال ميديا" [ref=e151] [cursor=pointer]:
+                  - /url: social-media-design.html?lang=ar
+        - generic [ref=e152]:
+          - paragraph [ref=e156]:
+            - link "© 2026 Khatwa Designs - خطوة للتصميمات" [ref=e157] [cursor=pointer]:
+              - /url: https://www.behance.net/khatwadesigns2
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - link "سياسة الخصوصية" [ref=e161] [cursor=pointer]:
+                - /url: privacy-policy.html?lang=ar
+            - listitem [ref=e162]:
+              - link "الشروط والأحكام" [ref=e163] [cursor=pointer]:
+                - /url: terms-and-conditions.html?lang=ar
+            - listitem [ref=e164]:
+              - link "حقوق النشر" [ref=e165] [cursor=pointer]:
+                - /url: copyright.html?lang=ar

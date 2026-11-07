@@ -13,7 +13,7 @@
         '                </a>' +
         '            </div>' +
         '            <div class="col-auto col-xl-6 menu-order position-static">' +
-        '                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">' +
+        '                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Open navigation" data-i18n-aria-label="nav_toggle">' +
         '                    <span class="navbar-toggler-line"></span>' +
         '                    <span class="navbar-toggler-line"></span>' +
         '                    <span class="navbar-toggler-line"></span>' +
@@ -25,11 +25,11 @@
         '                        <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>' +
         '                        <li class="nav-item dropdown dropdown-with-icon-style02">' +
         '                            <a href="services.html" class="nav-link" data-i18n="nav_services">Services</a>' +
-        '                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>' +
-        '                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">' +
+        '                            <button type="button" class="services-toggle dropdown-toggle" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="services-menu" aria-label="Show services" data-i18n-aria-label="nav_services_toggle"><i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>' +
+        '                            <ul class="dropdown-menu" id="services-menu" aria-labelledby="navbarDropdownMenuLink">' +
         '                                <li><a href="company-portfolio.html"><i class="line-icon-Medal-2"></i><span data-i18n="service_profiles">Company Profiles &amp; Engineering Portfolios</span></a></li>' +
         '                                <li><a href="powerpoint-presentations.html"><i class="line-icon-Financial"></i><span data-i18n="service_presentations">Presentations, Tender Documents &amp; Technical Proposals</span></a></li>' +
-        '                                <li><a href="web-design.html"><i class="line-icon-Money-Bag"></i><span data-i18n="service_web">Website Design &amp; Development</span></a></li>' +
+        '                                <li><a href="web-design.html"><i class="feather icon-feather-monitor" aria-hidden="true"></i><span data-i18n="service_web">Website Design &amp; Development</span></a></li>' +
         '                                <li><a href="brand-identity.html"><i class="line-icon-Archery-2"></i><span data-i18n="service_brand">Logo Design &amp; Visual Identity</span></a></li>' +
         '                                <li><a href="social-media-design.html"><i class="line-icon-Financial"></i><span data-i18n="service_social">Social Media Design</span></a></li>' +
         '                            </ul>' +
@@ -70,11 +70,11 @@
         '                <p class="footer-intro lh-30 w-90 xl-w-100 mx-auto" data-i18n="footer_intro">Khatwa Designs is a creative and digital partner for construction companies and engineering firms, helping them organize content and present their work through company profiles, technical presentations, visual identity, and websites.</p>' +
         '                <div class="elements-social social-icon-style-02 mt-20px xs-mt-15px">' +
         '                    <ul class="medium-icon dark">' +
-        '                        <li class="my-0"><a class="facebook" href="https://www.facebook.com/khatwadesigns" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>' +
-        '                        <li class="my-0"><a class="instagram" href="https://www.instagram.com/khatwadesigns/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>' +
-        '                        <li class="my-0"><a class="x-twitter" href="https://x.com/khatwadesigns" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>' +
-        '                        <li class="my-0"><a class="linkedin" href="https://www.linkedin.com/company/khatwadesigns/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>' +
-        '                        <li class="my-0"><a class="behance" href="https://www.behance.net/khatwadesigns2" target="_blank"><i class="fa-brands fa-behance"></i></a></li>' +
+        '                        <li class="my-0"><a class="facebook" href="https://www.facebook.com/khatwadesigns" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>' +
+        '                        <li class="my-0"><a class="instagram" href="https://www.instagram.com/khatwadesigns/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>' +
+        '                        <li class="my-0"><a class="x-twitter" href="https://x.com/khatwadesigns" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>' +
+        '                        <li class="my-0"><a class="linkedin" href="https://www.linkedin.com/company/khatwadesigns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>' +
+        '                        <li class="my-0"><a class="behance" href="https://www.behance.net/khatwadesigns2" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fa-brands fa-behance" aria-hidden="true"></i></a></li>' +
         '                    </ul>' +
         '                </div>' +
         '            </div>' +
@@ -175,4 +175,46 @@
     injectSharedFooter();
     bindServicesDropdownLinks();
     highlightActiveSidebarService();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var layout = document.querySelector('.page-layout');
+        if (layout && !document.querySelector('main')) {
+            var main = document.createElement('main');
+            main.className = layout.className;
+            main.id = 'main-content';
+            main.tabIndex = -1;
+            while (layout.firstChild) main.appendChild(layout.firstChild);
+            layout.replaceWith(main);
+            var skip = document.createElement('a');
+            skip.className = 'khatwa-skip-link';
+            skip.href = '#main-content';
+            skip.setAttribute('data-i18n', 'skip_content');
+            skip.textContent = 'Skip to content';
+            document.body.prepend(skip);
+        }
+        var current = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('header .navbar-nav > .nav-item > a').forEach(function (link) {
+            if (new URL(link.href).pathname.split('/').pop() === current) {
+                link.setAttribute('aria-current', 'page');
+            }
+        });
+        var services = {'company-portfolio.html': 'profiles', 'powerpoint-presentations.html': 'presentations', 'web-design.html': 'websites', 'brand-identity.html': 'brand', 'social-media-design.html': 'social'};
+        if (services[current]) {
+            document.querySelectorAll('a.btn[href^="contact.html"]').forEach(function (link) {
+                var url = new URL(link.href);
+                url.searchParams.set('service', services[current]);
+                link.setAttribute('href', 'contact.html' + url.search + url.hash);
+            });
+        }
+        if (['privacy-policy.html', 'terms-and-conditions.html', 'copyright.html'].indexOf(current) !== -1 && layout) {
+            var documentMain = document.getElementById('main-content');
+            documentMain.lang = 'en';
+            documentMain.dir = 'ltr';
+            var notice = document.createElement('p');
+            notice.className = 'container khatwa-document-notice';
+            notice.setAttribute('data-i18n', 'document_language_notice');
+            notice.textContent = 'This document is currently available in English.';
+            documentMain.querySelector('section').after(notice);
+        }
+    });
 })();

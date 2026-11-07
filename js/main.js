@@ -103,9 +103,18 @@
         $('.navbar .navbar-collapse').clone(true).addClass('navbar-collapse-clone').attr('id', 'navbarNav-clone').insertAfter('.page-layout');
 
         $('.navbar-toggler-clone, .navbar-collapse-clone').wrapAll('<div class="navbar-' + mobileStyle + '-inner"></div>');
-        $('.navbar-toggler').attr('data-target', '#navbarNav-clone').attr('aria-controls', '#navbarNav-clone');
+        $('.navbar-toggler').attr('data-target', '#navbarNav-clone').attr('data-bs-target', '#navbarNav-clone').attr('aria-controls', 'navbarNav-clone').attr('aria-expanded', 'false');
+        $('.navbar-toggler-clone').attr('data-i18n-aria-label', 'nav_close').attr('aria-label', 'Close navigation');
+        $('.navbar-collapse-clone [id]').each(function () {
+            this.id += '-clone';
+        });
+        $('.navbar-collapse-clone [aria-labelledby], .navbar-collapse-clone [aria-controls]').each(function () {
+            ['aria-labelledby', 'aria-controls'].forEach(function (attribute) {
+                if (this.hasAttribute(attribute)) this.setAttribute(attribute, this.getAttribute(attribute) + '-clone');
+            }, this);
+        });
         $('.navbar-' + mobileStyle + '-inner').find('.dropdown-toggle').addClass('dropdown-toggle-clone');
-        if (typeof $.fn.mCustomScrollbar === 'function') {
+        if (mobileStyle !== 'modern' && typeof $.fn.mCustomScrollbar === 'function') {
             if ($('.navbar-collapse-clone').length) {
                 var scrollOptions = $('.navbar-collapse-clone').attr('data-scroll-options') || '{ "theme": "light" }';
                 if (typeof (scrollOptions) !== 'undefined' && scrollOptions !== null) {
@@ -162,6 +171,36 @@
             $('body').removeClass('navbar-collapse-show');
             $('html').removeClass('overflow-hidden');
         }
+    });
+
+    // Keep the modal mobile navigation in the keyboard's focus order.
+    var mobileMenuOpener;
+    $('#navbarNav-clone').on('show.bs.collapse', function () {
+        mobileMenuOpener = document.activeElement;
+    }).on('shown.bs.collapse', function () {
+        if (getWindowWidth() > mobileNavBreakPoint) return;
+        $('.navbar-modern-inner').attr({'role': 'dialog', 'aria-modal': 'true', 'aria-label': document.documentElement.lang === 'ar' ? 'القائمة الرئيسية' : 'Main navigation'});
+        document.querySelectorAll('.page-layout, footer, header').forEach(function (el) { el.inert = true; });
+        document.querySelector('.navbar-toggler-clone').focus();
+    }).on('hidden.bs.collapse', function () {
+        document.querySelectorAll('.page-layout, footer, header').forEach(function (el) { el.inert = false; });
+        $('.navbar-modern-inner').removeAttr('role aria-modal');
+        if (mobileMenuOpener && mobileMenuOpener.isConnected && mobileMenuOpener.getClientRects().length) mobileMenuOpener.focus();
+        else if (document.querySelector('header .navbar-brand')) document.querySelector('header .navbar-brand').focus();
+    });
+    window.matchMedia('(min-width: 1200px)').addEventListener('change', function (event) {
+        if (event.matches) $('#navbarNav-clone').collapse('hide');
+    });
+    $(document).on('keydown', function (event) {
+        if (event.key !== 'Tab' || !$('body').hasClass('navbar-collapse-show')) return;
+        var menu = document.querySelector('.navbar-modern-inner');
+        if (!menu || !menu.hasAttribute('aria-modal')) return;
+        var targets = Array.from(menu.querySelectorAll('a[href], button:not([disabled])')).filter(function (el) {
+            return el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden';
+        });
+        var first = targets[0], last = targets[targets.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     });
 
     // Sub menu collapse event
@@ -229,7 +268,7 @@
     // Close on outside area
     $(document).on('click', 'body', function (e) {
         // Close all menu
-        if (!($(e.target).closest('.navbar-nav').length || $(e.target).closest('.navbar-full-screen-menu-inner').length)) {
+        if (!($(e.target).closest('.navbar-nav, .navbar-toggler, .navbar-modern-inner, .navbar-full-screen-menu-inner').length)) {
             setTimeout(function () {
                 $('.navbar-collapse.collapse').collapse('hide');
             }, 100);
@@ -2205,19 +2244,10 @@
 
         if (!error && actionURL != '' && actionURL != undefined) {
             if (actionURL === '#local-success') {
-                if (redirectVal != '' && redirectVal != undefined) {
-                    window.location.href = redirectVal;
-                } else {
-                    _this.removeClass('loading');
-                    formObj.find('input[type=text],input[type=url],input[type=email],input[type=tel],input[type=password],textarea').each(function () {
-                        $(this).val('');
-                        $(this).removeClass('is-invalid');
-                    });
-                    formObj.find('input[type=checkbox],input[type=radio]').prop('checked', false);
-                    resultsObj.removeClass('alert-danger').hide();
-                    resultsObj.addClass('alert-success').html('Your request has been submitted successfully.');
-                    resultsObj.removeClass('d-none').fadeIn('slow').delay(4000).fadeOut('slow');
-                }
+                // A local placeholder is not a delivery response. Keep all entered data.
+                _this.removeClass('loading');
+                var unavailable = window.KhatwaI18n ? window.KhatwaI18n.text('contact_unavailable') : 'Your inquiry could not be sent right now. Please try again later.';
+                resultsObj.removeClass('alert-success d-none').addClass('alert-danger').attr({'role': 'status', 'aria-live': 'polite', 'data-i18n': 'contact_unavailable'}).text(unavailable).show();
                 return false;
             }
             _this.addClass('loading');
