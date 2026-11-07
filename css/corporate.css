@@ -50,6 +50,8 @@ a {
 }
 
 .language-switcher .lang-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
     border: 1px solid var(--light-gray-brand);
     background: #ffffff;
     color: var(--dark-gray);
@@ -99,13 +101,14 @@ body.lang-ar .search-form {
     }
 }
 
+/* Override the theme's more specific nav-item display, including cloned menus. */
 .mobile-nav-action {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 1199.98px) {
     .mobile-nav-action {
-        display: block;
+        display: block !important;
     }
 
     .mobile-nav-action .mobile-language-switcher {

@@ -31,6 +31,10 @@
             nav_home: 'Home',
             nav_about: 'About Us',
             nav_services: 'Services',
+            services_meta_title: 'Services — Company Profiles, Presentations & Websites | Khatwa',
+            services_meta_desc: 'Explore company profile design, presentation and tender document design, website development, visual identity, and social media design by Khatwa Designs.',
+            services_quote_question: 'How is the project priced?',
+            services_quote_answer: 'We review your requirements and provide a project-specific quote based on the service and agreed deliverables.',
             nav_testimonials: 'Client Reviews',
             nav_contact: 'Contact',
             service_profiles: 'Company Profiles & Engineering Portfolios',
@@ -425,6 +429,10 @@
             nav_home: 'الرئيسية',
             nav_about: 'من نحن',
             nav_services: 'خدماتنا',
+            services_meta_title: 'خدمات خطوة — بروفايلات الشركات والعروض والمواقع',
+            services_meta_desc: 'تعرّف على خدمات خطوة للتصميمات: بروفايلات الشركات والعروض وملفات المناقصات والمواقع الإلكترونية والهوية البصرية وتصميم السوشيال ميديا.',
+            services_quote_question: 'كيف يتم تحديد سعر المشروع؟',
+            services_quote_answer: 'نراجع احتياجاتك ونقدّم عرض سعر خاصًا بالمشروع حسب الخدمة والمخرجات المتفق عليها.',
             nav_testimonials: 'آراء العملاء',
             nav_contact: 'تواصل معنا',
             service_profiles: 'بروفايلات الشركات والمكاتب الهندسية',
@@ -992,7 +1000,7 @@
             primary.href = (success ? 'index.html' : 'contact.html') + '?lang=' + lang + (state === 'error' ? '&retry=1#contact-form' : '');
             setText('[data-contact-result-action] .khatwa-button-text', t[success ? 'thankyou_home' : state === 'error' ? 'contact_result_retry' : 'contact_result_new']);
             var icon = document.querySelector('[data-contact-result-icon]');
-            icon.className = 'feather icon-feather-' + (success ? 'check-circle' : state === 'error' ? 'alert-circle' : 'mail');
+            icon.className = {success: 'feather icon-feather-check-circle', error: 'feather icon-feather-alert-circle', neutral: 'feather icon-feather-mail'}[state];
             document.querySelector('[data-contact-result-home]').hidden = success;
         }
 

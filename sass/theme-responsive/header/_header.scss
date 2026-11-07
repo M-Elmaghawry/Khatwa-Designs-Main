@@ -154,7 +154,7 @@
     }
 } 
 /* Navigation breakpoint start */ 
-@include respond-to('tablet') {
+@include respond-to('laptop') {
     .header-demo.navbar {
         .navbar-nav {
             .premium-element {
@@ -986,7 +986,7 @@
         }
     }
 
-    .navbar-expand-lg {
+    .navbar-expand-lg, .navbar-expand-xl {
         .navbar-toggler {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1047,7 +1047,7 @@
         .md-border-none {
             border: 0 !important; 
         }
-        .navbar-expand-lg {
+        .navbar-expand-lg, .navbar-expand-xl {
             padding-left: 15px;  
             padding-right: 15px; 
         }
@@ -1860,7 +1860,7 @@
 }
 @include respond-to('phone-landscape') {
     header {
-        .navbar-expand-lg {
+        .navbar-expand-lg, .navbar-expand-xl {
             padding-left: 0;
             padding-right: 0;
         }

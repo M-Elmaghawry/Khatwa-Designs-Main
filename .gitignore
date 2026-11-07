@@ -13,3 +13,6 @@ build/
 .sass-cache/
 .jekyll-cache/
 Gemfile.lock
+_site/
+css/icon.css
+css/vendors.css
