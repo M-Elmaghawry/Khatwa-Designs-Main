@@ -52,7 +52,10 @@ export default defineConfig({
   publicDir: false,
   build: {
     outDir: 'dist', emptyOutDir: true,
-    rolldownOptions: { output: { codeSplitting: { groups: [{ name: 'motion', test: /node_modules[\\/]gsap[\\/]/, priority: 20 }] } } }
+    rolldownOptions: { output: { codeSplitting: { groups: [
+      { name: 'motion', test: /node_modules[\\/]gsap[\\/]/, priority: 20 },
+      { name: 'site-content', test: /src[\\/]content[\\/].*\.json$/, priority: 10 }
+    ] } } }
   },
   server: { fs: { strict: true, allow: [directory] } }
 });

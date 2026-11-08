@@ -11,5 +11,5 @@ export function LegacyRedirectPage({ target }) {
     if (!params.has('lang')) params.set('lang', language);
     navigate('/' + (language === 'en' ? 'en/' : '') + target + '?' + params.toString() + location.hash, { replace: true });
   }, [target, language, location.search, location.hash, navigate]);
-  return <SectionWrapper><Button href={target + location.search + location.hash}>{t('nav_services')}</Button></SectionWrapper>;
+  return <SectionWrapper className="inner-redirect"><Button href={target + location.search + location.hash} variant="accent">{t('nav_services')}</Button></SectionWrapper>;
 }

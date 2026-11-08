@@ -272,6 +272,24 @@ test('active homepage motion survives StrictMode, filters and locale changes wit
       await click(ui.document.querySelector('.home-work-filters [data-filter="all"]'));
       assert.equal(ScrollTrigger.getAll().length, triggerCount, 'filter cleanup remains stable');
     }
+    await click(ui.document.querySelector('.navigation a[href*="about.html"]'));
+    assert.ok(ui.document.querySelector('.inner-about'));
+    assert.ok(ScrollTrigger.getAll().length > 0);
+    assert.equal(ScrollTrigger.getAll().filter(trigger => !trigger.trigger.isConnected).length, 0, 'route navigation leaves no detached triggers');
+    const aboutCount = ScrollTrigger.getAll().length;
+    await click(ui.document.querySelector('.language-switcher [lang="en"]'));
+    assert.equal(ScrollTrigger.getAll().length, aboutCount, 'inner locale cleanup is stable');
+    await click(ui.document.querySelector('.navigation > li > a[href*="/portfolio.html"]'));
+    const portfolioCount = ScrollTrigger.getAll().length;
+    for (let i = 0; i < 3; i++) {
+      await click(ui.document.querySelector('.inner-filters [data-filter="websites"]'));
+      assert.equal(ui.document.querySelectorAll('.work-item').length, 3);
+      await click(ui.document.querySelector('.inner-filters [data-filter="all"]'));
+      assert.equal(ScrollTrigger.getAll().length, portfolioCount, 'inner project filter cleanup is stable');
+    }
+    await ui.setReducedMotion(true);
+    assert.equal(ScrollTrigger.getAll().length, 0);
+    assert.equal(ui.document.querySelector('.inner-project-media').style.clipPath, '');
     await ui.unmount();
     ui = null;
     assert.equal(ScrollTrigger.getAll().length, 0);
