@@ -13,6 +13,7 @@ import { SITE_BASE, languageHref, resolveLanguage, routeFile } from '../src/lib/
 import { metadataFor } from '../src/lib/metadata.js';
 import { sendInquiry, inquiryParameters, parameterNames, restoreDraft, saveDraft, DRAFT_KEY } from '../src/lib/inquiry.js';
 import { render } from '../.ssr/entry-server.js';
+import { assetFingerprint, expectedAssetFingerprint } from './asset-fingerprints.mjs';
 
 const directory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const root = path.resolve(directory, '..');
@@ -41,8 +42,9 @@ test('all extracted inputs and original assets remain unchanged; main, backup ta
   const assetRecords = [...inventory.matchAll(/\| `((?:images|fonts|projects)\/[^`]+)` \| `([a-f0-9]{64})` \|/g)];
   assert.equal(assetRecords.length, 127);
   for (const [, file, expected] of assetRecords) {
-    assert.equal(hash(fs.readFileSync(path.join(root, file))), expected, file);
-    assert.equal(hash(fs.readFileSync(path.join(directory, 'dist', file))), expected, 'build/' + file);
+    const canonicalExpected = expectedAssetFingerprint(file, expected);
+    assert.equal(assetFingerprint(file, fs.readFileSync(path.join(root, file))), canonicalExpected, file);
+    assert.equal(assetFingerprint(file, fs.readFileSync(path.join(directory, 'dist', file))), canonicalExpected, 'build/' + file);
   }
   for (const ref of ['main', 'pre-react-v2^{commit}']) assert.equal(execFileSync('git', ['rev-parse', ref], { cwd: root, encoding: 'utf8' }).trim(), baseline);
   assert.equal(execFileSync('git', ['branch', '--show-current'], { cwd: root, encoding: 'utf8' }).trim(), 'redesign/react-v2');
