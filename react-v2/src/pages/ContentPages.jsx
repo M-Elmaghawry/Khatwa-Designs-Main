@@ -3,9 +3,10 @@ import pages from '../content/pages.json';
 import { ContentRenderer } from '../components/ContentRenderer.jsx';
 import { useLanguage } from '../i18n/LanguageProvider.jsx';
 import { SectionWrapper } from '../components/primitives.jsx';
+import { CinematicHero } from '../components/CinematicHero.jsx';
 
 function SourcePage({ file }) { return <div className="source-content"><ContentRenderer nodes={pages[file].sections} /></div>; }
-export function HomePage() { return <SourcePage file="index.html" />; }
+export function HomePage() { return <div className="source-content home-page"><CinematicHero /><ContentRenderer nodes={pages['index.html'].sections.slice(1)} /></div>; }
 export function AboutPage() { return <SourcePage file="about.html" />; }
 export function ServicesPage() { return <SourcePage file="services.html" />; }
 export function ServicePage({ file }) { return <SourcePage file={file} />; }

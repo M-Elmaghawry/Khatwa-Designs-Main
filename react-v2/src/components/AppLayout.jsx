@@ -21,5 +21,5 @@ export function AppLayout({ file, children }) {
     }
     previousPath.current = location.pathname;
   }, [location.pathname, location.hash]);
-  return <><a className="skip-link" href="#main-content">{t('skip_content')}</a><Header /><main id="main-content" tabIndex={-1} ref={main}><PageTransitionWrapper>{children}</PageTransitionWrapper></main><Footer /></>;
+  return <><a className="skip-link" href="#main-content">{t('skip_content')}</a><Header cinematic={file === 'index.html'} /><main id="main-content" tabIndex={-1} ref={main}><PageTransitionWrapper>{children}</PageTransitionWrapper></main><Footer /></>;
 }

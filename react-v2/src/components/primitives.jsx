@@ -15,8 +15,9 @@ export function SiteLink({ href, children, ...props }) {
 }
 export function Container({ as: Tag = 'div', className = '', ...props }) { return <Tag className={'container ' + className} {...props} />; }
 export function SectionWrapper({ children, className = '', ...props }) { return <section className={'section ' + className} {...props}><Container>{children}</Container></section>; }
-export function Button({ href, className = '', children, ...props }) {
-  return href ? <SiteLink href={href} className={'button ' + className} {...props}>{children}</SiteLink> : <button className={'button ' + className} {...props}>{children}</button>;
+export function Button({ href, variant = 'foundation', className = '', children, ...props }) {
+  const classes = 'button ' + (variant === 'foundation' ? '' : `ds-button ds-button--${variant} `) + className;
+  return href ? <SiteLink href={href} className={classes} {...props}>{children}</SiteLink> : <button className={classes} {...props}>{children}</button>;
 }
 // A stable lifecycle boundary for Phase 3. No entrance animation hides content.
 const scaffoldMotion = () => {};

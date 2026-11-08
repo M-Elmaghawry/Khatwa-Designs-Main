@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { App } from './App.jsx';
 import { SITE_BASE, resolveLanguage } from './lib/paths.js';
 import './styles/foundation.css';
+import './styles/design-system.css';
+import './styles/hero.css';
 
 let storage;
 try { storage = window.localStorage; } catch { /* Arabic works without storage. */ }

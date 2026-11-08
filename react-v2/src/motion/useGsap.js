@@ -1,31 +1,31 @@
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 
-let registration;
+let registered = false;
+const useBrowserLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+export function getGsap() {
+  if (typeof window === 'undefined') return null;
+  if (!registered) { gsap.registerPlugin(ScrollTrigger); registered = true; }
+  return { gsap, ScrollTrigger };
+}
 export function loadGsap() {
-  if (typeof window === 'undefined') return Promise.resolve(null);
-  registration ||= Promise.all([import('gsap'), import('gsap/ScrollTrigger.js')]).then(([module, plugin]) => {
-    const gsap = module.gsap;
-    gsap.registerPlugin(plugin.ScrollTrigger);
-    return { gsap, ScrollTrigger: plugin.ScrollTrigger };
-  });
-  return registration;
+  return Promise.resolve(getGsap());
 }
 
-// setup receives the registered tools and scoped selector context. No motion is
-// enabled by default. Revert on unmount/dependency change/reduced-motion change.
+// Run synchronously before browser paint so entrance states never flash after
+// an asynchronous plugin download. Static HTML/CSS remains visible without JS.
 export function useGsap(scope, setup, dependencies = []) {
-  useEffect(() => {
+  useBrowserLayoutEffect(() => {
     let disposed = false;
     let context;
-    let revision = 0;
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const run = async () => {
-      const currentRevision = ++revision;
+    const run = () => {
       context?.revert();
       context = undefined;
       if (preference.matches || disposed) return;
-      const tools = await loadGsap();
-      if (!disposed && currentRevision === revision && !preference.matches && scope.current) context = tools.gsap.context(() => setup(tools), scope.current);
+      const tools = getGsap();
+      if (scope.current) context = tools.gsap.context(() => setup(tools), scope.current);
     };
     run();
     preference.addEventListener('change', run);

@@ -11,7 +11,7 @@ import ar from '../src/content/ar.json' with { type: 'json' };
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 const originalFetch = globalThis.fetch;
-async function mount(location, { initialLanguage = 'ar', hydrated = false, storage = {} } = {}) {
+async function mount(location, { initialLanguage = 'ar', hydrated = false, storage = {}, reducedMotion = true } = {}) {
   const dom = new JSDOM('<!doctype html><html lang="ar"><head><title>Preview</title></head><body><div id="root"></div></body></html>', { url: 'https://example.test' + SITE_BASE });
   for (const name of ['window', 'document', 'HTMLElement', 'Node', 'Event', 'MouseEvent', 'CustomEvent']) globalThis[name] = name === 'window' ? dom.window : dom.window[name];
   Object.defineProperty(globalThis, 'navigator', { configurable: true, value: dom.window.navigator });
@@ -19,7 +19,14 @@ async function mount(location, { initialLanguage = 'ar', hydrated = false, stora
   globalThis.sessionStorage = dom.window.sessionStorage;
   dom.window.scrollTo = () => {};
   dom.window.HTMLElement.prototype.scrollIntoView = () => {};
-  dom.window.matchMedia = () => ({ matches: true, addEventListener() {}, removeEventListener() {} });
+  const mediaQueries = new Map();
+  dom.window.matchMedia = query => {
+    if (!mediaQueries.has(query)) {
+      const listeners = new Set();
+      mediaQueries.set(query, { media: query, matches: query.includes('prefers-reduced-motion') ? reducedMotion : query.includes('min-width: 60rem'), listeners, addEventListener(_, callback) { listeners.add(callback); }, removeEventListener(_, callback) { listeners.delete(callback); }, addListener(callback) { listeners.add(callback); }, removeListener(callback) { listeners.delete(callback); } });
+    }
+    return mediaQueries.get(query);
+  };
   dom.window.KhatwaEmailJSConfig = { serviceId: 'test-service', templateId: 'test-template', publicKey: 'test-public' };
   for (const [key, value] of Object.entries(storage)) dom.window.sessionStorage.setItem(key, value);
   const container = dom.window.document.getElementById('root');
@@ -29,7 +36,10 @@ async function mount(location, { initialLanguage = 'ar', hydrated = false, stora
   let root;
   const hydrationErrors = [];
   await act(async () => { root = hydrated ? hydrateRoot(container, app, { onRecoverableError: error => hydrationErrors.push(error.message) }) : createRoot(container); if (!hydrated) root.render(app); });
-  return { document: dom.window.document, window: dom.window, hydrationErrors, async unmount() { await act(async () => root.unmount()); dom.window.close(); globalThis.fetch = originalFetch; } };
+  return { document: dom.window.document, window: dom.window, hydrationErrors,
+    async setReducedMotion(value) { await act(async () => { for (const [query, media] of mediaQueries) if (query.includes('prefers-reduced-motion')) { media.matches = value; for (const listener of media.listeners) listener({ matches: value, media: query }); } }); },
+    async unmount() { await act(async () => root.unmount()); dom.window.close(); globalThis.fetch = originalFetch; }
+  };
 }
 const click = async element => { assert.ok(element, 'click target exists'); await act(async () => element.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }))); };
 async function input(element, value) {
@@ -156,4 +166,62 @@ test('reduced-motion preference prevents GSAP setup; unmount removes the prefere
     await act(async () => root.unmount());
     assert.equal(added, removed);
   } finally { await ui.unmount(); }
+});
+
+test('cinematic hero preserves bilingual claims and CTA destinations without changing later homepage content', async () => {
+  for (const [prefix, language, dictionary] of [['', 'ar', ar], ['en/', 'en', en]]) {
+    const ui = await mount(SITE_BASE + prefix + 'index.html?lang=' + language, { initialLanguage: language, hydrated: true });
+    try {
+      assert.deepEqual(ui.hydrationErrors, []);
+      const hero = ui.document.querySelector('.cinematic-hero');
+      assert.ok(hero);
+      assert.equal(hero.querySelector('h1').getAttribute('aria-label'), dictionary.home_hero_title);
+      assert.equal(hero.querySelector('h1').textContent.trim(), dictionary.home_hero_title);
+      assert.equal(hero.querySelector('.hero-description').textContent, dictionary.home_hero_text);
+      const quote = hero.querySelector('.hero-actions a[href*="contact.html"]');
+      assert.equal(new URL(quote.href).searchParams.get('lang'), language);
+      assert.equal(hero.querySelector('.hero-actions a[href="#work"]').textContent, dictionary.cta_work);
+      assert.ok(ui.document.getElementById('work'));
+      assert.equal(hero.querySelector('.hero-logo-well img').getAttribute('src'), SITE_BASE + 'images/khatwa-logo@2x.png');
+      assert.equal(ui.document.querySelectorAll('.home-page > section').length, 7);
+      assert.equal(ui.document.querySelectorAll('.home-page .khatwa-project-card').length, 6);
+      assert.equal(hero.querySelectorAll('[data-hero-line]').length, 3);
+      assert.equal(hero.querySelectorAll('[data-hero-line] [data-hero-line]').length, 0);
+      assert.ok(ui.document.querySelector('.site-header--cinematic'));
+    } finally { await ui.unmount(); }
+  }
+});
+
+test('active hero motion survives StrictMode and locale changes without duplicate ScrollTriggers, then reverts on unmount', async () => {
+  globalThis.requestAnimationFrame = callback => setTimeout(() => callback(performance.now()), 16);
+  globalThis.cancelAnimationFrame = clearTimeout;
+  let ui;
+  const { gsap } = await import('gsap');
+  const { ScrollTrigger } = await import('gsap/ScrollTrigger.js');
+  try {
+    // These globals are native in a browser; supply them for the DOM integration test.
+    const preliminary = new JSDOM('');
+    globalThis.getComputedStyle = element => window.getComputedStyle(element);
+    preliminary.window.close();
+    ui = await mount(SITE_BASE, { reducedMotion: false });
+    assert.equal(ScrollTrigger.getAll().length, 2);
+    await ui.setReducedMotion(true);
+    assert.equal(ScrollTrigger.getAll().length, 0);
+    assert.equal(ui.document.querySelector('[data-hero-line]').style.transform, '');
+    await ui.setReducedMotion(false);
+    assert.equal(ScrollTrigger.getAll().length, 2);
+    await click(ui.document.querySelector('.language-switcher [lang="en"]'));
+    assert.equal(ScrollTrigger.getAll().length, 2);
+    await click(ui.document.querySelector('.language-switcher [lang="ar"]'));
+    assert.equal(ScrollTrigger.getAll().length, 2);
+    await ui.unmount();
+    ui = null;
+    assert.equal(ScrollTrigger.getAll().length, 0);
+  } finally {
+    if (ui) await ui.unmount();
+    ScrollTrigger.disable(true, true);
+    gsap.ticker.sleep();
+    delete globalThis.requestAnimationFrame;
+    delete globalThis.cancelAnimationFrame;
+  }
 });

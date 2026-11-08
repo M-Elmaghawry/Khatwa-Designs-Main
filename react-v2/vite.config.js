@@ -50,6 +50,9 @@ export default defineConfig({
   base: SITE_BASE,
   plugins: [react(), legacyAssets()],
   publicDir: false,
-  build: { outDir: 'dist', emptyOutDir: true },
+  build: {
+    outDir: 'dist', emptyOutDir: true,
+    rolldownOptions: { output: { codeSplitting: { groups: [{ name: 'motion', test: /node_modules[\\/]gsap[\\/]/, priority: 20 }] } } }
+  },
   server: { fs: { strict: true, allow: [directory] } }
 });

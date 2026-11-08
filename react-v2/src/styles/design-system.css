@@ -1,0 +1,15 @@
+/* Opt-in primitives: legacy/source sections keep their Phase 2 presentation. */
+.ds-surface--light { background: var(--surface-light); color: var(--color-text); }
+.ds-surface--soft { background: var(--surface-soft); color: var(--color-text); }
+.ds-surface--dark { background: var(--surface-dark); color: var(--on-dark); }
+.ds-editorial-heading { font-size: var(--type-editorial); font-weight: 700; line-height: var(--display-leading); letter-spacing: -0.045em; color: inherit; }
+.ds-editorial-heading:lang(ar) { letter-spacing: 0; line-height: 1.28; }
+.ds-card { background: var(--surface-light); color: var(--brand-blue); border: 1px solid var(--color-border); border-radius: var(--radius-editorial); box-shadow: var(--shadow-editorial); }
+.ds-button { position: relative; gap: var(--space-6); min-block-size: 3.5rem; padding: var(--space-4) var(--space-6); border-radius: var(--radius-pill); font-size: 0.875rem; transition: background var(--duration-interaction) var(--ease-editorial), color var(--duration-interaction) var(--ease-editorial), border-color var(--duration-interaction) var(--ease-editorial); }
+.ds-button--accent { background: var(--brand-yellow); border-color: var(--brand-yellow); color: var(--brand-blue); }
+.ds-button--accent:hover { background: white; border-color: white; color: var(--brand-blue); }
+.ds-button--outline { background: transparent; border-color: rgb(255 255 255 / 35%); color: white; }
+.ds-button--outline:hover { background: rgb(255 255 255 / 8%); border-color: white; color: white; }
+.ds-surface--dark :focus-visible { outline-color: var(--brand-yellow); }
+.ds-button--accent:focus-visible { outline-color: white; }
+@media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } }

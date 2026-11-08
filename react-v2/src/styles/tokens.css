@@ -40,6 +40,33 @@
   --breakpoint-small: 40rem;
   --breakpoint-medium: 60rem;
   --breakpoint-legacy-navigation: 74.9375rem;
+  /* Phase 3 agency primitives: tonal derivatives retain the source palette. */
+  --surface-light: var(--color-background);
+  --surface-soft: var(--color-surface);
+  --surface-dark: color-mix(in srgb, var(--brand-blue) 48%, black);
+  --surface-brand: var(--brand-blue);
+  --on-dark: #ffffff;
+  --on-dark-muted: color-mix(in srgb, var(--brand-gray) 88%, white);
+  --border-dark: rgb(255 255 255 / 15%);
+  --type-display: clamp(2.75rem, 5.6vw, 6rem);
+  --type-editorial: clamp(2rem, 4vw, 4rem);
+  --type-label: 0.75rem;
+  --display-leading: 1.1;
+  --space-5: 1.25rem;
+  --space-10: 2.5rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --container-editorial: 88rem;
+  --container-reading: 46rem;
+  --section-cinematic: 100svh;
+  --radius-editorial: 1.25rem;
+  --shadow-editorial: 0 24px 80px rgb(0 0 0 / 18%);
+  --shadow-brand-glow: 0 0 96px rgb(28 54 100 / 25%);
+  --gradient-cinematic: linear-gradient(128deg, var(--surface-dark), var(--brand-blue) 72%, color-mix(in srgb, var(--brand-blue) 88%, white));
+  --glow-brand: color-mix(in srgb, var(--brand-blue) 72%, white);
+  --ease-editorial: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration-interaction: 180ms;
 }
 :root:lang(ar), [lang='ar'] { --font-body: var(--font-arabic); font-family: var(--font-arabic); }
 [lang='en'] { --font-body: var(--font-english); font-family: var(--font-english); }
