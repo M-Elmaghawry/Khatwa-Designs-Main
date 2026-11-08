@@ -1,0 +1,37 @@
+[
+  {
+    "id": "profiles",
+    "file": "company-portfolio.html",
+    "labelKey": "service_profiles",
+    "prefix": "cp",
+    "formValue": "Company portfolio"
+  },
+  {
+    "id": "presentations",
+    "file": "powerpoint-presentations.html",
+    "labelKey": "service_presentations",
+    "prefix": "pp",
+    "formValue": "PowerPoint presentations"
+  },
+  {
+    "id": "websites",
+    "file": "web-design.html",
+    "labelKey": "service_web",
+    "prefix": "wd",
+    "formValue": "Web design"
+  },
+  {
+    "id": "brand",
+    "file": "brand-identity.html",
+    "labelKey": "service_brand",
+    "prefix": "bi",
+    "formValue": "Brand identity"
+  },
+  {
+    "id": "social",
+    "file": "social-media-design.html",
+    "labelKey": "service_social",
+    "prefix": "sm",
+    "formValue": "Social media design"
+  }
+]

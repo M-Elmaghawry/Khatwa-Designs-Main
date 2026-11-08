@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ghayah",
+    "category": "profiles",
+    "titleKey": "home_proj1",
+    "image": "projects/ghayah.svg",
+    "url": "https://www.behance.net/gallery/192450545/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "wadi-al-abrakeen",
+    "category": "profiles",
+    "titleKey": "home_proj2",
+    "image": "projects/wadi-al-abrakeen.svg",
+    "url": "https://www.behance.net/gallery/193903091/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "al-emar",
+    "category": "profiles",
+    "titleKey": "home_proj3",
+    "image": "projects/al-emar.svg",
+    "url": "https://www.behance.net/gallery/202594407/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "bim-connection",
+    "category": "profiles",
+    "titleKey": "home_proj4",
+    "image": "projects/bim-connection.svg",
+    "url": "https://www.behance.net/gallery/192151991/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "engineering-group",
+    "category": "profiles",
+    "titleKey": "pf_proj7",
+    "image": "projects/engineering-group.svg",
+    "url": "https://www.behance.net/khatwadesigns2",
+    "temporaryCover": true
+  },
+  {
+    "id": "tpack",
+    "category": "presentations",
+    "titleKey": "home_proj6",
+    "image": "projects/tpack.svg",
+    "url": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
+    "temporaryCover": true
+  },
+  {
+    "id": "al-maher",
+    "category": "websites",
+    "titleKey": "home_proj5",
+    "image": "projects/al-maher.svg",
+    "url": "https://www.behance.net/gallery/203874479/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "fahd-al-mutairi",
+    "category": "websites",
+    "titleKey": "pf_proj8",
+    "image": "projects/fahd-al-mutairi.svg",
+    "url": "https://www.behance.net/gallery/215345183/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "omega",
+    "category": "websites",
+    "titleKey": "pf_proj9",
+    "image": "projects/omega.svg",
+    "url": "https://www.behance.net/gallery/194950199/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "aya-roshdy",
+    "category": "brand",
+    "titleKey": "pf_proj11",
+    "image": "projects/aya-roshdy.svg",
+    "url": "https://www.behance.net/khatwadesigns2",
+    "temporaryCover": true
+  },
+  {
+    "id": "mohamed-el-naggar",
+    "category": "brand",
+    "titleKey": "pf_proj12",
+    "image": "projects/mohamed-el-naggar.svg",
+    "url": "https://www.behance.net/khatwadesigns2",
+    "temporaryCover": true
+  },
+  {
+    "id": "talal-shaker",
+    "category": "social",
+    "titleKey": "pf_proj10",
+    "image": "projects/talal-shaker.svg",
+    "url": "https://www.behance.net/khatwadesigns2",
+    "temporaryCover": true
+  }
+]

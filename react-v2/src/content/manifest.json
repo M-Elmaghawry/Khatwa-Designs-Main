@@ -1,0 +1,66 @@
+{
+  "baseline": "a831f3d456767b5c4116c3477f9f79726e296f51",
+  "inputs": {
+    "404.html": "da38d63c13571dd395e03641fb549f6f74217295a96ce0ffb62ed42d81b3f678",
+    "about.html": "5f866bf56014b87e2d6871386ae2cda0125ffbbc951b44df17d4edccb659f9dd",
+    "blog-single-clean.html": "5bbf4197cde3ac3dfd1a6b3575cf8574773fa41572cc91f9166f0d8e56a683dc",
+    "blog.html": "da2f8cc66cc73ed04c396100cfff5e23b9a934f14c83a8241f3ed8b377208f7e",
+    "brand-identity.html": "8abdc3e2da39aee59c4380a8e7130484dc15b0eabf95a034487265b03bc81788",
+    "coming-soon.html": "4130291739348b9ad80e48add63ecca1300b0c1dd1031de5275bd6807b9852ee",
+    "company-portfolio.html": "53c4041546e779510f8475f00cb7271687f476203f54e52c6b6d8149c9338c92",
+    "contact.html": "0c0433b863c4f27fcaca60724c577ffcc0ce509ed7bc3cf7b4fafdb14fb5b3ac",
+    "copyright.html": "aa78451ba302ba6b7b2cd0070cfc25df14cfa52c913ddec5dc6d3eb4aac0963a",
+    "customer-stories.html": "28fc83f3a66ee67f2ddc20112e259a4c5bc680277eaee266c5a7efbda9831bd8",
+    "index.html": "50feaa4ebab1d490c9a0240e720de0910c30c1fbb9e0ad8e8d3a10a0d4a5e80d",
+    "logo-design.html": "99d86ea228d19621055b692001fa4980f89118790a48860e02dc0ac39e01861f",
+    "maintenance.html": "8ba0cb35ea9a6f5eb2412526e574035a9fb7316782fe9ac3a5eaa994353b1542",
+    "n8n-ai-automations.html": "44bc238d7fc75d9830c812d34b873c6607fa34eee12057a857df917cb3fe9c17",
+    "portfolio.html": "8fe88060ed2dc8d6ea4d77887b16749944383c4816584d951e4190f2ed8b5c61",
+    "powerpoint-presentations.html": "b33122ea4f011ee13afa3aab9e0c8ffeb3733713db8dfbe7b7c492b441d944c2",
+    "privacy-policy.html": "405cd1a68bd1ad14fd125df916b26652bf43f4730fc4ea9258af98dcd6dcabe9",
+    "search-result.html": "8e4363a0df7fb2508f043436207cb1e5bcc63b3c4dce03ee681102ad738ac215",
+    "services-details.html": "c122dd3ecb5703d068958fa171051718c595c2b57e01345a19cd1b7f5c0665e7",
+    "services.html": "cb6400013c9bdd0c3b9287cd4e5031bf2728a084714038a6a11de3da32fefba6",
+    "social-media-design.html": "64fd5367a3305f9c71da70754bae4dbb38c221561a8f7f55b2c45538723030b9",
+    "social-media-management.html": "02185c9d1087fc81a24c15cb1b84c9e79b357c199a2ea1a287abcc3f6bee46a6",
+    "terms-and-conditions.html": "ce4d9c4110b9b4ba945b5ee9e835147d3de76db2675cca1155a284d7403bcfe9",
+    "thank-you.html": "d6cf4a193ddb369f5c2bdd245a870bca2192e077c41d33c922c4d37e03cb3ade",
+    "video-presentations.html": "ea21dccf00ee6d91203c833d77cc32c947114bf3e68e9b0c65c2bf6851621d79",
+    "web-design.html": "3b58bdca67c3cecf40c39c70356a79b3f95242e42448a8bdb390114e549181b2",
+    "js/khatwa-i18n.js": "7a50f6c2ec46a4a3b73108f0c0c3871f7bb81785413643aa82aa56c8373acd52",
+    "js/khatwa-layout.js": "4554e6f7095f5044bfdd582e17d019ae5f4809501425c0cc8e271fbee236e1f1",
+    "js/khatwa-contact.js": "8a0847d8ad3abe3170e7c96c74b308547e1620971e0056951d113b9b299d07c0",
+    "scripts/site-config.js": "44696cad41635bcfa31146c39063c7dd733ed79164789bf27d717d5abb1ad5a3",
+    "docs/Khatwa_Designs_Content_Master_AR_EN_v1.md": "f14c9536fe0210a13266a42e87d9002eea9ad2b9a9d176dc36921318eb1b2fad"
+  },
+  "company": {
+    "name": "Khatwa Designs",
+    "founded": 2021,
+    "headquarters": "Mansoura, Egypt",
+    "markets": [
+      "Egypt",
+      "Saudi Arabia"
+    ]
+  },
+  "archivedFiles": [
+    "blog.html",
+    "blog-single-clean.html",
+    "coming-soon.html",
+    "maintenance.html",
+    "search-result.html"
+  ],
+  "redirects": {
+    "logo-design.html": "brand-identity.html",
+    "services-details.html": "services.html",
+    "social-media-management.html": "services.html",
+    "video-presentations.html": "services.html",
+    "n8n-ai-automations.html": "services.html"
+  },
+  "masterOnlyProjects": [
+    {
+      "name": "Bank Albilad Vision booklet",
+      "url": "https://www.behance.net/gallery/149628683/_",
+      "status": "Preserved in master; not a current public portfolio card"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "author": "Rana Ahmed",
+    "textKey": "cs_rev1",
+    "dateKey": "cs_date1",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "2",
+    "author": "Mohamed Ibrahim",
+    "textKey": "cs_rev2",
+    "dateKey": "cs_date2",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "3",
+    "author": "Mahmoud Hussein Shafik",
+    "textKey": "cs_rev3",
+    "dateKey": "cs_date3",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "4",
+    "author": "Hesham Mohamed",
+    "textKey": "cs_rev4",
+    "dateKey": "cs_date4",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "5",
+    "author": "Amro Ahmed Abdallah",
+    "textKey": "cs_rev5",
+    "dateKey": "cs_date5",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "6",
+    "author": "Farida Gerges",
+    "textKey": "cs_rev6",
+    "dateKey": "cs_date6",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": true
+  },
+  {
+    "id": "7",
+    "author": "Walaa Elshaboury",
+    "textKey": "cs_rev7",
+    "dateKey": "cs_date7",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "8",
+    "author": "Aya Fathy",
+    "textKey": "cs_rev8",
+    "dateKey": "cs_date8",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "9",
+    "author": "Gehad Mohamed Amin",
+    "textKey": "cs_rev9",
+    "dateKey": "cs_date9",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "10",
+    "author": "Amira Hassan",
+    "textKey": "cs_rev10",
+    "dateKey": "cs_date10",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "11",
+    "author": "Mahmoud Elsayed",
+    "textKey": "cs_rev11",
+    "dateKey": "cs_date11",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  },
+  {
+    "id": "12",
+    "author": "Mahmoud Ali Saleh",
+    "textKey": "cs_rev12",
+    "dateKey": "cs_date12",
+    "source": "Owner-provided Facebook recommendations, cited in content master (KH-002.pdf)",
+    "wordingCaution": false
+  }
+]

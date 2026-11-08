@@ -1,0 +1,162 @@
+[
+  {
+    "name": "name",
+    "id": "exampleInputEmail1",
+    "tag": "input",
+    "type": "text",
+    "required": true,
+    "maxLength": 160,
+    "autoComplete": "name",
+    "inputMode": null,
+    "labelKey": "contact_name_label",
+    "placeholderKey": "contact_name_placeholder",
+    "options": []
+  },
+  {
+    "name": "email",
+    "id": "exampleInputEmail2",
+    "tag": "input",
+    "type": "email",
+    "required": true,
+    "maxLength": 254,
+    "autoComplete": "email",
+    "inputMode": null,
+    "labelKey": "contact_email_label",
+    "placeholderKey": "contact_email_placeholder",
+    "options": []
+  },
+  {
+    "name": "country_code",
+    "id": "countryCode",
+    "tag": "select",
+    "type": "text",
+    "required": false,
+    "maxLength": null,
+    "autoComplete": "tel-country-code",
+    "inputMode": null,
+    "labelKey": "contact_country_label",
+    "placeholderKey": null,
+    "options": [
+      {
+        "value": "+20",
+        "key": "country_egypt",
+        "text": "Egypt (+20)"
+      },
+      {
+        "value": "+966",
+        "key": "country_saudi",
+        "text": "Saudi Arabia (+966)"
+      },
+      {
+        "value": "+965",
+        "key": "country_kuwait",
+        "text": "Kuwait (+965)"
+      },
+      {
+        "value": "+971",
+        "key": "country_uae",
+        "text": "UAE (+971)"
+      },
+      {
+        "value": "+974",
+        "key": "country_qatar",
+        "text": "Qatar (+974)"
+      },
+      {
+        "value": "+973",
+        "key": "country_bahrain",
+        "text": "Bahrain (+973)"
+      },
+      {
+        "value": "+964",
+        "key": "country_iraq",
+        "text": "Iraq (+964)"
+      },
+      {
+        "value": "+90",
+        "key": "country_turkey",
+        "text": "Turkey (+90)"
+      },
+      {
+        "value": "+34",
+        "key": "country_spain",
+        "text": "Spain (+34)"
+      },
+      {
+        "value": "other",
+        "key": "country_other",
+        "text": "Other"
+      }
+    ]
+  },
+  {
+    "name": "phone_number",
+    "id": "exampleInputEmail3",
+    "tag": "input",
+    "type": "tel",
+    "required": false,
+    "maxLength": 40,
+    "autoComplete": "tel-national",
+    "inputMode": "tel",
+    "labelKey": "contact_phone_label",
+    "placeholderKey": "contact_phone_placeholder",
+    "options": []
+  },
+  {
+    "name": "subject",
+    "id": "serviceNeed",
+    "tag": "select",
+    "type": "text",
+    "required": false,
+    "maxLength": null,
+    "autoComplete": null,
+    "inputMode": null,
+    "labelKey": "contact_service_label",
+    "placeholderKey": null,
+    "options": [
+      {
+        "value": "",
+        "key": "contact_service_placeholder",
+        "text": "Select a service"
+      },
+      {
+        "value": "Company portfolio",
+        "key": "service_profiles",
+        "text": "Company Profiles & Engineering Portfolios"
+      },
+      {
+        "value": "PowerPoint presentations",
+        "key": "service_presentations",
+        "text": "Presentations, Tender Documents & Technical Proposals"
+      },
+      {
+        "value": "Web design",
+        "key": "service_web",
+        "text": "Website Design & Development"
+      },
+      {
+        "value": "Brand identity",
+        "key": "service_brand",
+        "text": "Logo Design & Visual Identity"
+      },
+      {
+        "value": "Social media design",
+        "key": "service_social",
+        "text": "Social Media Design"
+      }
+    ]
+  },
+  {
+    "name": "comment",
+    "id": "projectDetails",
+    "tag": "textarea",
+    "type": "text",
+    "required": false,
+    "maxLength": 10000,
+    "autoComplete": null,
+    "inputMode": null,
+    "labelKey": "contact_details_label",
+    "placeholderKey": "contact_details_placeholder",
+    "options": []
+  }
+]

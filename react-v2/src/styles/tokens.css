@@ -1,0 +1,45 @@
+:root {
+  /* Extracted from the original css/corporate.css; original logo bytes retained. */
+  --brand-blue: #1c3664;
+  --brand-yellow: #ffcd05;
+  --brand-gray: #cccccb;
+  --brand-supporting-gray: #626879;
+  --color-primary: var(--brand-blue);
+  --color-secondary: var(--brand-gray);
+  --color-accent: var(--brand-yellow);
+  --color-text: #24334c;
+  --color-muted: #626879;
+  --color-background: #ffffff;
+  --color-surface: #f6f8fb;
+  --color-border: #dce1e9;
+  --color-error: #a12828;
+  --font-english: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', Tahoma, sans-serif;
+  --font-body: var(--font-english);
+  --font-size-small: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-title: clamp(2rem, 4vw, 3.25rem);
+  --line-height-body: 1.85;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-small: 0.375rem;
+  --radius-medium: 0.875rem;
+  --radius-pill: 999px;
+  --shadow-small: 0 4px 18px rgb(28 54 100 / 6%);
+  --shadow-medium: 0 12px 36px rgb(28 54 100 / 10%);
+  --gradient-brand: linear-gradient(120deg, #1c3664, #2f5aa3);
+  --gradient-surface: linear-gradient(135deg, #eef2f8, #ffffff 65%, #fffbe8);
+  --content-width: 76rem;
+  /* CSS custom properties document breakpoints; media queries use these literal values. */
+  --breakpoint-small: 40rem;
+  --breakpoint-medium: 60rem;
+  --breakpoint-legacy-navigation: 74.9375rem;
+}
+:root:lang(ar), [lang='ar'] { --font-body: var(--font-arabic); font-family: var(--font-arabic); }
+[lang='en'] { --font-body: var(--font-english); font-family: var(--font-english); }
