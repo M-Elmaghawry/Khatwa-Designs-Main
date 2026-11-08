@@ -19,6 +19,14 @@ async function mount(location, { initialLanguage = 'ar', hydrated = false, stora
   globalThis.sessionStorage = dom.window.sessionStorage;
   dom.window.scrollTo = () => {};
   dom.window.HTMLElement.prototype.scrollIntoView = () => {};
+  if (!reducedMotion) {
+    // JSDOM has no layout. Keep section reveals below the viewport so once-only
+    // triggers do not disappear due to zero-size geometry during lifecycle QA.
+    dom.window.HTMLElement.prototype.getBoundingClientRect = function () {
+      const top = this.matches('.cinematic-hero') ? 0 : 1200;
+      return { x: 0, y: top, top, left: 0, right: 1200, bottom: top + 300, width: 1200, height: 300, toJSON() { return this; } };
+    };
+  }
   const mediaQueries = new Map();
   dom.window.matchMedia = query => {
     if (!mediaQueries.has(query)) {
@@ -192,7 +200,44 @@ test('cinematic hero preserves bilingual claims and CTA destinations without cha
   }
 });
 
-test('active hero motion survives StrictMode and locale changes without duplicate ScrollTriggers, then reverts on unmount', async () => {
+test('homepage filters, marquee control and all source-backed bilingual content remain accessible', async () => {
+  const { default: pages } = await import('../src/content/pages.json', { with: { type: 'json' } });
+  const source = pages['index.html'].sections.slice(1);
+  function keys(nodes) {
+    return nodes.flatMap(node => typeof node === 'string' ? [] : [node.attrs['data-i18n'], ...keys(node.children)].filter(Boolean));
+  }
+  for (const [language, dictionary] of [['ar', ar], ['en', en]]) {
+    const ui = await mount(SITE_BASE + 'index.html?lang=' + language, { initialLanguage: language, hydrated: true });
+    try {
+      assert.deepEqual(ui.hydrationErrors, []);
+      const home = ui.document.querySelector('.home-page');
+      for (const key of keys(source)) assert.ok(home.textContent.includes(dictionary[key]), 'preserved homepage text: ' + key);
+      for (const file of ['company-portfolio.html', 'powerpoint-presentations.html', 'web-design.html', 'brand-identity.html', 'social-media-design.html']) {
+        assert.ok(home.querySelector(`.home-service-link[href*="${file}"]`));
+      }
+      assert.equal(home.querySelectorAll('.home-service--primary').length, 3);
+      assert.equal(home.querySelectorAll('.home-review').length, 5);
+      assert.equal(home.querySelectorAll('.home-timeline li').length, 4);
+      assert.equal(home.querySelectorAll('.home-project-link').length, 6);
+      const destinations = Array.from(home.querySelectorAll('.home-project-link'), link => link.href);
+      for (const category of ['profiles', 'websites', 'presentations']) {
+        await click(home.querySelector(`[data-filter="${category}"]`));
+        assert.equal(home.querySelector(`[data-filter="${category}"]`).getAttribute('aria-pressed'), 'true');
+        assert.ok(Array.from(home.querySelectorAll('.home-project')).every(card => card.dataset.cat === category));
+      }
+      await click(home.querySelector('[data-filter="all"]'));
+      assert.deepEqual(Array.from(home.querySelectorAll('.home-project-link'), link => link.href), destinations);
+      const pause = home.querySelector('.marquee-pause');
+      await click(pause);
+      assert.equal(pause.getAttribute('aria-pressed'), 'true');
+      assert.equal(home.querySelector('.brand-marquee').dataset.paused, 'true');
+      await click(pause);
+      assert.equal(pause.getAttribute('aria-pressed'), 'false');
+    } finally { await ui.unmount(); }
+  }
+});
+
+test('active homepage motion survives StrictMode, filters and locale changes without duplicate ScrollTriggers, then reverts on unmount', async () => {
   globalThis.requestAnimationFrame = callback => setTimeout(() => callback(performance.now()), 16);
   globalThis.cancelAnimationFrame = clearTimeout;
   let ui;
@@ -204,16 +249,29 @@ test('active hero motion survives StrictMode and locale changes without duplicat
     globalThis.getComputedStyle = element => window.getComputedStyle(element);
     preliminary.window.close();
     ui = await mount(SITE_BASE, { reducedMotion: false });
-    assert.equal(ScrollTrigger.getAll().length, 2);
+    const triggerCount = ScrollTrigger.getAll().length;
+    assert.ok(triggerCount > 2, 'homepage sections register motion');
+    assert.equal(ScrollTrigger.getAll().filter(trigger => trigger.trigger.closest('.cinematic-hero')).length, 2);
+    const projectImage = ui.document.querySelector('[data-motion-image]');
+    const imageTriggers = ScrollTrigger.getAll().filter(trigger => trigger.trigger === projectImage);
+    assert.equal(imageTriggers.length, 2, 'one mask reveal and one desktop parallax share the image frame');
+    assert.equal(imageTriggers.filter(trigger => trigger.animation.vars.clipPath).length, 1, 'nested motion scopes do not duplicate mask reveals');
+    assert.equal(imageTriggers.filter(trigger => trigger.vars.scrub).length, 1, 'desktop parallax is registered once');
     await ui.setReducedMotion(true);
     assert.equal(ScrollTrigger.getAll().length, 0);
     assert.equal(ui.document.querySelector('[data-hero-line]').style.transform, '');
     await ui.setReducedMotion(false);
-    assert.equal(ScrollTrigger.getAll().length, 2);
+    assert.equal(ScrollTrigger.getAll().length, triggerCount);
     await click(ui.document.querySelector('.language-switcher [lang="en"]'));
-    assert.equal(ScrollTrigger.getAll().length, 2);
+    assert.equal(ScrollTrigger.getAll().length, triggerCount);
     await click(ui.document.querySelector('.language-switcher [lang="ar"]'));
-    assert.equal(ScrollTrigger.getAll().length, 2);
+    assert.equal(ScrollTrigger.getAll().length, triggerCount);
+    for (let i = 0; i < 3; i++) {
+      await click(ui.document.querySelector('.home-work-filters [data-filter="websites"]'));
+      assert.equal(ui.document.querySelectorAll('.home-project').length, 1);
+      await click(ui.document.querySelector('.home-work-filters [data-filter="all"]'));
+      assert.equal(ScrollTrigger.getAll().length, triggerCount, 'filter cleanup remains stable');
+    }
     await ui.unmount();
     ui = null;
     assert.equal(ScrollTrigger.getAll().length, 0);

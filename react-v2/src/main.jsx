@@ -6,6 +6,7 @@ import { SITE_BASE, resolveLanguage } from './lib/paths.js';
 import './styles/foundation.css';
 import './styles/design-system.css';
 import './styles/hero.css';
+import './styles/home.css';
 
 let storage;
 try { storage = window.localStorage; } catch { /* Arabic works without storage. */ }

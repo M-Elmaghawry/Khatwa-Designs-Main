@@ -1,0 +1,228 @@
+{
+  "rows": [
+    {
+      "language": "ar",
+      "width": 320,
+      "viewport": 320,
+      "scrollWidth": 305,
+      "direction": "rtl",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "ar",
+      "width": 390,
+      "viewport": 390,
+      "scrollWidth": 375,
+      "direction": "rtl",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "ar",
+      "width": 768,
+      "viewport": 768,
+      "scrollWidth": 753,
+      "direction": "rtl",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "ar",
+      "width": 1024,
+      "viewport": 1024,
+      "scrollWidth": 1009,
+      "direction": "rtl",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "ar",
+      "width": 1440,
+      "viewport": 1440,
+      "scrollWidth": 1425,
+      "direction": "rtl",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "viewport": 320,
+      "scrollWidth": 305,
+      "direction": "ltr",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "viewport": 390,
+      "scrollWidth": 375,
+      "direction": "ltr",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "en",
+      "width": 768,
+      "viewport": 768,
+      "scrollWidth": 753,
+      "direction": "ltr",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "en",
+      "width": 1024,
+      "viewport": 1024,
+      "scrollWidth": 1009,
+      "direction": "ltr",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "viewport": 1440,
+      "scrollWidth": 1425,
+      "direction": "ltr",
+      "sections": 7,
+      "h1s": 1,
+      "projects": 6,
+      "imageDimensions": true,
+      "marquee": "none",
+      "hiddenWords": 0
+    }
+  ],
+  "interactions": [
+    {
+      "language": "ar",
+      "category": "profiles",
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "language": "ar",
+      "category": "websites",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "language": "ar",
+      "category": "presentations",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "language": "ar",
+      "category": "all",
+      "expected": 6,
+      "actual": 6
+    },
+    {
+      "languageSwitchFrom": "ar",
+      "actual": "en"
+    },
+    {
+      "language": "en",
+      "category": "profiles",
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "language": "en",
+      "category": "websites",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "language": "en",
+      "category": "presentations",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "language": "en",
+      "category": "all",
+      "expected": 6,
+      "actual": 6
+    },
+    {
+      "languageSwitchFrom": "en",
+      "actual": "ar"
+    },
+    {
+      "marqueePaused": "true"
+    },
+    {
+      "firstTab": "skip-link"
+    },
+    {
+      "skipTarget": "main-content"
+    },
+    {
+      "keyboardFilterProjects": 1
+    },
+    {
+      "projectFocus": {
+        "element": "home-project-link",
+        "outline": "solid",
+        "width": "2.4px",
+        "visible": true
+      }
+    },
+    {
+      "touchProjects": 1,
+      "touchCTAVisible": true
+    },
+    {
+      "reducedMotionAfterToggle": "none"
+    },
+    {
+      "noJS": {
+        "headings": 6,
+        "projectLinks": 6,
+        "title": "خطوة للتصميمات — بروفايلات ومواقع وهوية بصرية"
+      }
+    }
+  ],
+  "errors": [],
+  "failedResponses": []
+}

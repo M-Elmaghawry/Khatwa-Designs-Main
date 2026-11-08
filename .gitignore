@@ -14,5 +14,7 @@ build/
 .jekyll-cache/
 Gemfile.lock
 _site/
+/.playwright-cli/
+/.taste-skill/
 css/icon.css
 css/vendors.css
