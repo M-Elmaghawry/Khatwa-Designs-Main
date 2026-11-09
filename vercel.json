@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci --prefix react-v2",
+  "buildCommand": "npm --prefix react-v2 run build",
+  "outputDirectory": "react-v2/dist",
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/Khatwa-Designs-Main/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/Khatwa-Designs-Main",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/Khatwa-Designs-Main/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/Khatwa-Designs-Main/:path*",
+      "destination": "/:path*"
+    }
+  ]
+}
