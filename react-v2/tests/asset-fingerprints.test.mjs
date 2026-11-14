@@ -21,9 +21,9 @@ test('only audited text assets accept LF/CRLF; content, unknown SVGs and binary 
 });
 
 test('audited canonical fingerprints match original Git blobs and inventory CRLF bytes', () => {
-  assert.equal(textAssetBaselines.size, 14);
+  assert.equal(textAssetBaselines.size, 16);
   for (const [file, [recorded, canonical]] of textAssetBaselines) {
-    const original = execFileSync('git', ['show', '68782cf:' + file]);
+    const original = execFileSync('git', ['show', '68782cf:' + file], { maxBuffer: 10 * 1024 * 1024 });
     assert.equal(assetFingerprint(file, original), canonical, file);
     assert.equal(expectedAssetFingerprint(file, recorded), canonical);
     const crlf = Buffer.from(original.toString('utf8').replaceAll('\r\n', '\n').replaceAll('\n', '\r\n'));
