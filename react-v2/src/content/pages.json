@@ -3807,7 +3807,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/192450545/_",
+                              "href": "https://www.behance.net/gallery/215345183/_",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -3817,10 +3817,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/ghayah.svg",
+                                  "src": "projects/behance-215345183.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -3838,115 +3838,33 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_contracting"
+                                  "data-i18n": "pf_f_websites"
                                 },
                                 "children": [
-                                  "Contracting company profile"
+                                  "Website"
                                 ]
                               },
                               {
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj1"
+                                  "data-i18n": "project_215345183"
                                 },
                                 "children": [
-                                  "Ghayah Contracting Company Profile"
+                                  "Website — 1"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/gallery/192450545/_",
+                                  "href": "https://www.behance.net/gallery/215345183/_",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "tag": "div",
-                    "attrs": {
-                      "class": "col-lg-4 col-md-6"
-                    },
-                    "children": [
-                      {
-                        "tag": "article",
-                        "attrs": {
-                          "class": "khatwa-project-card"
-                        },
-                        "children": [
-                          {
-                            "tag": "a",
-                            "attrs": {
-                              "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/193903091/_",
-                              "target": "_blank",
-                              "rel": "noopener noreferrer",
-                              "tabindex": "-1",
-                              "aria-hidden": "true"
-                            },
-                            "children": [
-                              {
-                                "tag": "img",
-                                "attrs": {
-                                  "src": "projects/wadi-al-abrakeen.svg",
-                                  "alt": "",
-                                  "width": "800",
-                                  "height": "600",
-                                  "loading": "lazy",
-                                  "decoding": "async"
-                                },
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "tag": "div",
-                            "attrs": {
-                              "class": "khatwa-project-content"
-                            },
-                            "children": [
-                              {
-                                "tag": "span",
-                                "attrs": {
-                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_contracting"
-                                },
-                                "children": [
-                                  "Contracting company profile"
-                                ]
-                              },
-                              {
-                                "tag": "h3",
-                                "attrs": {
-                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj2"
-                                },
-                                "children": [
-                                  "Wadi Al-Abrakeen Contracting Company Profile"
-                                ]
-                              },
-                              {
-                                "tag": "a",
-                                "attrs": {
-                                  "href": "https://www.behance.net/gallery/193903091/_",
-                                  "target": "_blank",
-                                  "rel": "noopener noreferrer",
-                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "home_work_view"
-                                },
-                                "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -3981,10 +3899,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/al-emar.svg",
+                                  "src": "projects/behance-202594407.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -4002,7 +3920,7 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_company"
+                                  "data-i18n": "pf_f_profiles"
                                 },
                                 "children": [
                                   "Company profile"
@@ -4012,10 +3930,10 @@
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj3"
+                                  "data-i18n": "project_202594407"
                                 },
                                 "children": [
-                                  "Al-Emar Al-Fareed Company Profile"
+                                  "Company profile — 1"
                                 ]
                               },
                               {
@@ -4028,7 +3946,7 @@
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -4053,7 +3971,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/192151991/_",
+                              "href": "https://www.behance.net/gallery/149311089/Supply-Chain-Powerpoint-Presentation",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -4063,10 +3981,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/bim-connection.svg",
+                                  "src": "projects/behance-149311089.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -4084,33 +4002,33 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_office"
+                                  "data-i18n": "pf_f_presentations"
                                 },
                                 "children": [
-                                  "Engineering office profile"
+                                  "Presentation"
                                 ]
                               },
                               {
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj4"
+                                  "data-i18n": "project_149311089"
                                 },
                                 "children": [
-                                  "BIM Connection Engineering Office Profile"
+                                  "Supply Chain — PowerPoint"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/gallery/192151991/_",
+                                  "href": "https://www.behance.net/gallery/149311089/Supply-Chain-Powerpoint-Presentation",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -4135,7 +4053,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/203874479/_",
+                              "href": "https://www.behance.net/gallery/186010277/-Branding",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -4145,10 +4063,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/al-maher.svg",
+                                  "src": "projects/behance-186010277.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -4166,33 +4084,33 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_website"
+                                  "data-i18n": "pf_cat_brand"
                                 },
                                 "children": [
-                                  "Website for an engineering-related business"
+                                  "Brand identity"
                                 ]
                               },
                               {
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj5"
+                                  "data-i18n": "project_186010277"
                                 },
                                 "children": [
-                                  "Al-Maher Electromechanical Website"
+                                  "Brand identity — 1"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/gallery/203874479/_",
+                                  "href": "https://www.behance.net/gallery/186010277/-Branding",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -4217,7 +4135,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
+                              "href": "https://www.behance.net/gallery/186383121/_",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -4227,10 +4145,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/tpack.svg",
+                                  "src": "projects/behance-186383121.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -4248,33 +4166,115 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_presentation"
+                                  "data-i18n": "pf_cat_social"
                                 },
                                 "children": [
-                                  "Presentation design sample"
+                                  "Social media design"
                                 ]
                               },
                               {
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj6"
+                                  "data-i18n": "project_186383121"
                                 },
                                 "children": [
-                                  "TPACK PowerPoint Presentation"
+                                  "Social media design — 1"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
+                                  "href": "https://www.behance.net/gallery/186383121/_",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/193903091/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-193903091.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_profiles"
+                                },
+                                "children": [
+                                  "Company profile"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_193903091"
+                                },
+                                "children": [
+                                  "Company profile — 2"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/193903091/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -5060,7 +5060,7 @@
                     "tag": "div",
                     "attrs": {
                       "class": "col-lg-4 col-md-6 work-item",
-                      "data-cat": "profiles"
+                      "data-cat": "websites"
                     },
                     "children": [
                       {
@@ -5073,7 +5073,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/192450545/_",
+                              "href": "https://www.behance.net/gallery/215345183/_",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -5083,10 +5083,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/ghayah.svg",
+                                  "src": "projects/behance-215345183.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -5104,448 +5104,33 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_contracting"
+                                  "data-i18n": "pf_f_websites"
                                 },
                                 "children": [
-                                  "Contracting company profile"
+                                  "Website"
                                 ]
                               },
                               {
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj1"
+                                  "data-i18n": "project_215345183"
                                 },
                                 "children": [
-                                  "Ghayah Contracting Company Profile"
+                                  "Website — 1"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/gallery/192450545/_",
+                                  "href": "https://www.behance.net/gallery/215345183/_",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "tag": "div",
-                    "attrs": {
-                      "class": "col-lg-4 col-md-6 work-item",
-                      "data-cat": "profiles"
-                    },
-                    "children": [
-                      {
-                        "tag": "article",
-                        "attrs": {
-                          "class": "khatwa-project-card"
-                        },
-                        "children": [
-                          {
-                            "tag": "a",
-                            "attrs": {
-                              "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/193903091/_",
-                              "target": "_blank",
-                              "rel": "noopener noreferrer",
-                              "tabindex": "-1",
-                              "aria-hidden": "true"
-                            },
-                            "children": [
-                              {
-                                "tag": "img",
-                                "attrs": {
-                                  "src": "projects/wadi-al-abrakeen.svg",
-                                  "alt": "",
-                                  "width": "800",
-                                  "height": "600",
-                                  "loading": "lazy",
-                                  "decoding": "async"
-                                },
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "tag": "div",
-                            "attrs": {
-                              "class": "khatwa-project-content"
-                            },
-                            "children": [
-                              {
-                                "tag": "span",
-                                "attrs": {
-                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_contracting"
-                                },
-                                "children": [
-                                  "Contracting company profile"
-                                ]
-                              },
-                              {
-                                "tag": "h3",
-                                "attrs": {
-                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj2"
-                                },
-                                "children": [
-                                  "Wadi Al-Abrakeen Contracting Company Profile"
-                                ]
-                              },
-                              {
-                                "tag": "a",
-                                "attrs": {
-                                  "href": "https://www.behance.net/gallery/193903091/_",
-                                  "target": "_blank",
-                                  "rel": "noopener noreferrer",
-                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "home_work_view"
-                                },
-                                "children": [
-                                  "View Project on Behance"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "tag": "div",
-                    "attrs": {
-                      "class": "col-lg-4 col-md-6 work-item",
-                      "data-cat": "profiles"
-                    },
-                    "children": [
-                      {
-                        "tag": "article",
-                        "attrs": {
-                          "class": "khatwa-project-card"
-                        },
-                        "children": [
-                          {
-                            "tag": "a",
-                            "attrs": {
-                              "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/202594407/_",
-                              "target": "_blank",
-                              "rel": "noopener noreferrer",
-                              "tabindex": "-1",
-                              "aria-hidden": "true"
-                            },
-                            "children": [
-                              {
-                                "tag": "img",
-                                "attrs": {
-                                  "src": "projects/al-emar.svg",
-                                  "alt": "",
-                                  "width": "800",
-                                  "height": "600",
-                                  "loading": "lazy",
-                                  "decoding": "async"
-                                },
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "tag": "div",
-                            "attrs": {
-                              "class": "khatwa-project-content"
-                            },
-                            "children": [
-                              {
-                                "tag": "span",
-                                "attrs": {
-                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_company"
-                                },
-                                "children": [
-                                  "Company profile"
-                                ]
-                              },
-                              {
-                                "tag": "h3",
-                                "attrs": {
-                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj3"
-                                },
-                                "children": [
-                                  "Al-Emar Al-Fareed Company Profile"
-                                ]
-                              },
-                              {
-                                "tag": "a",
-                                "attrs": {
-                                  "href": "https://www.behance.net/gallery/202594407/_",
-                                  "target": "_blank",
-                                  "rel": "noopener noreferrer",
-                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "home_work_view"
-                                },
-                                "children": [
-                                  "View Project on Behance"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "tag": "div",
-                    "attrs": {
-                      "class": "col-lg-4 col-md-6 work-item",
-                      "data-cat": "profiles"
-                    },
-                    "children": [
-                      {
-                        "tag": "article",
-                        "attrs": {
-                          "class": "khatwa-project-card"
-                        },
-                        "children": [
-                          {
-                            "tag": "a",
-                            "attrs": {
-                              "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/192151991/_",
-                              "target": "_blank",
-                              "rel": "noopener noreferrer",
-                              "tabindex": "-1",
-                              "aria-hidden": "true"
-                            },
-                            "children": [
-                              {
-                                "tag": "img",
-                                "attrs": {
-                                  "src": "projects/bim-connection.svg",
-                                  "alt": "",
-                                  "width": "800",
-                                  "height": "600",
-                                  "loading": "lazy",
-                                  "decoding": "async"
-                                },
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "tag": "div",
-                            "attrs": {
-                              "class": "khatwa-project-content"
-                            },
-                            "children": [
-                              {
-                                "tag": "span",
-                                "attrs": {
-                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_office"
-                                },
-                                "children": [
-                                  "Engineering office profile"
-                                ]
-                              },
-                              {
-                                "tag": "h3",
-                                "attrs": {
-                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj4"
-                                },
-                                "children": [
-                                  "BIM Connection Engineering Office Profile"
-                                ]
-                              },
-                              {
-                                "tag": "a",
-                                "attrs": {
-                                  "href": "https://www.behance.net/gallery/192151991/_",
-                                  "target": "_blank",
-                                  "rel": "noopener noreferrer",
-                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "home_work_view"
-                                },
-                                "children": [
-                                  "View Project on Behance"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "tag": "div",
-                    "attrs": {
-                      "class": "col-lg-4 col-md-6 work-item",
-                      "data-cat": "profiles"
-                    },
-                    "children": [
-                      {
-                        "tag": "article",
-                        "attrs": {
-                          "class": "khatwa-project-card"
-                        },
-                        "children": [
-                          {
-                            "tag": "a",
-                            "attrs": {
-                              "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/khatwadesigns2",
-                              "target": "_blank",
-                              "rel": "noopener noreferrer",
-                              "tabindex": "-1",
-                              "aria-hidden": "true"
-                            },
-                            "children": [
-                              {
-                                "tag": "img",
-                                "attrs": {
-                                  "src": "projects/engineering-group.svg",
-                                  "alt": "",
-                                  "width": "800",
-                                  "height": "600",
-                                  "loading": "lazy",
-                                  "decoding": "async"
-                                },
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "tag": "div",
-                            "attrs": {
-                              "class": "khatwa-project-content"
-                            },
-                            "children": [
-                              {
-                                "tag": "span",
-                                "attrs": {
-                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "pf_cat_portfolio"
-                                },
-                                "children": [
-                                  "Engineering portfolio"
-                                ]
-                              },
-                              {
-                                "tag": "h3",
-                                "attrs": {
-                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "pf_proj7"
-                                },
-                                "children": [
-                                  "Engineering Group Portfolio"
-                                ]
-                              },
-                              {
-                                "tag": "a",
-                                "attrs": {
-                                  "href": "https://www.behance.net/khatwadesigns2",
-                                  "target": "_blank",
-                                  "rel": "noopener noreferrer",
-                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "pf_view_profile"
-                                },
-                                "children": [
-                                  "Browse on Behance Profile"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "tag": "div",
-                    "attrs": {
-                      "class": "col-lg-4 col-md-6 work-item",
-                      "data-cat": "presentations"
-                    },
-                    "children": [
-                      {
-                        "tag": "article",
-                        "attrs": {
-                          "class": "khatwa-project-card"
-                        },
-                        "children": [
-                          {
-                            "tag": "a",
-                            "attrs": {
-                              "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
-                              "target": "_blank",
-                              "rel": "noopener noreferrer",
-                              "tabindex": "-1",
-                              "aria-hidden": "true"
-                            },
-                            "children": [
-                              {
-                                "tag": "img",
-                                "attrs": {
-                                  "src": "projects/tpack.svg",
-                                  "alt": "",
-                                  "width": "800",
-                                  "height": "600",
-                                  "loading": "lazy",
-                                  "decoding": "async"
-                                },
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "tag": "div",
-                            "attrs": {
-                              "class": "khatwa-project-content"
-                            },
-                            "children": [
-                              {
-                                "tag": "span",
-                                "attrs": {
-                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_presentation"
-                                },
-                                "children": [
-                                  "Presentation design sample"
-                                ]
-                              },
-                              {
-                                "tag": "h3",
-                                "attrs": {
-                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj6"
-                                },
-                                "children": [
-                                  "TPACK PowerPoint Presentation"
-                                ]
-                              },
-                              {
-                                "tag": "a",
-                                "attrs": {
-                                  "href": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
-                                  "target": "_blank",
-                                  "rel": "noopener noreferrer",
-                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "home_work_view"
-                                },
-                                "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -5581,10 +5166,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/al-maher.svg",
+                                  "src": "projects/behance-203874479.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -5602,20 +5187,20 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "home_cat_website"
+                                  "data-i18n": "pf_f_websites"
                                 },
                                 "children": [
-                                  "Website for an engineering-related business"
+                                  "Website"
                                 ]
                               },
                               {
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "home_proj5"
+                                  "data-i18n": "project_203874479"
                                 },
                                 "children": [
-                                  "Al-Maher Electromechanical Website"
+                                  "Website — 2"
                                 ]
                               },
                               {
@@ -5628,7 +5213,7 @@
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -5654,7 +5239,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/gallery/215345183/_",
+                              "href": "https://www.behance.net/gallery/195189457/_",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -5664,10 +5249,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/fahd-al-mutairi.svg",
+                                  "src": "projects/behance-195189457.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -5685,7 +5270,7 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "pf_cat_website"
+                                  "data-i18n": "pf_f_websites"
                                 },
                                 "children": [
                                   "Website"
@@ -5695,23 +5280,23 @@
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "pf_proj8"
+                                  "data-i18n": "project_195189457"
                                 },
                                 "children": [
-                                  "Lawyer Fahad Al-Mutairi Company Website"
+                                  "Website — 3"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/gallery/215345183/_",
+                                  "href": "https://www.behance.net/gallery/195189457/_",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -5747,10 +5332,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/omega.svg",
+                                  "src": "projects/behance-194950199.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -5768,7 +5353,7 @@
                                 "tag": "span",
                                 "attrs": {
                                   "class": "fs-14 text-base-color fw-600 d-block mb-10px",
-                                  "data-i18n": "pf_cat_website"
+                                  "data-i18n": "pf_f_websites"
                                 },
                                 "children": [
                                   "Website"
@@ -5778,10 +5363,10 @@
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "pf_proj9"
+                                  "data-i18n": "project_194950199"
                                 },
                                 "children": [
-                                  "Omega Training Academy Website"
+                                  "Website — 4"
                                 ]
                               },
                               {
@@ -5794,7 +5379,837 @@
                                   "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "View Project on Behance"
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "websites"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/189475113/-Landing-Page",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-189475113.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_websites"
+                                },
+                                "children": [
+                                  "Website"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_189475113"
+                                },
+                                "children": [
+                                  "Landing page"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/189475113/-Landing-Page",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "profiles"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/202594407/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-202594407.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_profiles"
+                                },
+                                "children": [
+                                  "Company profile"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_202594407"
+                                },
+                                "children": [
+                                  "Company profile — 1"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/202594407/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "profiles"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/193903091/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-193903091.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_profiles"
+                                },
+                                "children": [
+                                  "Company profile"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_193903091"
+                                },
+                                "children": [
+                                  "Company profile — 2"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/193903091/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "profiles"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/192450545/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-192450545.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_profiles"
+                                },
+                                "children": [
+                                  "Company profile"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_192450545"
+                                },
+                                "children": [
+                                  "Company profile — 3"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/192450545/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "profiles"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/192151991/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-192151991.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_profiles"
+                                },
+                                "children": [
+                                  "Company profile"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_192151991"
+                                },
+                                "children": [
+                                  "Company profile — 4"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/192151991/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "profiles"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/149628627/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-149628627.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_profiles"
+                                },
+                                "children": [
+                                  "Company profile"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_149628627"
+                                },
+                                "children": [
+                                  "Company profile — 5"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/149628627/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "presentations"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/149311089/Supply-Chain-Powerpoint-Presentation",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-149311089.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_presentations"
+                                },
+                                "children": [
+                                  "Presentation"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_149311089"
+                                },
+                                "children": [
+                                  "Supply Chain — PowerPoint"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/149311089/Supply-Chain-Powerpoint-Presentation",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "presentations"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-149311977.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_presentations"
+                                },
+                                "children": [
+                                  "Presentation"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_149311977"
+                                },
+                                "children": [
+                                  "TPACK — PowerPoint"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "presentations"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/149312263/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-149312263.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_presentations"
+                                },
+                                "children": [
+                                  "Presentation"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_149312263"
+                                },
+                                "children": [
+                                  "Presentation — 3"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/149312263/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "presentations"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/149309225/Grand-Hotel-Powerpoint-Presentation",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-149309225.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_f_presentations"
+                                },
+                                "children": [
+                                  "Presentation"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_149309225"
+                                },
+                                "children": [
+                                  "Grand Hotel — PowerPoint"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/149309225/Grand-Hotel-Powerpoint-Presentation",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -5820,7 +6235,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/khatwadesigns2",
+                              "href": "https://www.behance.net/gallery/186010277/-Branding",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -5830,10 +6245,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/aya-roshdy.svg",
+                                  "src": "projects/behance-186010277.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -5861,23 +6276,23 @@
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "pf_proj11"
+                                  "data-i18n": "project_186010277"
                                 },
                                 "children": [
-                                  "Eng. Aya Rushdy — Branding"
+                                  "Brand identity — 1"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/khatwadesigns2",
+                                  "href": "https://www.behance.net/gallery/186010277/-Branding",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "pf_view_profile"
+                                  "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "Browse on Behance Profile"
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -5903,7 +6318,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/khatwadesigns2",
+                              "href": "https://www.behance.net/gallery/185519875/-Branding",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -5913,10 +6328,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/mohamed-el-naggar.svg",
+                                  "src": "projects/behance-185519875.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -5944,23 +6359,189 @@
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "pf_proj12"
+                                  "data-i18n": "project_185519875"
                                 },
                                 "children": [
-                                  "Eng. Mohamed Al-Najjar — Branding"
+                                  "Brand identity — 2"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/khatwadesigns2",
+                                  "href": "https://www.behance.net/gallery/185519875/-Branding",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "pf_view_profile"
+                                  "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "Browse on Behance Profile"
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "brand"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/126865569/-Branding",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-126865569.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_cat_brand"
+                                },
+                                "children": [
+                                  "Brand identity"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_126865569"
+                                },
+                                "children": [
+                                  "Brand identity — 3"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/126865569/-Branding",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "brand"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/149607461/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-149607461.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_cat_brand"
+                                },
+                                "children": [
+                                  "Brand identity"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_149607461"
+                                },
+                                "children": [
+                                  "Brand identity — 4"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/149607461/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
                                 ]
                               }
                             ]
@@ -5986,7 +6567,7 @@
                             "tag": "a",
                             "attrs": {
                               "class": "khatwa-project-cover",
-                              "href": "https://www.behance.net/khatwadesigns2",
+                              "href": "https://www.behance.net/gallery/186383121/_",
                               "target": "_blank",
                               "rel": "noopener noreferrer",
                               "tabindex": "-1",
@@ -5996,10 +6577,10 @@
                               {
                                 "tag": "img",
                                 "attrs": {
-                                  "src": "projects/talal-shaker.svg",
+                                  "src": "projects/behance-186383121.svg",
                                   "alt": "",
-                                  "width": "800",
-                                  "height": "600",
+                                  "width": "1200",
+                                  "height": "900",
                                   "loading": "lazy",
                                   "decoding": "async"
                                 },
@@ -6027,23 +6608,355 @@
                                 "tag": "h3",
                                 "attrs": {
                                   "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
-                                  "data-i18n": "pf_proj10"
+                                  "data-i18n": "project_186383121"
                                 },
                                 "children": [
-                                  "Social Media Designs — Eng. Talal Shaker’s Office"
+                                  "Social media design — 1"
                                 ]
                               },
                               {
                                 "tag": "a",
                                 "attrs": {
-                                  "href": "https://www.behance.net/khatwadesigns2",
+                                  "href": "https://www.behance.net/gallery/186383121/_",
                                   "target": "_blank",
                                   "rel": "noopener noreferrer",
                                   "class": "fw-600 text-dark-gray text-decoration-line-bottom",
-                                  "data-i18n": "pf_view_profile"
+                                  "data-i18n": "home_work_view"
                                 },
                                 "children": [
-                                  "Browse on Behance Profile"
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "social"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/186382111/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-186382111.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_cat_social"
+                                },
+                                "children": [
+                                  "Social media design"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_186382111"
+                                },
+                                "children": [
+                                  "Social media design — 2"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/186382111/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "social"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/127171397/_",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-127171397.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_cat_social"
+                                },
+                                "children": [
+                                  "Social media design"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_127171397"
+                                },
+                                "children": [
+                                  "Social media design — 3"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/127171397/_",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "social"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/126865999/-Bim-Connection-Part-1",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-126865999.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_cat_social"
+                                },
+                                "children": [
+                                  "Social media design"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_126865999"
+                                },
+                                "children": [
+                                  "BIM Connection — Social media, Part 1"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/126865999/-Bim-Connection-Part-1",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attrs": {
+                      "class": "col-lg-4 col-md-6 work-item",
+                      "data-cat": "social"
+                    },
+                    "children": [
+                      {
+                        "tag": "article",
+                        "attrs": {
+                          "class": "khatwa-project-card"
+                        },
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attrs": {
+                              "class": "khatwa-project-cover",
+                              "href": "https://www.behance.net/gallery/130734157/-Muro-Real-Estate-Part-1",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer",
+                              "tabindex": "-1",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attrs": {
+                                  "src": "projects/behance-130734157.svg",
+                                  "alt": "",
+                                  "width": "1200",
+                                  "height": "900",
+                                  "loading": "lazy",
+                                  "decoding": "async"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attrs": {
+                              "class": "khatwa-project-content"
+                            },
+                            "children": [
+                              {
+                                "tag": "span",
+                                "attrs": {
+                                  "class": "fs-14 text-base-color fw-600 d-block mb-10px",
+                                  "data-i18n": "pf_cat_social"
+                                },
+                                "children": [
+                                  "Social media design"
+                                ]
+                              },
+                              {
+                                "tag": "h3",
+                                "attrs": {
+                                  "class": "alt-font fw-600 text-dark-gray fs-20 mb-20px",
+                                  "data-i18n": "project_130734157"
+                                },
+                                "children": [
+                                  "Muro Real Estate — Social media, Part 1"
+                                ]
+                              },
+                              {
+                                "tag": "a",
+                                "attrs": {
+                                  "href": "https://www.behance.net/gallery/130734157/-Muro-Real-Estate-Part-1",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "class": "fw-600 text-dark-gray text-decoration-line-bottom",
+                                  "data-i18n": "home_work_view"
+                                },
+                                "children": [
+                                  "View on Behance"
                                 ]
                               }
                             ]

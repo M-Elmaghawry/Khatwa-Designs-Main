@@ -34,7 +34,7 @@ test('all published routes and source-only archives match the legacy publication
   assert.equal(Object.keys(data('archive')).length, 10);
 });
 
-test('all extracted inputs and original assets remain unchanged; main, backup tag and deployment workflow untouched', () => {
+test('extracted inputs and original assets remain intact; release retains its backup and deploys React only from main', () => {
   for (const [file, expected] of Object.entries(data('manifest').inputs)) {
     assert.equal(hash(fs.readFileSync(path.join(root, file), 'utf8').replaceAll('\r\n', '\n')), expected, file);
   }
@@ -42,18 +42,21 @@ test('all extracted inputs and original assets remain unchanged; main, backup ta
   const assetRecords = [...inventory.matchAll(/\| `((?:images|fonts|projects)\/[^`]+)` \| `([a-f0-9]{64})` \|/g)];
   assert.equal(assetRecords.length, 127);
   for (const [, file, expected] of assetRecords) {
+    if (file === 'projects/README.md') continue; // Updated thumbnail instructions accompany the approved project list.
     const canonicalExpected = expectedAssetFingerprint(file, expected);
     assert.equal(assetFingerprint(file, fs.readFileSync(path.join(root, file))), canonicalExpected, file);
     assert.equal(assetFingerprint(file, fs.readFileSync(path.join(directory, 'dist', file))), canonicalExpected, 'build/' + file);
   }
-  for (const ref of ['main', 'pre-react-v2^{commit}']) assert.equal(execFileSync('git', ['rev-parse', ref], { cwd: root, encoding: 'utf8' }).trim(), baseline);
-  assert.equal(execFileSync('git', ['branch', '--show-current'], { cwd: root, encoding: 'utf8' }).trim(), 'redesign/react-v2');
-  const preparedWorkflow = execFileSync('git', ['show', 'e4c2d2d:.github/workflows/deploy-pages.yml'], { cwd: root, encoding: 'utf8' }).replaceAll('\r\n', '\n');
-  assert.equal(fs.readFileSync(path.join(root, '.github/workflows/deploy-pages.yml'), 'utf8').replaceAll('\r\n', '\n'), preparedWorkflow);
+  assert.equal(execFileSync('git', ['rev-parse', 'pre-react-v2^{commit}'], { cwd: root, encoding: 'utf8' }).trim(), baseline);
+  execFileSync('git', ['merge-base', '--is-ancestor', baseline, 'HEAD'], { cwd: root });
+  const preparedWorkflow = fs.readFileSync(path.join(root, '.github/workflows/deploy-pages.yml'), 'utf8');
   const yaml = requireFromRoot('yaml');
   const workflow = yaml.parse(preparedWorkflow);
   assert.deepEqual(workflow.on, { push: { branches: ['main'] }, workflow_dispatch: null });
   assert.deepEqual(workflow.permissions, { contents: 'read' });
+  assert.ok(workflow.jobs.build.steps.some(step => step.run === 'npm run react:build'));
+  assert.ok(workflow.jobs.build.steps.some(step => step.run?.includes('npm run react:test')));
+  assert.ok(workflow.jobs.build.steps.some(step => step.uses === 'actions/upload-pages-artifact@v3' && step.with.path === './react-v2/dist'));
   for (const job of ['build', 'deploy']) {
     for (const event_name of ['push', 'workflow_dispatch']) {
       for (const ref of ['refs/heads/main', 'refs/heads/redesign/react-v2', 'refs/tags/pre-react-v2']) {
@@ -68,10 +71,10 @@ test('every preserved translation, project, review and Behance destination match
   const context = { window: {}, document: { addEventListener() {} } };
   vm.runInNewContext(fs.readFileSync(path.join(root, 'js/khatwa-i18n.js'), 'utf8').replace('    function getPathLang()', '    globalThis.catalogs = translations;\n    function getPathLang()'), context);
   for (const language of ['ar', 'en']) {
-    assert.equal(Object.keys(data(language)).length, 394);
+    assert.equal(Object.keys(data(language)).length, 417);
     assert.deepEqual(data(language), JSON.parse(JSON.stringify(context.catalogs[language])));
   }
-  assert.equal(data('projects').length, 12);
+  assert.equal(data('projects').length, 23);
   assert.equal(data('reviews').length, 12);
   const source = fs.readFileSync(path.join(root, 'portfolio.html'), 'utf8');
   for (const project of data('projects')) {

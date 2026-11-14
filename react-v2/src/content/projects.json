@@ -1,98 +1,186 @@
 [
   {
-    "id": "ghayah",
-    "category": "profiles",
-    "titleKey": "home_proj1",
-    "image": "projects/ghayah.svg",
-    "url": "https://www.behance.net/gallery/192450545/_",
-    "temporaryCover": true
-  },
-  {
-    "id": "wadi-al-abrakeen",
-    "category": "profiles",
-    "titleKey": "home_proj2",
-    "image": "projects/wadi-al-abrakeen.svg",
-    "url": "https://www.behance.net/gallery/193903091/_",
-    "temporaryCover": true
-  },
-  {
-    "id": "al-emar",
-    "category": "profiles",
-    "titleKey": "home_proj3",
-    "image": "projects/al-emar.svg",
-    "url": "https://www.behance.net/gallery/202594407/_",
-    "temporaryCover": true
-  },
-  {
-    "id": "bim-connection",
-    "category": "profiles",
-    "titleKey": "home_proj4",
-    "image": "projects/bim-connection.svg",
-    "url": "https://www.behance.net/gallery/192151991/_",
-    "temporaryCover": true
-  },
-  {
-    "id": "engineering-group",
-    "category": "profiles",
-    "titleKey": "pf_proj7",
-    "image": "projects/engineering-group.svg",
-    "url": "https://www.behance.net/khatwadesigns2",
-    "temporaryCover": true
-  },
-  {
-    "id": "tpack",
-    "category": "presentations",
-    "titleKey": "home_proj6",
-    "image": "projects/tpack.svg",
-    "url": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
-    "temporaryCover": true
-  },
-  {
-    "id": "al-maher",
+    "id": "behance-215345183",
     "category": "websites",
-    "titleKey": "home_proj5",
-    "image": "projects/al-maher.svg",
-    "url": "https://www.behance.net/gallery/203874479/_",
-    "temporaryCover": true
-  },
-  {
-    "id": "fahd-al-mutairi",
-    "category": "websites",
-    "titleKey": "pf_proj8",
-    "image": "projects/fahd-al-mutairi.svg",
+    "titleKey": "project_215345183",
+    "image": "projects/behance-215345183.svg",
     "url": "https://www.behance.net/gallery/215345183/_",
     "temporaryCover": true
   },
   {
-    "id": "omega",
+    "id": "behance-203874479",
     "category": "websites",
-    "titleKey": "pf_proj9",
-    "image": "projects/omega.svg",
+    "titleKey": "project_203874479",
+    "image": "projects/behance-203874479.svg",
+    "url": "https://www.behance.net/gallery/203874479/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-195189457",
+    "category": "websites",
+    "titleKey": "project_195189457",
+    "image": "projects/behance-195189457.svg",
+    "url": "https://www.behance.net/gallery/195189457/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-194950199",
+    "category": "websites",
+    "titleKey": "project_194950199",
+    "image": "projects/behance-194950199.svg",
     "url": "https://www.behance.net/gallery/194950199/_",
     "temporaryCover": true
   },
   {
-    "id": "aya-roshdy",
-    "category": "brand",
-    "titleKey": "pf_proj11",
-    "image": "projects/aya-roshdy.svg",
-    "url": "https://www.behance.net/khatwadesigns2",
+    "id": "behance-189475113",
+    "category": "websites",
+    "titleKey": "project_189475113",
+    "image": "projects/behance-189475113.svg",
+    "url": "https://www.behance.net/gallery/189475113/-Landing-Page",
     "temporaryCover": true
   },
   {
-    "id": "mohamed-el-naggar",
-    "category": "brand",
-    "titleKey": "pf_proj12",
-    "image": "projects/mohamed-el-naggar.svg",
-    "url": "https://www.behance.net/khatwadesigns2",
+    "id": "behance-202594407",
+    "category": "profiles",
+    "titleKey": "project_202594407",
+    "image": "projects/behance-202594407.svg",
+    "url": "https://www.behance.net/gallery/202594407/_",
     "temporaryCover": true
   },
   {
-    "id": "talal-shaker",
+    "id": "behance-193903091",
+    "category": "profiles",
+    "titleKey": "project_193903091",
+    "image": "projects/behance-193903091.svg",
+    "url": "https://www.behance.net/gallery/193903091/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-192450545",
+    "category": "profiles",
+    "titleKey": "project_192450545",
+    "image": "projects/behance-192450545.svg",
+    "url": "https://www.behance.net/gallery/192450545/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-192151991",
+    "category": "profiles",
+    "titleKey": "project_192151991",
+    "image": "projects/behance-192151991.svg",
+    "url": "https://www.behance.net/gallery/192151991/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-149628627",
+    "category": "profiles",
+    "titleKey": "project_149628627",
+    "image": "projects/behance-149628627.svg",
+    "url": "https://www.behance.net/gallery/149628627/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-149311089",
+    "category": "presentations",
+    "titleKey": "project_149311089",
+    "image": "projects/behance-149311089.svg",
+    "url": "https://www.behance.net/gallery/149311089/Supply-Chain-Powerpoint-Presentation",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-149311977",
+    "category": "presentations",
+    "titleKey": "project_149311977",
+    "image": "projects/behance-149311977.svg",
+    "url": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-149312263",
+    "category": "presentations",
+    "titleKey": "project_149312263",
+    "image": "projects/behance-149312263.svg",
+    "url": "https://www.behance.net/gallery/149312263/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-149309225",
+    "category": "presentations",
+    "titleKey": "project_149309225",
+    "image": "projects/behance-149309225.svg",
+    "url": "https://www.behance.net/gallery/149309225/Grand-Hotel-Powerpoint-Presentation",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-186010277",
+    "category": "brand",
+    "titleKey": "project_186010277",
+    "image": "projects/behance-186010277.svg",
+    "url": "https://www.behance.net/gallery/186010277/-Branding",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-185519875",
+    "category": "brand",
+    "titleKey": "project_185519875",
+    "image": "projects/behance-185519875.svg",
+    "url": "https://www.behance.net/gallery/185519875/-Branding",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-126865569",
+    "category": "brand",
+    "titleKey": "project_126865569",
+    "image": "projects/behance-126865569.svg",
+    "url": "https://www.behance.net/gallery/126865569/-Branding",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-149607461",
+    "category": "brand",
+    "titleKey": "project_149607461",
+    "image": "projects/behance-149607461.svg",
+    "url": "https://www.behance.net/gallery/149607461/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-186383121",
     "category": "social",
-    "titleKey": "pf_proj10",
-    "image": "projects/talal-shaker.svg",
-    "url": "https://www.behance.net/khatwadesigns2",
+    "titleKey": "project_186383121",
+    "image": "projects/behance-186383121.svg",
+    "url": "https://www.behance.net/gallery/186383121/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-186382111",
+    "category": "social",
+    "titleKey": "project_186382111",
+    "image": "projects/behance-186382111.svg",
+    "url": "https://www.behance.net/gallery/186382111/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-127171397",
+    "category": "social",
+    "titleKey": "project_127171397",
+    "image": "projects/behance-127171397.svg",
+    "url": "https://www.behance.net/gallery/127171397/_",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-126865999",
+    "category": "social",
+    "titleKey": "project_126865999",
+    "image": "projects/behance-126865999.svg",
+    "url": "https://www.behance.net/gallery/126865999/-Bim-Connection-Part-1",
+    "temporaryCover": true
+  },
+  {
+    "id": "behance-130734157",
+    "category": "social",
+    "titleKey": "project_130734157",
+    "image": "projects/behance-130734157.svg",
+    "url": "https://www.behance.net/gallery/130734157/-Muro-Real-Estate-Part-1",
     "temporaryCover": true
   }
 ]

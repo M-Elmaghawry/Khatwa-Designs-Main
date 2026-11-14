@@ -41,15 +41,17 @@ test('every redesigned source-backed inner page retains original bilingual copy,
   }
 });
 
-test('homepage markup and approved visual source stay unchanged from the reviewed Phase 3 baseline', () => {
-  const expected = { ar: '831915703b5d2743c7acd652fb7ce94f85bcfd79988a35c02b50e5d039355a35', en: '4eccd5ff6eb588af323503ed5a2c74d82f8f06153ed787482bc16012256cd07d' };
+test('homepage outside the approved portfolio update retains the reviewed Phase 3 baseline', () => {
+  const expected = {"ar":"a82d157f41559e1b292f0b2d1930ca1fd8b689465db3ff1ed433cf00d61b4f4a","en":"e1b078c12c984170b6320bc278429036af64b8b1a664fed08511e0e30316c0b3"};
   for (const language of ['ar', 'en']) {
     const dom = new JSDOM(render(SITE_BASE + 'index.html?lang=' + language, language));
-    try { assert.equal(crypto.createHash('sha256').update(dom.window.document.querySelector('.home-page').outerHTML).digest('hex'), expected[language]); }
+    try { dom.window.document.querySelector('.home-work').remove(); assert.equal(crypto.createHash('sha256').update(dom.window.document.querySelector('.home-page').outerHTML).digest('hex'), expected[language]); }
     finally { dom.window.close(); }
   }
   for (const file of ['src/components/CinematicHero.jsx', 'src/components/home/HomeSections.jsx', 'src/content/home-model.js', 'src/styles/home.css', 'src/styles/hero.css', 'src/styles/tokens.css']) {
     const baseline = execFileSync('git', ['show', '1e53ac5:react-v2/' + file], { encoding: 'utf8' }).replaceAll('\r\n', '\n');
-    assert.equal(fs.readFileSync(new URL('../' + file, import.meta.url), 'utf8').replaceAll('\r\n', '\n'), baseline, file);
+    const current = fs.readFileSync(new URL('../' + file, import.meta.url), 'utf8').replaceAll('\r\n', '\n');
+    const expectedSource = file === 'src/components/home/HomeSections.jsx' ? baseline.replace("['all', 'profiles', 'websites', 'presentations']", "['all', 'profiles', 'websites', 'presentations', 'brand', 'social']") : baseline;
+    assert.equal(current, expectedSource, file);
   }
 });

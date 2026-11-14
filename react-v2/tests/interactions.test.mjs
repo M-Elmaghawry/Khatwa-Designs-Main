@@ -84,12 +84,12 @@ test('direct English route, mobile navigation and native portfolio filters work'
     const toggle = ui.document.querySelector('.menu-toggle');
     await click(toggle);
     assert.equal(toggle.getAttribute('aria-expanded'), 'true');
-    assert.equal(ui.document.querySelectorAll('.work-item').length, 12);
+    assert.equal(ui.document.querySelectorAll('.work-item').length, 23);
     await click(ui.document.querySelector('[data-filter="websites"]'));
-    assert.equal(ui.document.querySelectorAll('.work-item').length, 3);
+    assert.equal(ui.document.querySelectorAll('.work-item').length, 5);
     assert.equal(ui.document.querySelector('[data-filter="websites"]').getAttribute('aria-pressed'), 'true');
     await click(ui.document.querySelector('[data-filter="all"]'));
-    assert.equal(ui.document.querySelectorAll('.work-item').length, 12);
+    assert.equal(ui.document.querySelectorAll('.work-item').length, 23);
   } finally { await ui.unmount(); }
 });
 
@@ -220,7 +220,7 @@ test('homepage filters, marquee control and all source-backed bilingual content 
       assert.equal(home.querySelectorAll('.home-timeline li').length, 4);
       assert.equal(home.querySelectorAll('.home-project-link').length, 6);
       const destinations = Array.from(home.querySelectorAll('.home-project-link'), link => link.href);
-      for (const category of ['profiles', 'websites', 'presentations']) {
+      for (const category of ['profiles', 'websites', 'presentations', 'brand', 'social']) {
         await click(home.querySelector(`[data-filter="${category}"]`));
         assert.equal(home.querySelector(`[data-filter="${category}"]`).getAttribute('aria-pressed'), 'true');
         assert.ok(Array.from(home.querySelectorAll('.home-project')).every(card => card.dataset.cat === category));
@@ -283,7 +283,7 @@ test('active homepage motion survives StrictMode, filters and locale changes wit
     const portfolioCount = ScrollTrigger.getAll().length;
     for (let i = 0; i < 3; i++) {
       await click(ui.document.querySelector('.inner-filters [data-filter="websites"]'));
-      assert.equal(ui.document.querySelectorAll('.work-item').length, 3);
+      assert.equal(ui.document.querySelectorAll('.work-item').length, 5);
       await click(ui.document.querySelector('.inner-filters [data-filter="all"]'));
       assert.equal(ScrollTrigger.getAll().length, portfolioCount, 'inner project filter cleanup is stable');
     }

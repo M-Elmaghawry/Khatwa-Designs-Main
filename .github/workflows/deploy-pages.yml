@@ -25,25 +25,30 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            react-v2/package-lock.json
 
       - name: Install locked dependencies
         run: npm ci
 
+      - name: Install React dependencies
+        run: npm ci --prefix react-v2
+
       - name: Build production assets
-        run: npm run build
+        run: npm run react:build
 
       - name: Run regression checks
-        run: npm test
-
-      - name: Prepare Pages artifact
-        run: npm run prepare:site
+        run: |
+          npm test
+          npm run react:test
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./react-v2/dist
 
   deploy:
     if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}

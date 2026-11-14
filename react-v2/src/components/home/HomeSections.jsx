@@ -112,7 +112,7 @@ export function HomeWorks() {
       <div className="home-section-intro"><Heading id="work-heading">{t('home_work_title')}</Heading><div><p>{t('home_work_intro')}</p><SiteLink href="portfolio.html" className="home-text-link">{t('home_work_all')}<Arrow /></SiteLink></div></div>
       <Rule />
       <div className="home-work-filters" role="group" aria-label={t('pf_filters_label')}>
-        {['all', 'profiles', 'websites', 'presentations'].map(category => <button key={category} type="button" data-filter={category} aria-pressed={filter === category} aria-controls="home-project-results" onClick={() => setFilter(category)}>{t('pf_f_' + category)}</button>)}
+        {['all', 'profiles', 'websites', 'presentations', 'brand', 'social'].map(category => <button key={category} type="button" data-filter={category} aria-pressed={filter === category} aria-controls="home-project-results" onClick={() => setFilter(category)}>{t('pf_f_' + category)}</button>)}
       </div>
       <p className="home-cover-note">{coverNote}</p>
       <p className="sr-only" role="status" aria-live="polite">{language === 'ar' ? `عدد المشروعات: ${shown.length}` : `${shown.length} projects`}</p>

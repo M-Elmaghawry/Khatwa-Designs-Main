@@ -1,7 +1,7 @@
-// Fill in the existing EmailJS account identifiers when supplied by the owner.
+// Shared EmailJS account identifiers for the contact form.
 // Only the PUBLIC key belongs here. Never add a private key or access token.
 window.KhatwaEmailJSConfig = {
-    serviceId: '',
-    templateId: '',
-    publicKey: ''
+    serviceId: 'service_pzjv8g8',
+    templateId: 'template_nhgwlgj',
+    publicKey: 'UdJErrWWJNphl0QbO'
 };

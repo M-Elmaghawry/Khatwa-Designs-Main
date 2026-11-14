@@ -803,6 +803,54 @@
         }
     };
 
+    // Owner-approved portfolio projects; neutral titles until final thumbnails arrive.
+    translations.en.project_215345183 = "Website — 1";
+    translations.ar.project_215345183 = "موقع إلكتروني — 1";
+    translations.en.project_203874479 = "Website — 2";
+    translations.ar.project_203874479 = "موقع إلكتروني — 2";
+    translations.en.project_195189457 = "Website — 3";
+    translations.ar.project_195189457 = "موقع إلكتروني — 3";
+    translations.en.project_194950199 = "Website — 4";
+    translations.ar.project_194950199 = "موقع إلكتروني — 4";
+    translations.en.project_189475113 = "Landing page";
+    translations.ar.project_189475113 = "صفحة هبوط";
+    translations.en.project_202594407 = "Company profile — 1";
+    translations.ar.project_202594407 = "بروفايل شركة — 1";
+    translations.en.project_193903091 = "Company profile — 2";
+    translations.ar.project_193903091 = "بروفايل شركة — 2";
+    translations.en.project_192450545 = "Company profile — 3";
+    translations.ar.project_192450545 = "بروفايل شركة — 3";
+    translations.en.project_192151991 = "Company profile — 4";
+    translations.ar.project_192151991 = "بروفايل شركة — 4";
+    translations.en.project_149628627 = "Company profile — 5";
+    translations.ar.project_149628627 = "بروفايل شركة — 5";
+    translations.en.project_149311089 = "Supply Chain — PowerPoint";
+    translations.ar.project_149311089 = "سلاسل الإمداد — عرض تقديمي";
+    translations.en.project_149311977 = "TPACK — PowerPoint";
+    translations.ar.project_149311977 = "TPACK — عرض تقديمي";
+    translations.en.project_149312263 = "Presentation — 3";
+    translations.ar.project_149312263 = "عرض تقديمي — 3";
+    translations.en.project_149309225 = "Grand Hotel — PowerPoint";
+    translations.ar.project_149309225 = "Grand Hotel — عرض تقديمي";
+    translations.en.project_186010277 = "Brand identity — 1";
+    translations.ar.project_186010277 = "هوية بصرية — 1";
+    translations.en.project_185519875 = "Brand identity — 2";
+    translations.ar.project_185519875 = "هوية بصرية — 2";
+    translations.en.project_126865569 = "Brand identity — 3";
+    translations.ar.project_126865569 = "هوية بصرية — 3";
+    translations.en.project_149607461 = "Brand identity — 4";
+    translations.ar.project_149607461 = "هوية بصرية — 4";
+    translations.en.project_186383121 = "Social media design — 1";
+    translations.ar.project_186383121 = "تصميم سوشيال ميديا — 1";
+    translations.en.project_186382111 = "Social media design — 2";
+    translations.ar.project_186382111 = "تصميم سوشيال ميديا — 2";
+    translations.en.project_127171397 = "Social media design — 3";
+    translations.ar.project_127171397 = "تصميم سوشيال ميديا — 3";
+    translations.en.project_126865999 = "BIM Connection — Social media, Part 1";
+    translations.ar.project_126865999 = "BIM Connection — سوشيال ميديا، الجزء الأول";
+    translations.en.project_130734157 = "Muro Real Estate — Social media, Part 1";
+    translations.ar.project_130734157 = "Muro Real Estate — سوشيال ميديا، الجزء الأول";
+
     function getPathLang() {
         var params = new URLSearchParams(window.location.search);
         var lang = params.get('lang');
