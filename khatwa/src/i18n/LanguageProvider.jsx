@@ -12,7 +12,7 @@ export function LanguageProvider({ initialLanguage = 'ar', children }) {
   const navigate = useNavigate();
   const requested = new URLSearchParams(location.search).get('lang');
   const pathLanguage = /^\/(ar|en)(?:\/|$)/.exec(location.pathname)?.[1];
-  const language = isLanguage(requested) ? requested : pathLanguage || initialLanguage;
+  const language = isLanguage(requested) ? requested : pathLanguage || 'ar';
   useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
@@ -25,10 +25,10 @@ export function LanguageProvider({ initialLanguage = 'ar', children }) {
     setLanguage(next) {
       if (!isLanguage(next)) return;
       const params = new URLSearchParams(location.search);
-      params.set('lang', next);
+      params.delete('lang');
       const relative = location.pathname.replace(/^\/(?:ar|en)(?:\/|$)/, '/');
       const pathname = next === 'en' ? '/en' + (relative.startsWith('/') ? relative : '/' + relative) : relative;
-      navigate({ pathname, search: '?' + params.toString(), hash: location.hash }, { replace: true });
+      navigate({ pathname, search: params.size ? '?' + params.toString() : '', hash: location.hash }, { replace: true });
     }
   }), [language, location.pathname, location.search, location.hash, navigate]);
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

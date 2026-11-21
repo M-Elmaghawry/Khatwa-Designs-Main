@@ -14,7 +14,9 @@
     "react:build": "npm run build",
     "react:preview": "npm run preview",
     "react:test": "npm test",
-    "audit:files": "node khatwa/scripts/audit-files.mjs"
+    "audit:files": "node khatwa/scripts/audit-files.mjs",
+    "seo:test": "node --test khatwa/tests/seo.test.mjs",
+    "seo:inventory": "node khatwa/scripts/seo-inventory.mjs"
   },
   "devDependencies": {
     "yaml": "1.10.3"

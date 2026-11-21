@@ -9,14 +9,12 @@ import './styles/hero.css';
 import './styles/home.css';
 import './styles/inner.css';
 
-let storage;
-try { storage = window.localStorage; } catch { /* Arabic works without storage. */ }
 const pathLanguage = /^\/(?:Khatwa-Designs-Main\/)?(ar|en)(?:\/|$)/.exec(location.pathname)?.[1];
-const language = new URLSearchParams(location.search).has('lang') ? resolveLanguage(location.search, storage) : pathLanguage || resolveLanguage('', storage);
+const language = new URLSearchParams(location.search).has('lang') ? resolveLanguage(location.search, null) : pathLanguage || 'ar';
 const app = <StrictMode><BrowserRouter basename={SITE_BASE.slice(0, -1)}><App initialLanguage={language} /></BrowserRouter></StrictMode>;
 const root = document.getElementById('root');
 // Static snapshots use their own locale and a neutral result state. An explicit
-// query/storage override is mounted freshly to avoid a hydration mismatch.
+// query override is mounted freshly to avoid a hydration mismatch.
 const dynamicResult = new URLSearchParams(location.search).has('status');
 if (root.hasChildNodes() && document.documentElement.lang === language && !dynamicResult && !location.search.includes('retry=1')) hydrateRoot(root, app);
 else createRoot(root).render(app);

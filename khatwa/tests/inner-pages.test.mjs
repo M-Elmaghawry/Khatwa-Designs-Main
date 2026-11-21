@@ -45,7 +45,20 @@ test('homepage outside the approved portfolio update retains the reviewed Phase 
   const expected = {"ar":"efa3f34665c6a210e0d5dbd29835e91d1e6b63780e302a3832ebca8279325503","en":"0fb051eb801af3a6c04ca909da6c056c4b61279b639c10ae7aa5c90d56463d30"};
   for (const language of ['ar', 'en']) {
     const dom = new JSDOM(render(SITE_BASE + 'index.html?lang=' + language, language));
-    try { dom.window.document.querySelector('.home-work').remove(); assert.equal(crypto.createHash('sha256').update(dom.window.document.querySelector('.home-page').outerHTML).digest('hex'), expected[language]); }
+    try {
+      dom.window.document.querySelector('.home-work').remove();
+      // Compare the original visual/content snapshot after restoring only the
+      // historical URL spelling; clean language links are covered by SEO tests.
+      for (const anchor of dom.window.document.querySelectorAll('.home-page a[href]')) {
+        const href = anchor.getAttribute('href');
+        if (!href.startsWith(SITE_BASE)) continue;
+        const url = new URL(href, 'https://example.test');
+        if (url.pathname.endsWith('/')) url.pathname += 'index.html';
+        url.searchParams.set('lang', language);
+        anchor.setAttribute('href', url.pathname + url.search + url.hash);
+      }
+      assert.equal(crypto.createHash('sha256').update(dom.window.document.querySelector('.home-page').outerHTML).digest('hex'), expected[language]);
+    }
     finally { dom.window.close(); }
   }
   for (const file of ['src/components/CinematicHero.jsx', 'src/components/home/HomeSections.jsx', 'src/styles/home.css', 'src/styles/hero.css', 'src/styles/tokens.css']) {

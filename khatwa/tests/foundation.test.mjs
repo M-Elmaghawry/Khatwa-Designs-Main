@@ -80,7 +80,7 @@ test('all content routes render real Arabic and English content, accessible navi
       assert.ok(document.querySelector('main h1'), prefix + file + ' needs an h1');
       assert.equal(document.title, metadataFor(file, language).title);
       assert.equal(document.querySelector('link[rel="canonical"]').href, metadataFor(file, language).canonical);
-      assert.equal(document.querySelector('link[hreflang="x-default"]').href, metadataFor(file, language).alternates.ar);
+      assert.equal(document.querySelector('link[hreflang="x-default"]')?.href, metadataFor(file, language).alternates['x-default']);
       assert.ok(document.querySelector('a[href="#main-content"]'));
       assert.ok(document.querySelector('nav'));
       const live = new JSDOM(render(SITE_BASE + prefix + file + '?lang=' + language, language)).window.document;
@@ -148,7 +148,7 @@ test('language resolution and links preserve valid explicit language, preference
   assert.equal(resolveLanguage('', { getItem: () => 'en' }), 'en');
   assert.equal(resolveLanguage('?lang=bad', { getItem() { throw Error(); } }), 'ar');
   const link = languageHref('contact.html?service=profiles&retry=1#contact-form', 'en');
-  assert.equal(link, SITE_BASE + 'en/contact.html?service=profiles&retry=1&lang=en#contact-form');
+  assert.equal(link, SITE_BASE + 'en/contact.html?service=profiles&retry=1#contact-form');
   assert.equal(languageHref('https://www.behance.net/gallery/192450545/_', 'ar'), 'https://www.behance.net/gallery/192450545/_');
   assert.equal(routeFile(SITE_BASE + 'en/about.html'), 'about.html');
   assert.equal(routeFile(SITE_BASE), 'index.html');

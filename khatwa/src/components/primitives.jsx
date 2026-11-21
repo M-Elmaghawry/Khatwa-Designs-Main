@@ -7,7 +7,7 @@ import { useGsap } from '../motion/useGsap.js';
 export function SiteLink({ href, children, ...props }) {
   const { language } = useLanguage();
   const destination = languageHref(href, language);
-  if (!destination || /^(?:[a-z]+:|\/\/|#)/i.test(destination) || !destination.startsWith(SITE_BASE)) {
+  if (!destination || /^(?:[a-z]+:|\/\/|#)/i.test(destination) || !destination.startsWith(SITE_BASE) || destination === SITE_BASE) {
     return <a href={destination} {...props}>{children}</a>;
   }
   // React Router applies basename itself; avoid applying the project prefix twice.

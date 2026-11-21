@@ -15,7 +15,7 @@ export function legacyAssets() {
     configResolved(resolved) { config = resolved; },
     transformIndexHtml: {
       order: 'post',
-      handler() { return [{ tag: 'script', attrs: { src: SITE_BASE + 'legacy/emailjs-config.js' }, injectTo: 'body-prepend' }]; }
+      handler() { return [{ tag: 'script', attrs: { src: SITE_BASE + 'legacy/normalize-url.js' }, injectTo: 'head-prepend' }, { tag: 'script', attrs: { src: SITE_BASE + 'legacy/emailjs-config.js' }, injectTo: 'body-prepend' }]; }
     },
     configureServer(server) {
       server.middlewares.use((request, response, next) => {
@@ -25,6 +25,7 @@ export function legacyAssets() {
         else relative = relative.replace(/^\//, '');
         let source;
         if (relative === 'legacy/emailjs-config.js') source = path.join(legacyRoot, 'js/khatwa-emailjs-config.js');
+        else if (relative === 'legacy/normalize-url.js') source = path.join(legacyRoot, 'js/normalize-url.js');
         else if (/^(images|projects)\//.test(relative)) {
           source = path.resolve(legacyRoot, relative);
           const allowed = path.resolve(legacyRoot, relative.split('/')[0]) + path.sep;
@@ -42,6 +43,7 @@ export function legacyAssets() {
       fs.mkdirSync(path.join(output, 'legacy'), { recursive: true });
       fs.copyFileSync(path.join(legacyRoot, 'js/khatwa-emailjs-config.js'), path.join(output, 'legacy/emailjs-config.js'));
       fs.copyFileSync(path.join(legacyRoot, 'js/redirect.js'), path.join(output, 'legacy/redirect.js'));
+      fs.copyFileSync(path.join(legacyRoot, 'js/normalize-url.js'), path.join(output, 'legacy/normalize-url.js'));
     }
   };
 }

@@ -23,7 +23,7 @@ test('final application preserves the reviewed content, form integration and rou
   const files = [
     'khatwa/src/content/form.json', 'khatwa/src/content/reviews.json',
     'khatwa/src/components/ContentRenderer.jsx', 'khatwa/src/components/ContactForm.jsx', 'khatwa/src/lib/inquiry.js',
-    'khatwa/src/lib/metadata.js', 'khatwa/src/App.jsx'
+    'khatwa/src/App.jsx'
   ];
   for (const file of files) {
     const preserved = execFileSync('git', ['show', '68782cf:' + file.replace(/^khatwa\//, 'react-v2/')], { cwd: root, encoding: 'utf8' }).replaceAll('\r\n', '\n');

@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { build } from 'vite';
-import { metadataFor } from '../src/lib/metadata.js';
+import { metadataFor, renderMetadataHead, indexableRoutes, SITE_URL } from '../src/lib/metadata.js';
 import { SITE_BASE } from '../src/lib/paths.js';
 import pages from '../src/content/pages.json' with { type: 'json' };
 import { spawnSync } from 'node:child_process';
@@ -26,20 +26,15 @@ for (const [file, page] of Object.entries(pages)) {
       continue;
     }
     const metadata = metadataFor(file, language);
-    const head = `<meta name="description" content="${escape(metadata.description)}"><meta name="robots" content="${escape(metadata.robots)}"><link rel="canonical" href="${escape(metadata.canonical)}">` +
-      Object.entries(metadata.alternates).map(([lang, href]) => `<link rel="alternate" hreflang="${lang}" href="${escape(href)}">`).join('') +
-      Object.entries({ 'og:title': metadata.title, 'og:description': metadata.description, 'og:url': metadata.canonical, 'og:locale': language === 'ar' ? 'ar_EG' : 'en_US', 'og:type': 'website', ...(metadata.image ? { 'og:image': metadata.image } : {}) }).map(([name, value]) => `<meta property="${name}" content="${escape(value)}">`).join('') +
-      `<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${escape(metadata.title)}"><meta name="twitter:description" content="${escape(metadata.description)}">`;
+    const head = renderMetadataHead(metadata);
     const html = template.replace('<html lang="ar" dir="rtl">', `<html lang="${language}" dir="${language === 'ar' ? 'rtl' : 'ltr'}">`).replace(/<title>.*?<\/title>/s, `<title>${escape(metadata.title)}</title>`).replace('</head>', head + '</head>').replace('<div id="root"></div>', '<div id="root">' + render(SITE_BASE + prefix + file, language) + '</div>');
     write(prefix + file, html);
   }
 }
-const indexed = Object.values(pages).filter(page => page.status === 'migrated' && !page.robots.includes('noindex') && !page.languageGap && !['404.html', 'thank-you.html'].includes(page.file));
-const entries = indexed.flatMap(page => ['ar', 'en'].map(language => {
-  const metadata = metadataFor(page.file, language);
+const entries = indexableRoutes().map(({ metadata }) => {
   return `<url><loc>${escape(metadata.canonical)}</loc>${Object.entries(metadata.alternates).map(([lang, href]) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${escape(href)}"/>`).join('')}</url>`;
-}));
+});
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${entries.join('')}</urlset>`);
-write('robots.txt', 'User-agent: *\nAllow: /\n\nSitemap: https://m-elmaghawry.github.io/Khatwa-Designs-Main/sitemap.xml\n');
+write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
 write('.nojekyll', '');
 console.log(`Prerendered ${Object.keys(pages).length} existing routes with Arabic/default and explicit ar/en static entries. Output: khatwa/dist (local only).`);

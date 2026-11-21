@@ -70,7 +70,7 @@ test('Arabic default hydrates without mismatch; switching language updates direc
     assert.equal(ui.document.querySelector('h1').textContent, en.ab_title);
     assert.equal(ui.document.title, en.ab_meta_title);
     assert.equal(ui.window.localStorage.getItem('khatwa_lang'), 'en');
-    assert.ok(ui.document.querySelector('nav a[href*="en/portfolio.html?lang=en"]'));
+    assert.ok(ui.document.querySelector('nav a[href$="en/portfolio.html"]'));
     await click(ui.document.querySelector('.language-switcher [lang="ar"]'));
     assert.equal(ui.document.querySelector('h1').textContent, ar.ab_title);
   } finally { await ui.unmount(); }
@@ -155,7 +155,7 @@ test('direct result URLs stay neutral without a recognized state; unknown routes
   try { assert.equal(ui.document.querySelector('main h1').textContent, en.contact_result_neutral_title); }
   finally { await ui.unmount(); }
   const missing = await mount(SITE_BASE + 'unknown.html?lang=en');
-  try { assert.equal(missing.document.querySelector('main h1').textContent, en.page404_title); assert.ok(missing.document.querySelector('main a[href*="index.html"]')); }
+  try { assert.equal(missing.document.querySelector('main h1').textContent, en.page404_title); assert.ok(missing.document.querySelector(`main a[href="${SITE_BASE}en/"]`)); }
   finally { await missing.unmount(); }
 });
 
@@ -187,7 +187,8 @@ test('cinematic hero preserves bilingual claims and CTA destinations without cha
       assert.equal(hero.querySelector('h1').textContent.trim(), dictionary.home_hero_title);
       assert.equal(hero.querySelector('.hero-description').textContent, dictionary.home_hero_text);
       const quote = hero.querySelector('.hero-actions a[href*="contact.html"]');
-      assert.equal(new URL(quote.href).searchParams.get('lang'), language);
+      assert.equal(new URL(quote.href).searchParams.has('lang'), false);
+      assert.equal(new URL(quote.href).pathname, SITE_BASE + (language === 'en' ? 'en/' : '') + 'contact.html');
       assert.equal(hero.querySelector('.hero-actions a[href="#work"]').textContent, dictionary.cta_work);
       assert.ok(ui.document.getElementById('work'));
       assert.equal(hero.querySelector('.hero-logo-well img').getAttribute('src'), SITE_BASE + 'images/khatwa-logo@2x.png');

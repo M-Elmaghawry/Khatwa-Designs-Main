@@ -15,8 +15,8 @@ export function languageHref(href, language) {
   if (url.origin !== SITE_ORIGIN || !url.pathname.startsWith(SITE_BASE)) return href;
   if (url.pathname.endsWith('.html') || url.pathname.endsWith('/')) {
     const relative = url.pathname.slice(SITE_BASE.length).replace(/^(?:ar|en)\//, '');
-    url.pathname = SITE_BASE + (language === 'en' ? 'en/' : '') + relative;
-    url.searchParams.set('lang', language);
+    url.pathname = SITE_BASE + (language === 'en' ? 'en/' : '') + (relative === 'index.html' ? '' : relative);
+    url.searchParams.delete('lang');
   }
   return url.pathname + url.search + url.hash;
 }
