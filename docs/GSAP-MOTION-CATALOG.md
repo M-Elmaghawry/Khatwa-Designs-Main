@@ -1,6 +1,6 @@
 # Khatwa homepage motion catalog
 
-Scope: Phase 3C/3D, `redesign/react-v2`. Code: `react-v2/src/motion/patterns.js`, the existing `useGsap.js`, and homepage-only `home.css`.
+Scope: Phase 3C/3D, `redesign/react-v2`. Code: `khatwa/src/motion/patterns.js`, the existing `useGsap.js`, and homepage-only `home.css`.
 
 All pattern functions receive `{ gsap, ScrollTrigger }` and a concrete DOM element. Call them within the existing `useGsap` context; they must not be created at module scope or during server rendering. `createSectionMotion` composes them using opt-in data attributes. The homepage's `useSection` helper binds a component ref and locale/filter dependencies to that context.
 
@@ -35,6 +35,6 @@ Existing hero motion remains unchanged: three-phrase load reveal, visible-only a
 
 ## Validation evidence
 
-`react-v2/tests/interactions.test.mjs` verifies real GSAP behavior in StrictMode: stable trigger counts after locale/reduced-motion changes and three repeated filter cycles, distinct mask/parallax registrations and zero triggers after unmount. JSDOM supplies deterministic nonzero layout geometry because it does not perform layout. Real Edge captures separately verify rendering, viewport behavior, focus, touch and static/reduced-motion fallbacks; DOM tests alone do not establish smooth frame rates.
+`khatwa/tests/interactions.test.mjs` verifies real GSAP behavior in StrictMode: stable trigger counts after locale/reduced-motion changes and three repeated filter cycles, distinct mask/parallax registrations and zero triggers after unmount. JSDOM supplies deterministic nonzero layout geometry because it does not perform layout. Real Edge captures separately verify rendering, viewport behavior, focus, touch and static/reduced-motion fallbacks; DOM tests alone do not establish smooth frame rates.
 
 Manual approval remains required for motion pacing, perceived intensity and device-specific smoothness. See [HOMEPAGE-VISUAL-QA.md](HOMEPAGE-VISUAL-QA.md).

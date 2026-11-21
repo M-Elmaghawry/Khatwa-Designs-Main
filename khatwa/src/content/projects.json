@@ -1,0 +1,186 @@
+[
+  {
+    "id": "01",
+    "category": "websites",
+    "titleKey": "Lawyer Fahad Al-Mutairi",
+    "image": "projects/Lawyer Fahad Al-Mutairi.webp",
+    "url": "https://www.behance.net/gallery/215345183/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "02",
+    "category": "websites",
+    "titleKey": "Al-Maher Electromechanical",
+    "image": "projects/Al-Maher Electromechanical.webp",
+    "url": "https://www.behance.net/gallery/203874479/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "03",
+    "category": "websites",
+    "titleKey": "Engineer Mahmoud Elmekawy",
+    "image": "projects/Engineer Mahmoud Elmekawy.webp",
+    "url": "https://www.behance.net/gallery/195189457/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "04",
+    "category": "websites",
+    "titleKey": "Omega Academy",
+    "image": "projects/Omega Academy.webp",
+    "url": "https://www.behance.net/gallery/194950199/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "05",
+    "category": "websites",
+    "titleKey": "Basmat Alqemat",
+    "image": "projects/Basmat Alqemat.webp",
+    "url": "https://www.behance.net/gallery/189475113/-Landing-Page",
+    "temporaryCover": false
+  },
+  {
+    "id": "06",
+    "category": "profiles",
+    "titleKey": "Alemaar Alfarid",
+    "image": "projects/Alemaar Alfarid.webp",
+    "url": "https://www.behance.net/gallery/202594407/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "07",
+    "category": "profiles",
+    "titleKey": "Wadi Alabraqin",
+    "image": "projects/Wadi Alabraqin.webp",
+    "url": "https://www.behance.net/gallery/193903091/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "08",
+    "category": "profiles",
+    "titleKey": "GHAYA Construction",
+    "image": "projects/GHAYA Construction.webp",
+    "url": "https://www.behance.net/gallery/192450545/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "09",
+    "category": "profiles",
+    "titleKey": "BIM Connection",
+    "image": "projects/BIM Connection.webp",
+    "url": "https://www.behance.net/gallery/192151991/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "10",
+    "category": "profiles",
+    "titleKey": "SARAH portfolio",
+    "image": "projects/SARAH portfolio.webp",
+    "url": "https://www.behance.net/gallery/149628627/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "11",
+    "category": "presentations",
+    "titleKey": "Supply Chain",
+    "image": "projects/Supply Chain.webp",
+    "url": "https://www.behance.net/gallery/149311089/Supply-Chain-Powerpoint-Presentation",
+    "temporaryCover": false
+  },
+  {
+    "id": "12",
+    "category": "presentations",
+    "titleKey": "TPACK",
+    "image": "projects/TPACK.webp",
+    "url": "https://www.behance.net/gallery/149311977/TPACK-Powerpoint-Presentation",
+    "temporaryCover": false
+  },
+  {
+    "id": "13",
+    "category": "presentations",
+    "titleKey": "Construction Program",
+    "image": "projects/Construction Program.webp",
+    "url": "https://www.behance.net/gallery/149312263/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "14",
+    "category": "presentations",
+    "titleKey": "Grand Hotel",
+    "image": "projects/Grand Hotel.webp",
+    "url": "https://www.behance.net/gallery/149309225/Grand-Hotel-Powerpoint-Presentation",
+    "temporaryCover": false
+  },
+  {
+    "id": "15",
+    "category": "brand",
+    "titleKey": "AYA Roushdy",
+    "image": "projects/AYA Roushdy.webp",
+    "url": "https://www.behance.net/gallery/186010277/-Branding",
+    "temporaryCover": false
+  },
+  {
+    "id": "16",
+    "category": "brand",
+    "titleKey": "Mohamed Elnagar",
+    "image": "projects/Mohamed Elnagar.webp",
+    "url": "https://www.behance.net/gallery/185519875/-Branding",
+    "temporaryCover": false
+  },
+  {
+    "id": "17",
+    "category": "brand",
+    "titleKey": "Delta Rides",
+    "image": "projects/Delta Rides.webp",
+    "url": "https://www.behance.net/gallery/126865569/-Branding",
+    "temporaryCover": false
+  },
+  {
+    "id": "18",
+    "category": "brand",
+    "titleKey": "Bim Connection-2",
+    "image": "projects/Bim Connection-2.webp",
+    "url": "https://www.behance.net/gallery/149607461/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "19",
+    "category": "social",
+    "titleKey": "Talal Shaker",
+    "image": "projects/Talal Shaker.webp",
+    "url": "https://www.behance.net/gallery/186383121/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "20",
+    "category": "social",
+    "titleKey": "Lawyer Fahad",
+    "image": "projects/Lawyer Fahad.webp",
+    "url": "https://www.behance.net/gallery/186382111/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "21",
+    "category": "social",
+    "titleKey": "Delta Rides-2",
+    "image": "projects/Delta Rides-2.webp",
+    "url": "https://www.behance.net/gallery/127171397/_",
+    "temporaryCover": false
+  },
+  {
+    "id": "22",
+    "category": "social",
+    "titleKey": "Bim Connection-3",
+    "image": "projects/Bim Connection-3.webp",
+    "url": "https://www.behance.net/gallery/126865999/-Bim-Connection-Part-1",
+    "temporaryCover": false
+  },
+  {
+    "id": "23",
+    "category": "social",
+    "titleKey": "Muro",
+    "image": "projects/Muro.webp",
+    "url": "https://www.behance.net/gallery/130734157/-Muro-Real-Estate-Part-1",
+    "temporaryCover": false
+  }
+]

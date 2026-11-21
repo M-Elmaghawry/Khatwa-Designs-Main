@@ -31,26 +31,27 @@ jobs:
           cache: npm
           cache-dependency-path: |
             package-lock.json
-            react-v2/package-lock.json
+            khatwa/package-lock.json
 
       - name: Install locked dependencies
         run: npm ci
 
       - name: Install React dependencies
-        run: npm ci --prefix react-v2
+        run: npm ci --prefix khatwa
 
       - name: Build production assets
-        run: npm run react:build
+        run: npm run build
+
+      - name: Check source and asset references
+        run: npm run audit:files
 
       - name: Run regression checks
-        run: |
-          npm test
-          npm run react:test
+        run: npm test
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./react-v2/dist
+          path: ./khatwa/dist
 
   deploy:
     if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}

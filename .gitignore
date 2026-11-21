@@ -1,7 +1,8 @@
 node_modules/
 .DS_Store
 .env
-.env.local
+.env.*
+!.env.example
 Khatwa-Emailjs.txt
 dist/
 build/
@@ -10,11 +11,6 @@ build/
 *.swp
 *.swo
 ~*
-.sass-cache/
-.jekyll-cache/
-Gemfile.lock
-_site/
 /.playwright-cli/
 /.taste-skill/
-css/icon.css
-css/vendors.css
+/.local-backup/

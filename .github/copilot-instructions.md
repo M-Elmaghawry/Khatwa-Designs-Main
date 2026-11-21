@@ -11,7 +11,7 @@ This master document records the approved positioning, service scope, Arabic and
 
 ## Non-negotiable constraints
 1. Preserve the existing visual identity, logo, colors, typography, layout, spacing, animations, and responsive behavior. Do not redesign the website unless explicitly asked.
-2. Keep the current stack and build process. Inspect the repository before changing anything. Do not migrate to React, Next.js, Tailwind, a CMS, or another framework as part of a content update.
+2. Keep the current stack and build process. Inspect the repository before changing anything. The final site already uses React/Vite in khatwa/. Keep that application; do not recreate the retired HTML/Gulp site or migrate frameworks during content updates.
 3. Do not rewrite whole files when a focused change is sufficient. Keep changes small and maintainable.
 4. Do not deploy, publish, push, force-push, delete branches, or change GitHub Pages settings. The owner reviews and publishes changes manually.
 5. Before modifying files, inspect the repository structure and `git status`. Never overwrite or discard existing user work.
@@ -38,7 +38,7 @@ Promotion priorities: company profiles first, presentations/tenders second, webs
 - Keep the current language-switching system and URL conventions after inspecting how they work (including any `?lang=ar` or `?lang=en` behavior).
 - Ensure user-facing content is complete in both Arabic and English; never translate by merely switching the menu while leaving English body copy on Arabic pages.
 - Arabic must render with appropriate RTL direction and alignment without breaking the existing layout. English should remain LTR.
-- Use the repository's existing translation architecture (for example, `khatwa-i18n.js` if present). Do not invent a second translation system or rename keys without updating all call sites.
+- Use khatwa/src/content/ar.json and en.json with the existing LanguageProvider. Do not invent a second translation system or rename keys without updating all call sites.
 - Use consistent labels: `اطلب عرض سعر` / `Request a Quote`; `استكشف أعمالنا` / `Explore Our Work`.
 
 ## Content and portfolio rules
@@ -59,7 +59,7 @@ Promotion priorities: company profiles first, presentations/tenders second, webs
 - Never commit secrets or credentials. Avoid printing them in logs or reports.
 
 ## Coding and accessibility
-- Follow existing HTML/CSS/JavaScript conventions and file naming.
+- Follow existing React, CSS and JavaScript conventions. Run npm run build, npm test and npm run audit:files.
 - Use semantic HTML, meaningful image alt text, accessible labels, keyboard focus, and adequate contrast consistent with the current design.
 - Preserve mobile behavior. Do not use external placeholder-image services for final portfolio imagery.
 - Update page titles and meta descriptions for relevant pages without keyword stuffing.
