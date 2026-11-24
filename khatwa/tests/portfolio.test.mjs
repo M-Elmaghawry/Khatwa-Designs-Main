@@ -8,7 +8,7 @@ import { render } from '../.ssr/entry-server.js';
 
 test('portfolio uses exactly the 23 owner-approved Behance projects in their supplied categories', () => {
   const approved = {
-    websites: ['215345183', '203874479', '195189457', '194950199', '189475113'],
+    websites: ['215345183', '258981569', '195189457', '194950199', '189475113'],
     profiles: ['202594407', '193903091', '192450545', '192151991', '149628627'],
     presentations: ['149311089', '149311977', '149312263', '149309225'],
     brand: ['186010277', '185519875', '126865569', '149607461'],

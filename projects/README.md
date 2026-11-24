@@ -7,7 +7,7 @@ Edit the image field in khatwa/src/content/projects.json and keep matching image
 | Project | Image | Behance |
 |---|---|---|
 | Lawyer Fahad Al-Mutairi | projects/Lawyer Fahad Al-Mutairi.webp | https://www.behance.net/gallery/215345183/_ |
-| Al-Maher Electromechanical | projects/Al-Maher Electromechanical.webp | https://www.behance.net/gallery/203874479/_ |
+| Al-Maher Electromechanical | projects/Al-Maher Electromechanical.webp | https://www.behance.net/gallery/258981569/_ |
 | Engineer Mahmoud Elmekawy | projects/Engineer Mahmoud Elmekawy.webp | https://www.behance.net/gallery/195189457/_ |
 | Omega Academy | projects/Omega Academy.webp | https://www.behance.net/gallery/194950199/_ |
 | Basmat Alqemat | projects/Basmat Alqemat.webp | https://www.behance.net/gallery/189475113/-Landing-Page |
