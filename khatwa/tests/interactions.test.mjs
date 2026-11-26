@@ -201,7 +201,7 @@ test('cinematic hero preserves bilingual claims and CTA destinations without cha
   }
 });
 
-test('homepage filters, marquee control and all source-backed bilingual content remain accessible', async () => {
+test('homepage filters and bilingual content remain accessible with review dates and marquee control removed', async () => {
   const { default: pages } = await import('../src/content/pages.json', { with: { type: 'json' } });
   const source = pages['index.html'].sections.slice(1);
   function keys(nodes) {
@@ -212,7 +212,10 @@ test('homepage filters, marquee control and all source-backed bilingual content 
     try {
       assert.deepEqual(ui.hydrationErrors, []);
       const home = ui.document.querySelector('.home-page');
-      for (const key of keys(source)) assert.ok(home.textContent.includes(dictionary[key]), 'preserved homepage text: ' + key);
+      for (const key of keys(source)) {
+        if (/^home_rev_date\d+$/.test(key)) assert.ok(!home.textContent.includes(dictionary[key]), 'review dates stay hidden');
+        else assert.ok(home.textContent.includes(dictionary[key]), 'preserved homepage text: ' + key);
+      }
       for (const file of ['company-portfolio.html', 'powerpoint-presentations.html', 'web-design.html', 'brand-identity.html', 'social-media-design.html']) {
         assert.ok(home.querySelector(`.home-service-link[href*="${file}"]`));
       }
@@ -228,12 +231,9 @@ test('homepage filters, marquee control and all source-backed bilingual content 
       }
       await click(home.querySelector('[data-filter="all"]'));
       assert.deepEqual(Array.from(home.querySelectorAll('.home-project-link'), link => link.href), destinations);
-      const pause = home.querySelector('.marquee-pause');
-      await click(pause);
-      assert.equal(pause.getAttribute('aria-pressed'), 'true');
-      assert.equal(home.querySelector('.brand-marquee').dataset.paused, 'true');
-      await click(pause);
-      assert.equal(pause.getAttribute('aria-pressed'), 'false');
+      assert.equal(home.querySelector('.marquee-pause'), null);
+      assert.ok(home.querySelector('.marquee-track'));
+      assert.equal(home.querySelector('.brand-marquee').hasAttribute('data-paused'), false);
     } finally { await ui.unmount(); }
   }
 });

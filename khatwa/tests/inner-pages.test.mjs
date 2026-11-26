@@ -25,6 +25,10 @@ test('every redesigned source-backed inner page retains original bilingual copy,
         const content = normalized(main.textContent);
         const source = page.sections.flatMap(walk);
         for (const node of source.filter(node => node.attrs['data-i18n'] || (page.languageGap && /^(p|h[1-6]|li)$/.test(node.tag)))) {
+          if (file === 'customer-stories.html' && /^cs_date\d+$/.test(node.attrs['data-i18n'])) {
+            assert.ok(!content.includes(normalized(textFor(node, dictionary))), 'review dates stay hidden');
+            continue;
+          }
           assert.ok(content.includes(normalized(textFor(node, dictionary))), `${language}/${file}: preserved ${node.attrs['data-i18n'] || node.tag}`);
         }
         const hrefs = Array.from(main.querySelectorAll('a'), link => link.getAttribute('href'));
@@ -41,8 +45,8 @@ test('every redesigned source-backed inner page retains original bilingual copy,
   }
 });
 
-test('homepage outside the approved portfolio update retains the reviewed Phase 3 baseline', () => {
-  const expected = {"ar":"efa3f34665c6a210e0d5dbd29835e91d1e6b63780e302a3832ebca8279325503","en":"0fb051eb801af3a6c04ca909da6c056c4b61279b639c10ae7aa5c90d56463d30"};
+test('homepage retains the approved hero, review and marquee refinements', () => {
+  const expected = {"ar":"aac9dad1b0b1c37f92d8c5cbf635c803dd0b4eaf65c0ecdb09f3b6694166a3a2","en":"edaf104cfb5428773e5a3cbc7d12a4f06dbd1cc751300bf5f5cc3131dfc060f7"};
   for (const language of ['ar', 'en']) {
     const dom = new JSDOM(render(SITE_BASE + 'index.html?lang=' + language, language));
     try {
@@ -62,9 +66,8 @@ test('homepage outside the approved portfolio update retains the reviewed Phase 
     finally { dom.window.close(); }
   }
   for (const file of ['src/components/CinematicHero.jsx', 'src/components/home/HomeSections.jsx', 'src/styles/home.css', 'src/styles/hero.css', 'src/styles/tokens.css']) {
-    const baseline = execFileSync('git', ['show', '1e53ac5:react-v2/' + file], { encoding: 'utf8' }).replaceAll('\r\n', '\n');
+    const baseline = execFileSync('git', ['show', 'a329052:khatwa/' + file], { encoding: 'utf8' }).replaceAll('\r\n', '\n');
     const current = fs.readFileSync(new URL('../' + file, import.meta.url), 'utf8').replaceAll('\r\n', '\n');
-    const expectedSource = file === 'src/components/home/HomeSections.jsx' ? baseline.replace("['all', 'profiles', 'websites', 'presentations']", "['all', 'profiles', 'websites', 'presentations', 'brand', 'social']").replace('<p className="home-cover-note">{coverNote}</p>', '{featuredProjects.some(project => project.temporaryCover) && <p className="home-cover-note">{coverNote}</p>}').replace("<p>{t('home_reviews_note')}</p>", '') : baseline;
-    assert.equal(current, expectedSource, file);
+    assert.equal(current, baseline, file);
   }
 });

@@ -67,7 +67,7 @@ test('final bilingual catalogs, projects and reviews remain complete', () => {
   }
   assert.equal(data('manifest').masterOnlyProjects.length, 1);
   const reviews = render(SITE_BASE + 'customer-stories.html?lang=en', 'en');
-  for (const review of data('reviews')) { assert.ok(reviews.includes(review.author)); assert.ok(reviews.includes(data('en')[review.dateKey])); }
+  for (const review of data('reviews')) { assert.ok(reviews.includes(review.author)); assert.ok(!reviews.includes(data('en')[review.dateKey]), 'review dates stay hidden'); }
 });
 
 test('all content routes render real Arabic and English content, accessible navigation and valid static entry metadata', () => {
