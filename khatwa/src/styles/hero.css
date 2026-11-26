@@ -31,12 +31,10 @@
 [dir='rtl'] .hero-actions .hero-arrow { transform: rotate(180deg); }
 .hero-arrow--down { transform: rotate(90deg); }
 .hero-visual { min-inline-size: 0; }
-.hero-brand-stage { position: relative; inline-size: 100%; min-block-size: 34rem; display: grid; align-items: center; }
-.hero-stage-coordinate { position: absolute; inset-inline: var(--space-3); display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); color: rgb(255 255 255 / 50%); font-size: 0.625rem; letter-spacing: 0.12em; }
+.hero-brand-stage { position: relative; inline-size: 100%; min-block-size: 34rem; display: grid; grid-template-rows: auto 1fr auto; align-items: center; gap: var(--space-6); padding-block: var(--space-6); }
+.hero-stage-coordinate { position: relative; margin-inline: var(--space-3); display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); color: var(--on-dark-muted); font-size: 0.75rem; letter-spacing: 0.12em; }
 .hero-stage-coordinate:lang(ar) { letter-spacing: 0; }
-.hero-stage-coordinate--top { inset-block-start: var(--space-6); }
-.hero-stage-coordinate--bottom { inset-block-end: var(--space-6); }
-.hero-stage-coordinate--bottom [dir='ltr'] { font-size: 0.55rem; letter-spacing: 0.14em; }
+.hero-stage-coordinate--bottom [dir='ltr'] { font-size: 0.625rem; letter-spacing: 0.14em; }
 .hero-wireframe { position: absolute; inline-size: 90%; block-size: 63%; inset-inline-start: 5%; inset-block-start: 18.5%; border: 1px solid rgb(255 255 255 / 25%); border-radius: var(--radius-editorial); }
 .hero-wireframe--back { transform: rotate(-15deg); background: rgb(255 255 255 / 2%); }
 .hero-wireframe--front { transform: rotate(10deg); border-color: rgb(255 255 255 / 12%); }
@@ -46,7 +44,7 @@
 .hero-card-marker { inline-size: 1.125rem; block-size: 0.25rem; background: var(--brand-yellow); }
 .hero-logo-well { display: grid; align-items: center; padding-block: var(--space-8); }
 .hero-logo-well img { inline-size: 100%; block-size: auto; aspect-ratio: 8334 / 2096; }
-.hero-card-footer { padding-block-start: var(--space-3); border-block-start: 1px solid var(--brand-gray); }
+.hero-card-footer { direction: ltr; padding-block-start: var(--space-3); border-block-start: 1px solid var(--brand-gray); }
 .hero-brand-seal { position: absolute; inset-inline-end: -0.25rem; inset-block-end: 16%; inline-size: 4.25rem; aspect-ratio: 1; border-radius: 50%; background: var(--brand-yellow); color: var(--brand-blue); display: grid; place-content: center; transform: rotate(12deg); font-family: var(--font-english); font-size: 1rem; font-weight: 800; box-shadow: 0 8px 32px rgb(0 0 0 / 12%); }
 .hero-seal-cross { position: absolute; inset-block-start: 0.125rem; inset-inline-end: 0.5rem; font-size: 0.75rem; }
 .hero-bottom { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block-start: var(--space-6); border-block-start: 1px solid var(--border-dark); }
@@ -94,8 +92,6 @@
   .hero-brand-stage { min-block-size: 18rem; }
   .hero-identity-card { padding: var(--space-5); }
   .hero-brand-seal { inline-size: 3.5rem; inset-block-end: 16%; }
-  .hero-stage-coordinate--top { inset-block-start: var(--space-4); }
-  .hero-stage-coordinate--bottom { inset-block-end: var(--space-4); }
   .hero-bottom { gap: var(--space-3); }
   .hero-signature { font-size: 0.5rem; letter-spacing: 0.07em; }
   .hero-signature > span { padding-inline: var(--space-1); }

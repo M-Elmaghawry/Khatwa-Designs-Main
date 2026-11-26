@@ -48,7 +48,6 @@ export function HomeServices() {
 
 export function BrandMarquee() {
   const { t, language } = useLanguage();
-  const [paused, setPaused] = useState(false);
   const scope = useRef(null);
   useEffect(() => {
     const element = scope.current;
@@ -64,15 +63,11 @@ export function BrandMarquee() {
     return () => { observer?.disconnect(); document.removeEventListener('visibilitychange', update); };
   }, []);
   const labels = services.slice(0, 3).map((_, i) => t(`home_svc${i + 1}_title`));
-  const pauseLabel = language === 'ar' ? 'إيقاف حركة الشريط' : 'Pause marquee';
-  return <div className="brand-marquee" data-paused={paused} ref={scope} dir={language === 'ar' ? 'rtl' : 'ltr'}>
+  return <div className="brand-marquee" ref={scope} dir={language === 'ar' ? 'rtl' : 'ltr'}>
     <p className="sr-only">{labels.join(' / ')}</p>
     <div className="marquee-window" aria-hidden="true"><div className="marquee-track">
       {[0, 1].map(copy => <div className="marquee-group" key={copy}>{labels.map(label => <span key={label}>{label}<span className="marquee-separator" /></span>)}</div>)}
     </div></div>
-    <button type="button" className="marquee-pause" onClick={() => setPaused(value => !value)} aria-label={pauseLabel} aria-pressed={paused}>
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true">{paused ? <path d="m5 3 10 6-10 6Z" /> : <path d="M4 3h3v12H4zm7 0h3v12h-3z" />}</svg>
-    </button>
   </div>;
 }
 
@@ -141,7 +136,7 @@ export function HomeTestimonials() {
       <div className="home-review-grid">{homeReviews.map((review, i) => <figure key={review.name} className={'home-review' + (i === 0 ? ' home-review--lead' : '')} data-motion-reveal>
         <svg className="home-quote-mark" width="48" height="36" viewBox="0 0 48 36" fill="currentColor" aria-hidden="true"><path d="M0 20C0 8 6 2 18 0v6C11 8 8 12 8 18h10v18H0zm28 0C28 8 34 2 46 0v6c-7 2-10 6-10 12h10v18H28z" /></svg>
         {i === 3 ? <p className="home-review-text">{t(review.quoteKey)}</p> : <blockquote><p>{t(review.quoteKey)}</p></blockquote>}
-        <figcaption><span className="home-review-name">{review.name}</span><span>{t(review.dateKey)}</span></figcaption>
+        <figcaption><span className="home-review-name">{review.name}</span></figcaption>
       </figure>)}</div>
       <div className="home-reviews-end"><SiteLink href="customer-stories.html" className="home-text-link">{t('home_reviews_btn')}<Arrow /></SiteLink></div>
     </Container>

@@ -95,7 +95,7 @@ export function InnerReviewsPage() {
     <EditorialSection><div className="inner-review-grid">{reviews.map((review, index) => <figure key={review.id} className={index === 0 ? 'inner-review inner-review-lead' : 'inner-review'}>
       <svg className="inner-quote" width="40" height="32" viewBox="0 0 48 36" fill="currentColor" aria-hidden="true"><path d="M0 20C0 8 6 2 18 0v6C11 8 8 12 8 18h10v18H0zm28 0C28 8 34 2 46 0v6c-7 2-10 6-10 12h10v18H28z" /></svg>
       {review.wordingCaution ? <p>{t(review.textKey)}</p> : <blockquote><p>{t(review.textKey)}</p></blockquote>}
-      <figcaption><span>{review.author}</span><span>{t(review.dateKey)}</span></figcaption>
+      <figcaption><span>{review.author}</span></figcaption>
     </figure>)}</div></EditorialSection>
     <PageCTA title={t('home_cta_title')} text={t('home_cta_text')} />
   </div>;
