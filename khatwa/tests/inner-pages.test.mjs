@@ -57,9 +57,14 @@ test('homepage retains the approved hero, review and marquee refinements', () =>
         const href = anchor.getAttribute('href');
         if (!href.startsWith(SITE_BASE)) continue;
         const url = new URL(href, 'https://example.test');
+        url.pathname = '/Khatwa-Designs-Main/' + url.pathname.slice(SITE_BASE.length);
         if (url.pathname.endsWith('/')) url.pathname += 'index.html';
         url.searchParams.set('lang', language);
         anchor.setAttribute('href', url.pathname + url.search + url.hash);
+      }
+      for (const image of dom.window.document.querySelectorAll('.home-page img[src]')) {
+        const src = image.getAttribute('src');
+        if (src.startsWith(SITE_BASE)) image.setAttribute('src', '/Khatwa-Designs-Main/' + src.slice(SITE_BASE.length));
       }
       assert.equal(crypto.createHash('sha256').update(dom.window.document.querySelector('.home-page').outerHTML).digest('hex'), expected[language]);
     }

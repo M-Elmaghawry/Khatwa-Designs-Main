@@ -4,6 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { build } from 'vite';
 import { metadataFor, renderMetadataHead, indexableRoutes, SITE_URL } from '../src/lib/metadata.js';
 import { SITE_BASE } from '../src/lib/paths.js';
+import { DEPLOY } from '../src/lib/deploy-target.js';
 import pages from '../src/content/pages.json' with { type: 'json' };
 import { spawnSync } from 'node:child_process';
 
@@ -35,6 +36,11 @@ const entries = indexableRoutes().map(({ metadata }) => {
   return `<url><loc>${escape(metadata.canonical)}</loc>${Object.entries(metadata.alternates).map(([lang, href]) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${escape(href)}"/>`).join('')}</url>`;
 });
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${entries.join('')}</urlset>`);
-write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
+write('robots.txt', DEPLOY.preview ? 'User-agent: *\nDisallow: /\n' : `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
+if (DEPLOY.preview) write('_headers', '/*\n  X-Robots-Tag: noindex, nofollow\n');
+// With html_handling=none Workers preserves .html URLs but does not resolve
+// directory indexes. Rewrite only the three known language home entries.
+if (DEPLOY.target !== 'github') write('_redirects', '/ /index.html 200\n/ar/ /ar/index.html 200\n/en/ /en/index.html 200\n');
 write('.nojekyll', '');
+console.log(`Deploy target: ${DEPLOY.target}; base: ${SITE_BASE}; SEO: ${SITE_URL}; preview noindex: ${DEPLOY.preview}`);
 console.log(`Prerendered ${Object.keys(pages).length} existing routes with Arabic/default and explicit ar/en static entries. Output: khatwa/dist (local only).`);
