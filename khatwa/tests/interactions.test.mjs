@@ -122,6 +122,15 @@ test('React form validates and focuses invalid fields, prevents duplicate sends,
     await input(form.elements.name, 'Client');
     await input(form.elements.email, 'client+quote@company.technology');
     await submit(form);
+    assert.equal(calls, 0);
+    assert.equal(ui.document.activeElement, form.elements.phone_number);
+    await input(form.elements.phone_number, '01012345678');
+    await input(form.elements.comment, '   ');
+    await submit(form);
+    assert.equal(calls, 0);
+    assert.equal(ui.document.activeElement, form.elements.comment);
+    await input(form.elements.comment, 'Project details');
+    await submit(form);
     await submit(form);
     assert.equal(calls, 1);
     assert.equal(form.getAttribute('aria-busy'), 'true');
@@ -139,6 +148,11 @@ test('failed inquiry uses localized error result and retry restores session draf
     const form = ui.document.querySelector('form');
     await input(form.elements.name, 'Client');
     await input(form.elements.email, 'client@example.test');
+    await input(form.elements.phone_number, '01012345678');
+    await act(async () => {
+      form.elements.subject.value = 'Brand identity';
+      form.elements.subject.dispatchEvent(new window.Event('change', { bubbles: true }));
+    });
     await input(form.elements.comment, 'Private project context');
     await submit(form);
     assert.equal(ui.document.querySelector('main h1').textContent, ar.contact_result_error_title);

@@ -4,7 +4,7 @@ import { useLanguage } from '../i18n/LanguageProvider.jsx';
 import fields from '../content/form.json';
 import services from '../content/services.json';
 import { Button, SiteLink } from './primitives.jsx';
-import { DRAFT_KEY, restoreDraft, saveDraft, sendInquiry } from '../lib/inquiry.js';
+import { DRAFT_KEY, restoreDraft, saveDraft, sendInquiry, inquiryFieldError, inquiryParameters, validateInquiry } from '../lib/inquiry.js';
 
 export function ContactForm() {
   const { t, language } = useLanguage();
@@ -32,22 +32,22 @@ export function ContactForm() {
     window.addEventListener('pageshow', restorePage);
     return () => { mounted.current = false; activeController.current?.abort(); window.removeEventListener('pageshow', restorePage); };
   }, []);
-  const errorFor = element => element.validity.valueMissing ? 'contact_error_required' : element.validity.typeMismatch ? 'contact_error_email' : '';
+  const errorFor = element => inquiryFieldError(element.name, element.value);
   async function submit(event) {
     event.preventDefault();
     if (pending.current) return;
-    const nextErrors = {};
-    for (const field of fields) { const error = errorFor(form.current.elements[field.name]); if (error) nextErrors[field.name] = error; }
+    const submittedValues = inquiryParameters(Object.fromEntries(new window.FormData(form.current)));
+    const nextErrors = validateInquiry(submittedValues);
     setErrors(nextErrors);
     const first = Object.keys(nextErrors)[0];
     if (first) { form.current.elements[first].focus(); return; }
     pending.current = true;
     setSending(true);
-    try { saveDraft(window.sessionStorage, values); } catch { /* Optional retry support. */ }
+    try { saveDraft(window.sessionStorage, submittedValues); } catch { /* Optional retry support. */ }
     activeController.current = new AbortController();
     let status = 'success';
     try {
-      await sendInquiry(values, window.KhatwaEmailJSConfig, { signal: activeController.current.signal });
+      await sendInquiry(submittedValues, window.KhatwaEmailJSConfig, { signal: activeController.current.signal });
       try { window.sessionStorage.removeItem(DRAFT_KEY); } catch { /* Optional storage. */ }
     } catch { status = 'error'; }
     finally { pending.current = false; if (mounted.current) setSending(false); }
@@ -58,7 +58,7 @@ export function ContactForm() {
       const Tag = field.tag;
       const error = errors[field.name];
       return <div className={'field field-' + field.name} key={field.name}>
-        <label htmlFor={field.id}>{t(field.labelKey)}</label>
+        <label htmlFor={field.id}>{t(field.labelKey)}{field.required && !t(field.labelKey).includes('*') ? ' *' : ''}</label>
         <Tag id={field.id} name={field.name} type={Tag === 'input' ? field.type : undefined} required={field.required} maxLength={field.maxLength || undefined} autoComplete={field.autoComplete || undefined} inputMode={field.inputMode || undefined} placeholder={field.placeholderKey ? t(field.placeholderKey) : undefined} rows={Tag === 'textarea' ? 5 : undefined} value={values[field.name]} aria-invalid={Boolean(error)} aria-describedby={error ? field.id + '-error' : undefined}
           onChange={event => { setValues(current => ({ ...current, [field.name]: event.target.value })); if (error) setErrors(current => ({ ...current, [field.name]: errorFor(event.target) })); }}
           onBlur={event => setErrors(current => ({ ...current, [field.name]: errorFor(event.target) }))}>

@@ -19,16 +19,19 @@ test('hero phrase splitting preserves every original Arabic word and English wor
   }
 });
 
-test('final application preserves the reviewed content, form integration and route components', () => {
+test('final application preserves reviewed content and routes while requiring every contact field', () => {
   const files = [
-    'khatwa/src/content/form.json', 'khatwa/src/content/reviews.json',
-    'khatwa/src/components/ContentRenderer.jsx', 'khatwa/src/components/ContactForm.jsx', 'khatwa/src/lib/inquiry.js',
+    'khatwa/src/content/reviews.json',
+    'khatwa/src/components/ContentRenderer.jsx',
     'khatwa/src/App.jsx'
   ];
   for (const file of files) {
     const preserved = execFileSync('git', ['show', '68782cf:' + file.replace(/^khatwa\//, 'react-v2/')], { cwd: root, encoding: 'utf8' }).replaceAll('\r\n', '\n');
     assert.equal(fs.readFileSync(path.join(root, file), 'utf8').replaceAll('\r\n', '\n'), preserved, file);
   }
+  const originalFields = JSON.parse(execFileSync('git', ['show', '68782cf:react-v2/src/content/form.json'], { cwd: root, encoding: 'utf8' }));
+  const fields = JSON.parse(fs.readFileSync(path.join(directory, 'src/content/form.json'), 'utf8'));
+  assert.deepEqual(fields, originalFields.map(field => ({ ...field, required: true })));
 });
 
 test('shared contact configuration contains the owner-supplied EmailJS public identifiers', () => {

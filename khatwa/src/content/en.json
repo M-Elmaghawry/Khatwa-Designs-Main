@@ -413,5 +413,9 @@
   "Lawyer Fahad": "Lawyer Fahad Al-MutairiSocial media design",
   "Delta Rides-2": "Delta Rides CompanySocial media design ",
   "Bim Connection-3": "BIM Connection — Social media design, Part 1",
-  "Muro": "Muro Real Estate — Social media, Part 1"
+  "Muro": "Muro Real Estate — Social media, Part 1",
+  "contact_error_phone": "Enter a valid phone number with 7 to 15 digits and no letters.",
+  "contact_error_text": "Enter a name containing letters.",
+  "contact_error_choice": "Choose a valid option from the list.",
+  "contact_error_length": "This text is too long. Please shorten it."
 }

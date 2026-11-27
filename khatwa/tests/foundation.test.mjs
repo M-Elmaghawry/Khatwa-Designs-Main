@@ -9,7 +9,7 @@ import { JSDOM } from 'jsdom';
 import { createStaticServer } from '../scripts/serve.mjs';
 import { SITE_BASE, languageHref, resolveLanguage, routeFile } from '../src/lib/paths.js';
 import { metadataFor } from '../src/lib/metadata.js';
-import { sendInquiry, inquiryParameters, parameterNames, restoreDraft, saveDraft, DRAFT_KEY } from '../src/lib/inquiry.js';
+import { sendInquiry, inquiryParameters, emailTemplateParameters, parameterNames, restoreDraft, saveDraft, DRAFT_KEY } from '../src/lib/inquiry.js';
 import { render } from '../.ssr/entry-server.js';
 import { createHash } from 'node:crypto';
 
@@ -57,7 +57,7 @@ function requireFromRoot(name) { return createRequire(path.join(root, 'package.j
 
 test('final bilingual catalogs, projects and reviews remain complete', () => {
   assert.deepEqual(Object.keys(data('ar')).sort(), Object.keys(data('en')).sort());
-  for (const language of ['ar', 'en']) assert.equal(Object.keys(data(language)).length, 415);
+  for (const language of ['ar', 'en']) assert.equal(Object.keys(data(language)).length, 419);
   assert.equal(data('projects').length, 23);
   assert.equal(data('reviews').length, 12);
   for (const project of data('projects')) {
@@ -164,14 +164,14 @@ test('legacy redirects retain exact query, language and fragments using the unch
 });
 
 test('inquiry adapter preserves exact parameters, confirms HTTP 200 only, rejects failures and times out using mocked transport', async () => {
-  const values = { name: 'Client', email: 'client@example.test', country_code: '+20', phone_number: '123', subject: 'Company portfolio', comment: 'Private inquiry', rogue: 'drop' };
+  const values = { name: 'Client', email: 'client@example.test', country_code: '+20', phone_number: '01012345678', subject: 'Company portfolio', comment: 'Private inquiry', rogue: 'drop' };
   assert.deepEqual(Object.keys(inquiryParameters(values)), parameterNames);
   let request;
   const config = { serviceId: 'test-service', templateId: 'test-template', publicKey: 'test-public' };
   await sendInquiry(values, config, { fetcher: async (url, options) => { request = { url, ...options }; return { status: 200 }; } });
   const body = JSON.parse(request.body);
   assert.equal(request.url, 'https://api.emailjs.com/api/v1.0/email/send');
-  assert.deepEqual(body.template_params, inquiryParameters(values));
+  assert.deepEqual(body.template_params, emailTemplateParameters(values));
   assert.equal(body.service_id, config.serviceId);
   await assert.rejects(sendInquiry(values, config, { fetcher: async () => ({ status: 201 }) }));
   await assert.rejects(sendInquiry(values, config, { fetcher: async () => { throw new Error('offline'); } }));
