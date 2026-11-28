@@ -5,6 +5,7 @@ import projects from '../src/content/projects.json' with { type: 'json' };
 import { galleryProjects } from '../src/content/inner-model.js';
 import { JSDOM } from 'jsdom';
 import { render } from '../.ssr/entry-server.js';
+import { SITE_BASE } from '../src/lib/paths.js';
 
 test('portfolio uses exactly the 23 owner-approved Behance projects in their supplied categories', () => {
   const approved = {
@@ -25,7 +26,7 @@ test('portfolio uses exactly the 23 owner-approved Behance projects in their sup
     assert.ok(instructions.includes(project.url));
     assert.ok(fs.existsSync(new URL('../../' + project.image, import.meta.url)));
   }
-  const dom = new JSDOM(render('/Khatwa-Designs-Main/index.html?lang=en', 'en'));
+  const dom = new JSDOM(render(SITE_BASE + 'index.html?lang=en', 'en'));
   try {
     const cards = Array.from(dom.window.document.querySelectorAll('.home-project'));
     assert.equal(cards.length, 6);

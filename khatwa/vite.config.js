@@ -4,10 +4,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SITE_BASE } from './src/lib/paths.js';
+import { DEPLOY } from './src/lib/deploy-target.js';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const legacyRoot = path.resolve(directory, '..');
 const types = { '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.woff': 'font/woff', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.js': 'text/javascript', '.txt': 'text/plain' };
+const normalizeScript = () => fs.readFileSync(path.join(legacyRoot, 'js/normalize-url.js'), 'utf8').replace("var base = '/Khatwa-Designs-Main/';", `var base = '${SITE_BASE}';`);
 export function legacyAssets() {
   let config;
   return {
@@ -25,7 +27,7 @@ export function legacyAssets() {
         else relative = relative.replace(/^\//, '');
         let source;
         if (relative === 'legacy/emailjs-config.js') source = path.join(legacyRoot, 'js/khatwa-emailjs-config.js');
-        else if (relative === 'legacy/normalize-url.js') source = path.join(legacyRoot, 'js/normalize-url.js');
+        else if (relative === 'legacy/normalize-url.js') { response.setHeader('Content-Type', types['.js']); return response.end(normalizeScript()); }
         else if (/^(images|projects)\//.test(relative)) {
           source = path.resolve(legacyRoot, relative);
           const allowed = path.resolve(legacyRoot, relative.split('/')[0]) + path.sep;
@@ -43,13 +45,14 @@ export function legacyAssets() {
       fs.mkdirSync(path.join(output, 'legacy'), { recursive: true });
       fs.copyFileSync(path.join(legacyRoot, 'js/khatwa-emailjs-config.js'), path.join(output, 'legacy/emailjs-config.js'));
       fs.copyFileSync(path.join(legacyRoot, 'js/redirect.js'), path.join(output, 'legacy/redirect.js'));
-      fs.copyFileSync(path.join(legacyRoot, 'js/normalize-url.js'), path.join(output, 'legacy/normalize-url.js'));
+      fs.writeFileSync(path.join(output, 'legacy/normalize-url.js'), normalizeScript());
     }
   };
 }
 export default defineConfig({
   root: directory,
   base: SITE_BASE,
+  define: { __KHATWA_DEPLOY__: JSON.stringify(DEPLOY) },
   plugins: [react(), legacyAssets()],
   publicDir: false,
   build: {

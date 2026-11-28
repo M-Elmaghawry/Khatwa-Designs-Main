@@ -1,5 +1,6 @@
-export const SITE_BASE = '/Khatwa-Designs-Main/';
-export const SITE_ORIGIN = 'https://m-elmaghawry.github.io';
+import { DEPLOY } from './deploy-target.js';
+export const SITE_BASE = DEPLOY.base;
+export const SITE_ORIGIN = DEPLOY.origin;
 export const SUPPORTED_LANGUAGES = ['ar', 'en'];
 export const isLanguage = value => SUPPORTED_LANGUAGES.includes(value);
 

@@ -3,16 +3,16 @@ import en from '../content/en.json' with { type: 'json' };
 import pages from '../content/pages.json' with { type: 'json' };
 import services from '../content/services.json' with { type: 'json' };
 import socials from '../content/socials.json' with { type: 'json' };
-import { SITE_BASE, SITE_ORIGIN } from './paths.js';
+import { DEPLOY } from './deploy-target.js';
 
-export const SITE_URL = SITE_ORIGIN + SITE_BASE;
+export const SITE_URL = DEPLOY.seoOrigin + DEPLOY.seoBase;
 export const SOCIAL_IMAGE = { url: SITE_URL + 'images/khatwa-logo.png', width: 4167, height: 1048, alt: 'Khatwa Designs' };
 export function canonicalFor(file, language) {
   return SITE_URL + (language === 'en' ? 'en/' : '') + (file === 'index.html' ? '' : file);
 }
 export function isIndexable(file, language) {
   const page = pages[file];
-  return Boolean(page && !page.redirect && !page.robots.includes('noindex') && !(page.languageGap && language === 'ar'));
+  return Boolean(!DEPLOY.preview && page && !page.redirect && !page.robots.includes('noindex') && !(page.languageGap && language === 'ar'));
 }
 export const indexableRoutes = () => Object.keys(pages).flatMap(file => ['ar', 'en'].filter(language => isIndexable(file, language)).map(language => ({ file, language, metadata: metadataFor(file, language) })));
 
@@ -47,7 +47,7 @@ export function metadataFor(file, language, search = '') {
   if (language === 'ar' && legalTitles[file]) title = legalTitles[file] + ' | خطوة للتصميمات';
   const canonical = canonicalFor(file, page.languageGap ? 'en' : language);
   const alternates = isIndexable(file, language) && !page.languageGap ? { ar: canonicalFor(file, 'ar'), en: canonicalFor(file, 'en'), 'x-default': canonicalFor(file, 'ar') } : {};
-  const metadata = { title, description, canonical, robots: page.redirect || (page.languageGap && language === 'ar') ? 'noindex,follow' : page.robots, image: SOCIAL_IMAGE.url, alternates };
+  const metadata = { title, description, canonical, robots: DEPLOY.preview ? 'noindex,nofollow' : page.redirect || (page.languageGap && language === 'ar') ? 'noindex,follow' : page.robots, image: SOCIAL_IMAGE.url, alternates };
   metadata.openGraph = { 'og:title': title, 'og:description': description, 'og:type': 'website', 'og:url': canonical, 'og:image': metadata.image, 'og:image:alt': SOCIAL_IMAGE.alt, 'og:image:width': String(SOCIAL_IMAGE.width), 'og:image:height': String(SOCIAL_IMAGE.height), 'og:locale': language === 'ar' ? 'ar_EG' : 'en_US', ...(!page.languageGap && Object.keys(alternates).length ? { 'og:locale:alternate': language === 'ar' ? 'en_US' : 'ar_EG' } : {}) };
   metadata.twitter = { 'twitter:card': 'summary', 'twitter:title': title, 'twitter:description': description, 'twitter:image': metadata.image, 'twitter:image:alt': SOCIAL_IMAGE.alt };
   metadata.jsonLd = structuredData(file, language, metadata, dictionary);

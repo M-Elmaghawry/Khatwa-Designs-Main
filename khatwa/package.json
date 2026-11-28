@@ -9,6 +9,12 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
     "build": "node scripts/build.mjs",
+    "build:github": "node scripts/target.mjs github",
+    "build:cloudflare-preview": "node scripts/target.mjs cloudflare-preview",
+    "build:cloudflare-production": "node scripts/target.mjs cloudflare-production",
+    "preview:cloudflare": "node scripts/target.mjs cloudflare-preview preview",
+    "test:cloudflare": "node scripts/target.mjs cloudflare-preview test tests/deploy-target.test.mjs tests/deploy-build.test.mjs",
+    "test:deploy": "node scripts/test-deploy.mjs",
     "preview": "node scripts/serve.mjs",
     "content:check": "node scripts/check-content.mjs",
     "test": "node --test tests/*.test.mjs"
