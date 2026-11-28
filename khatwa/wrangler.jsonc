@@ -2,6 +2,7 @@
   "name": "khatwa-designs-main",
   "compatibility_date": "2026-11-27",
   "workers_dev": true,
+  "previews": {},
   "assets": {
     "directory": "./dist",
     "html_handling": "none",
